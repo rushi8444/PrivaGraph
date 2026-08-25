@@ -1,0 +1,104 @@
+# ==============================================================================
+# Git Ignore Configuration for PrivaGraph (Privacy-Guard)
+# ==============================================================================
+
+# --- Secrets & Environment Variables ---
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!*.env.example
+*.pem
+*.key
+*.cert
+
+# --- Python Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+bin/
+include/
+lib/
+lib64/
+share/
+pyvenv.cfg
+
+# --- Python Bytecode & Cache ---
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- Python Packaging & Distribution ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Testing, Coverage & Linters ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node.js & Frontend (React/Vite) ---
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+dist/
+.oxlint_cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Runtime Data, Logs & Local Vault Storage ---
+data/*.jsonl
+data/audit.jsonl
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# --- IDEs, Editors & OS Metadata ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
