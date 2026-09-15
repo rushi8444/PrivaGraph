@@ -246,6 +246,4 @@ He manages a team budget of $2.3M and reports to Sarah Johnson (VP Engineering).
 
 ---
 
-## 📜 License
 
-MIT License. See [LICENSE](LICENSE) for details.
