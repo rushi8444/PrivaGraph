@@ -10,53 +10,11 @@ from app.api.dependencies import get_state, get_default_user
 from app.models.query import QueryRequest, QueryResponse, QueryMetadata, LLMRequest
 from app.security.audit_log import QUERY_SENT, QUERY_RECONSTRUCTED, INJECTION_BLOCKED
 
+from app.retrieval.synthesizer import AnswerSynthesizer
+
 router = APIRouter(prefix="/query", tags=["query"])
 
-
-def format_natural_fallback(context_text: str) -> str:
-    """Format knowledge graph context into natural, fluent English sentences."""
-    import re
-    rel_pattern = re.compile(r"-\s*(.+?)\s*--\[([A-Z_]+)\]-->\s*(.+)")
-    rels = rel_pattern.findall(context_text)
-
-    if not rels:
-        return "I could not find matching records in the knowledge base for this query."
-
-    pred_map = {
-        "EARNS": "earns",
-        "REPORTS_TO": "reports to",
-        "MANAGES": "manages a budget of",
-        "WORKS_FOR": "works for",
-        "LEADS": "leads",
-        "OVERSEES": "oversees",
-        "HAS_CONTACT": "can be reached at",
-        "IS_A": "is a",
-        "RELATED_TO": "is associated with",
-    }
-
-    by_subject: dict[str, list[str]] = {}
-    seen = set()
-    for subj, pred, obj in rels:
-        subj, pred, obj = subj.strip(), pred.strip(), obj.strip()
-        if (subj, pred, obj) in seen:
-            continue
-        seen.add((subj, pred, obj))
-        if subj not in by_subject:
-            by_subject[subj] = []
-        verb = pred_map.get(pred, pred.lower().replace("_", " "))
-        by_subject[subj].append(f"{verb} {obj}")
-
-    sentences = []
-    for subj, facts in by_subject.items():
-        if len(facts) == 1:
-            sentences.append(f"{subj} {facts[0]}.")
-        elif len(facts) == 2:
-            sentences.append(f"{subj} {facts[0]} and {facts[1]}.")
-        else:
-            joined = ", ".join(facts[:-1]) + f", and {facts[-1]}"
-            sentences.append(f"{subj} {joined}.")
-
-    return " ".join(sentences)
+synthesizer = AnswerSynthesizer()
 
 
 @router.post("", response_model=QueryResponse)
@@ -99,7 +57,7 @@ async def submit_query(request: QueryRequest):
             detail=f"Prompt injection detected: {', '.join(sanitization.violations)}",
         )
 
-    # Step 3: Send to cloud LLM
+    # Step 3: Send to cloud LLM or synthesize locally
     llm_request = LLMRequest(
         query=tokenized_query,
         context=sanitization.sanitized_text,
@@ -115,23 +73,41 @@ async def submit_query(request: QueryRequest):
         },
     )
 
+    llm_response_text = ""
+    llm_model = request.model or "offline-synthesizer"
+
     try:
         llm_response = await state.llm_gateway.query(llm_request)
+        if llm_response and llm_response.raw_text and llm_response.raw_text.strip():
+            llm_response_text = llm_response.raw_text
+            llm_model = llm_response.model
+        else:
+            import logging
+            logging.getLogger("uvicorn.error").warning(
+                "LLM returned empty response. Falling back to local graph answer synthesizer."
+            )
+            llm_response_text = synthesizer.synthesize(
+                tokenized_query, context, original_query=request.query
+            )
+            llm_model = "offline-synthesizer"
     except Exception as e:
         import logging
-        logging.getLogger("uvicorn.error").warning(f"LLM call failed: {e}")
-        # Natural conversational fallback generated directly from graph context
-        llm_response_text = format_natural_fallback(context)
-        llm_model = "offline-graph"
-        llm_response = None
-    else:
-        llm_response_text = llm_response.raw_text
-        llm_model = llm_response.model
+        logging.getLogger("uvicorn.error").warning(
+            f"LLM call failed: {e}. Synthesizing answer directly from graph context."
+        )
+        llm_response_text = synthesizer.synthesize(
+            tokenized_query, context, original_query=request.query
+        )
+        llm_model = "offline-synthesizer"
 
     # Step 4: Reconstruct tokens locally
     reconstructed_text, entities_count = await state.reconstructor.reconstruct(
         llm_response_text
     )
+
+    # Guarantee response is never empty string (prevents bare avatar glyph 🛡️)
+    if not reconstructed_text or not reconstructed_text.strip():
+        reconstructed_text = "I could not find matching records in the knowledge base for this query."
 
     elapsed_ms = int((time.time() - start_time) * 1000)
 

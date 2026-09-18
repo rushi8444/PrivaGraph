@@ -60,4 +60,18 @@ def get_custom_recognizers():
             ],
             supported_language="en",
         ),
+        # US Street Address pattern: e.g. 2 Overlook Pointe, Sewickley, PA 15143
+        PatternRecognizer(
+            supported_entity="LOCATION",
+            name="street_address_recognizer",
+            patterns=[
+                Pattern(
+                    name="us_street_address",
+                    regex=r"\b\d+\s+[A-Za-z0-9\s,.-]+?(?:Street|St|Avenue|Ave|Road|Rd|Drive|Dr|Lane|Ln|Boulevard|Blvd|Court|Ct|Way|Circle|Cir|Pointe|Place|Pl|Terrace|Ter|Row)\b(?:,\s*[A-Za-z\s]+)?(?:,\s*[A-Z]{2}\s+\d{5})?",
+                    score=0.95,
+                ),
+            ],
+            supported_language="en",
+        ),
     ]
+

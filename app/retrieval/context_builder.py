@@ -49,7 +49,32 @@ class ContextBuilder:
         # Step 1: Find explicit tokens in query
         mentioned_tokens = self.query_analyzer.extract_tokens(query)
 
-        # Step 2: If no explicit tokens, keyword-match against graph nodes
+        query_lower = query.lower()
+        target_dept = None
+        for dept in [
+            "engineering",
+            "sales",
+            "operations",
+            "marketing",
+            "customer success",
+            "legal",
+            "finance",
+            "executive",
+        ]:
+            if dept in query_lower:
+                target_dept = dept
+                break
+
+        if target_dept:
+            dept_nodes = [
+                u
+                for u, v, data in self.graph_builder.graph.edges(data=True)
+                if data.get("predicate") == "IN_DEPARTMENT" and target_dept in str(v).lower()
+            ]
+            if dept_nodes:
+                mentioned_tokens = dept_nodes
+
+        # Step 2: If no explicit tokens or department filter, keyword-match against graph nodes
         if not mentioned_tokens:
             all_nodes = list(self.graph_builder.graph.nodes)
             mentioned_tokens = self.query_analyzer.match_nodes(query, all_nodes)
@@ -57,11 +82,16 @@ class ContextBuilder:
         if not mentioned_tokens:
             return "# Knowledge Graph Context\n\nNo matching entities found in the graph."
 
-        # Step 3: Extract subgraphs around each matched entity
+        # Step 3: Extract subgraphs around each matched entity (using multi-hop for hierarchies)
+        traversal_depth = self.max_depth
+        if "report" in query_lower or "hierarchy" in query_lower or "manager" in query_lower:
+            traversal_depth = max(traversal_depth, 3)
+
         combined_subgraph = nx.MultiDiGraph()
         for token in mentioned_tokens:
-            sub = self.graph_builder.get_neighbors(token, depth=self.max_depth)
+            sub = self.graph_builder.get_neighbors(token, depth=traversal_depth)
             combined_subgraph = nx.compose(combined_subgraph, sub)
+
 
         # Step 4: Apply RBAC filtering
         filtered = self.rbac_filter.filter_subgraph(combined_subgraph, user)

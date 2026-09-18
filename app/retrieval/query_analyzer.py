@@ -41,7 +41,21 @@ class QueryAnalyzer:
             "about", "me", "my", "tell", "show", "find", "get",
         }
         words = query.lower().split()
-        return [w.strip("?.!,;:") for w in words if w.strip("?.!,;:") not in stopwords and len(w) > 2]
+        base_keywords = [
+            w.strip("?.!,;:'\"")
+            for w in words
+            if w.strip("?.!,;:'\"") not in stopwords and len(w.strip("?.!,;:'\"")) > 2
+        ]
+        # Expand hyphenated terms (e.g. mbeki-sorensen -> mbeki, sorensen)
+        expanded = list(base_keywords)
+        for kw in base_keywords:
+            if "-" in kw:
+                parts = kw.split("-")
+                for p in parts:
+                    if len(p) > 2 and p not in stopwords and p not in expanded:
+                        expanded.append(p)
+        return expanded
+
 
     def match_nodes(self, query: str, node_ids: list[str]) -> list[str]:
         """Find graph nodes that match keywords in the query.

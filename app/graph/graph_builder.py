@@ -16,18 +16,32 @@ from app.models.document import OKFHeader
 from app.models.graph import GraphData, GraphEdge, GraphNode, GraphStats
 
 
+class GraphContaminationError(ValueError):
+    """Raised when an entity accumulates an excessive number of edges indicating graph contamination."""
+    pass
+
+
 class KnowledgeGraphBuilder:
     """Builds and manages the in-memory knowledge graph."""
 
-    def __init__(self):
+    MAX_EDGES_PER_ENTITY: int = 100
+
+    def __init__(self, max_edges_per_entity: int = 100):
         self.graph = nx.MultiDiGraph()
+        self.MAX_EDGES_PER_ENTITY = max_edges_per_entity
 
     def add_triples(self, triples: list[Triple], header: OKFHeader) -> None:
         """Add extracted triples to the knowledge graph.
 
+        Enforces a circuit breaker threshold to abort ingestion if any entity
+        accumulates an excessive number of edges (preventing cartesian explosions).
+
         Args:
             triples: List of SVO triples to add.
             header: OKF header with namespace and ACL metadata.
+
+        Raises:
+            GraphContaminationError: If any entity exceeds MAX_EDGES_PER_ENTITY.
         """
         for triple in triples:
             self._ensure_node(
@@ -53,6 +67,14 @@ class KnowledgeGraphBuilder:
                 for data in existing_edges.values()
             )
             if not duplicate:
+                # Circuit breaker check on entity edge count
+                subject_edges = self.graph.out_degree(triple.subject) + self.graph.in_degree(triple.subject)
+                if subject_edges >= self.MAX_EDGES_PER_ENTITY:
+                    raise GraphContaminationError(
+                        f"Graph contamination circuit breaker triggered: entity '{triple.subject}' reached "
+                        f"{subject_edges} edges (limit: {self.MAX_EDGES_PER_ENTITY}). Ingestion halted."
+                    )
+
                 self.graph.add_edge(
                     triple.subject,
                     triple.object,

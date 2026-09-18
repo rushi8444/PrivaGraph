@@ -43,7 +43,19 @@ class EncryptedVault:
             doc_id: Source document ID.
         """
         if token in self._store:
-            return  # Already stored (idempotent)
+            # Upgrade stored value if the new value is longer / more specific (e.g. full hyphenated name)
+            try:
+                old_val = self.cipher.decrypt(
+                    self._store[token]["ciphertext"], self._store[token]["nonce"]
+                ).decode("utf-8")
+                if len(original_value) > len(old_val):
+                    ciphertext, nonce = self.cipher.encrypt(original_value.encode("utf-8"))
+                    self._store[token]["ciphertext"] = ciphertext
+                    self._store[token]["nonce"] = nonce
+            except Exception:
+                pass
+            return
+
 
         ciphertext, nonce = self.cipher.encrypt(original_value.encode("utf-8"))
 

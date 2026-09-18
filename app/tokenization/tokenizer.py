@@ -42,6 +42,13 @@ class DeterministicTokenizer:
         norm_type = entity.entity_type.upper().strip()
         norm_val = entity.original_value.strip().lower()
 
+        # For PERSON entities, normalize hyphenated compound surnames to canonical base name
+        # to ensure e.g. "Harold Mbeki-Sorensen" and "Harold Mbeki" map to the same canonical token.
+        import re
+        if norm_type in ("PERSON", "NAME"):
+            norm_val = re.sub(r"-[a-z]+$", "", norm_val)
+
+
         digest = hmac.new(
             self.secret_key,
             f"{norm_type}:{norm_val}".encode("utf-8"),

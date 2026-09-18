@@ -14,6 +14,7 @@ from app.proxy.reconstructor import TokenReconstructor
 from app.proxy.prompt_sanitizer import PromptSanitizer
 from app.security.audit_log import AuditLogger
 from app.ingestion.okf_parser import OKFParser
+from app.ingestion.pdf_converter import PDFToOKFConverter
 from app.graph.triple_extractor import TripleExtractor
 from app.models.auth import UserContext
 
@@ -27,6 +28,7 @@ class AppState:
     def __init__(self):
         # Stage 1: Ingestion
         self.parser = OKFParser()
+        self.pdf_converter = PDFToOKFConverter()
 
         # Stage 2: Detection & Tokenization
         self.detector: PresidioDetectionEngine | None = None  # Lazy-loaded

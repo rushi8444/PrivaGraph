@@ -32,7 +32,7 @@ export default function DocumentUploader({ onUploaded }) {
     if (errors.length > 0) {
       setMessage({
         type: 'error',
-        text: errors.join(' | ') + ' (Note: Markdown files require OKF YAML frontmatter at the top)',
+        text: errors.join(' | ') + ' (Markdown files require OKF YAML frontmatter; PDFs must contain extractable text)',
       });
     } else if (successCount > 0) {
       setMessage({
@@ -59,15 +59,15 @@ export default function DocumentUploader({ onUploaded }) {
           handleFiles(e.dataTransfer.files);
         }}
       >
-        <div className="upload-zone-icon">📁</div>
+        <div className="upload-zone-icon">📄</div>
         <div className="upload-zone-text">
-          {uploading ? 'Ingesting & Tokenizing Document...' : 'Drop Markdown files here or click to browse'}
+          {uploading ? 'Ingesting & Tokenizing Document...' : 'Drop Markdown (.md) or PDF (.pdf) files here or click to browse'}
         </div>
-        <div className="upload-zone-hint">Supports .md files with OKF YAML frontmatter</div>
+        <div className="upload-zone-hint">Supports .md (with OKF YAML frontmatter) and .pdf (auto-converted to OKF)</div>
         <input
           ref={fileInput}
           type="file"
-          accept=".md"
+          accept=".md,.pdf"
           multiple
           hidden
           onChange={(e) => handleFiles(e.target.files)}

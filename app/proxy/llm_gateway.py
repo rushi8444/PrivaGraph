@@ -13,12 +13,25 @@ from app.models.query import LLMRequest, LLMResponse
 
 
 SYSTEM_PROMPT = (
-    "You are a helpful, professional, and intelligent enterprise AI assistant. "
-    "Use the knowledge graph context to answer the user's question in a natural, fluent, and conversational tone, just like a standard AI assistant. "
-    "Do NOT start your answer with robotic meta-phrases such as 'Based on the provided context', 'According to the knowledge graph', or 'Based on the provided information'. Simply answer the question directly and naturally. "
-    "The context contains anonymized entity tokens in the format ⟦XX_TYPE_NNN⟧. "
-    "Use these tokens naturally within your sentences as subjects, objects, or values, and always preserve their exact brackets and casing (e.g. ⟦XX_TYPE_NNN⟧) so they can be securely resolved locally."
+    "You are a precise data answer synthesizer. Your job is to answer the user's query using ONLY the provided graph context.\n\n"
+    "CRITICAL CONSTRAINTS:\n"
+    "1. STRICT FACT MATCHING: Answer ONLY what the user explicitly asks for.\n"
+    "   - If the user asks for a Social Security Number, provide ONLY the Social Security Number.\n"
+    "   - DO NOT list adjacent entity properties (such as salary, address, manager, or title) unless the user explicitly asks for a full profile.\n"
+    "2. CONCISE FORMATTING: State the requested answer directly in 1 sentence.\n"
+    "3. ANONYMIZED TOKENS: The context contains anonymized entity tokens in the format ⟦XX_TYPE_NNN⟧. "
+    "Always preserve their exact brackets and casing (e.g. ⟦XX_TYPE_NNN⟧) so they can be securely resolved locally.\n\n"
+    "[Bad Example]\n"
+    "Query: \"What is John's SSN?\"\n"
+    "Context: {Name: John, SSN: 123, Salary: $50k, Address: Main St}\n"
+    "Response: \"John earns $50k, lives on Main St, and his SSN is 123.\" (INCORRECT - Over-disclosed)\n\n"
+    "[Good Example]\n"
+    "Query: \"What is John's SSN?\"\n"
+    "Context: {Name: John, SSN: 123, Salary: $50k, Address: Main St}\n"
+    "Response: \"John's Social Security Number is 123.\" (CORRECT)"
 )
+
+
 
 
 class LLMGateway:
@@ -78,6 +91,9 @@ class LLMGateway:
         }
 
         import asyncio
+        import logging
+        logger = logging.getLogger("uvicorn.error")
+
         data = {}
         for attempt in range(3):
             response = await self.client.post(url, json=payload)
@@ -91,9 +107,24 @@ class LLMGateway:
         raw_text = ""
         candidates = data.get("candidates", [])
         if candidates:
-            parts = candidates[0].get("content", {}).get("parts", [])
+            candidate = candidates[0]
+            parts = candidate.get("content", {}).get("parts", [])
             if parts:
                 raw_text = parts[0].get("text", "")
+            else:
+                finish_reason = candidate.get("finishReason", "UNKNOWN")
+                logger.warning(
+                    f"Gemini API returned candidate with no text parts. Finish reason: {finish_reason}. Candidate: {candidate}"
+                )
+                raise ValueError(f"Gemini blocked or returned empty content (finishReason: {finish_reason})")
+        else:
+            prompt_feedback = data.get("promptFeedback", {})
+            logger.warning(f"Gemini API returned no candidates. Prompt feedback: {prompt_feedback}")
+            raise ValueError(f"Gemini returned no candidates (feedback: {prompt_feedback})")
+
+        if not raw_text.strip():
+            logger.warning("Gemini API returned whitespace-only text.")
+            raise ValueError("Gemini returned empty text.")
 
         return LLMResponse(
             raw_text=raw_text,

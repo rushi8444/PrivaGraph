@@ -12,6 +12,7 @@ from pathlib import Path
 import yaml
 from pydantic import ValidationError
 
+from app.ingestion.table_parser import TableParser
 from app.models.document import OKFDocument, OKFHeader
 
 
@@ -22,6 +23,9 @@ class OKFParser:
         r"^---\s*\n(.*?)\n---\s*\n(.*)",
         re.DOTALL,
     )
+
+    def __init__(self):
+        self.table_parser = TableParser()
 
     def parse(self, file_path: Path) -> OKFDocument:
         """Parse an OKF Markdown file into a validated document model.
@@ -71,10 +75,14 @@ class OKFParser:
     def _split_sentences(self, text: str) -> list[str]:
         """Split body text into clean sentences for per-sentence NER and triple extraction.
 
-        Strips markdown headings and splits by paragraphs and sentence boundaries.
+        Extracts tables first into row-scoped sentences to prevent cross-row cartesian explosion.
+        Strips markdown headings and splits paragraphs by sentence boundaries.
         """
+        # 1. Extract tables and convert them to row-scoped sentences
+        text_without_tables, table_sentences = self.table_parser.convert_tables_in_text(text)
+
         sentences: list[str] = []
-        blocks = re.split(r"\n\s*\n+", text)
+        blocks = re.split(r"\n\s*\n+", text_without_tables)
         for block in blocks:
             # Strip pure markdown headers (e.g. '# Header') from sentence content
             lines = [
@@ -93,4 +101,6 @@ class OKFParser:
                 if clean_s:
                     sentences.append(clean_s)
 
+        # 2. Append table-generated row sentences
+        sentences.extend(table_sentences)
         return sentences

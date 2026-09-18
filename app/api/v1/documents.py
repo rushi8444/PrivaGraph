@@ -5,7 +5,7 @@ from __future__ import annotations
 import io
 from pathlib import Path
 
-from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 
 from app.api.dependencies import get_state, get_default_user
 from app.ingestion.schema_registry import validate_entity_categories
@@ -15,20 +15,51 @@ router = APIRouter(prefix="/documents", tags=["documents"])
 
 
 @router.post("/ingest")
-async def ingest_document(file: UploadFile = File(...)):
-    """Ingest a Markdown document with OKF frontmatter.
+async def ingest_document(
+    file: UploadFile = File(...),
+    title: str | None = Form(None),
+    classification: str | None = Form(None),
+    department: str | None = Form(None),
+    author: str | None = Form(None),
+):
+    """Ingest a Markdown document with OKF frontmatter or a PDF document.
 
-    Pipeline: Parse → Detect PII → Tokenize → Build Graph → Store.
+    Pipeline: Parse/Convert to OKF → Detect PII → Tokenize → Build Graph → Store.
     """
     state = get_state()
+    filename = file.filename or "upload"
+    ext = Path(filename).suffix.lower()
 
-    # Read uploaded file
+    # Sanitize optional form parameters
+    opt_title = title if isinstance(title, str) and title.strip() else None
+    opt_class = classification if isinstance(classification, str) and classification.strip() else None
+    opt_dept = department if isinstance(department, str) and department.strip() else None
+    opt_author = author if isinstance(author, str) and author.strip() else None
+
+    # Read uploaded file content
     content = await file.read()
-    text = content.decode("utf-8")
 
-    # Stage 1: Parse OKF
+    # Stage 1: Parse or Convert into OKFDocument
     try:
-        doc = state.parser.parse_text(text, source_path=file.filename or "<upload>")
+        if ext == ".pdf" or (file.content_type and "pdf" in file.content_type):
+            doc = state.pdf_converter.convert(
+                content=content,
+                filename=filename,
+                title=opt_title,
+                classification=opt_class,
+                department=opt_dept,
+                author=opt_author,
+            )
+        elif ext in (".md", ".markdown", ".txt") or (file.content_type and "text" in file.content_type):
+            text = content.decode("utf-8")
+            doc = state.parser.parse_text(text, source_path=filename)
+        else:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Unsupported file format '{filename}'. Please upload a .md (OKF Markdown) or .pdf document.",
+            )
+    except UnicodeDecodeError as e:
+        raise HTTPException(status_code=422, detail=f"Failed to decode text file: {e}")
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e))
 

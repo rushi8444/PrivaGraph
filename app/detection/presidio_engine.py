@@ -34,8 +34,10 @@ class FallbackPIIDetector:
         (r"PRJ-\d{4}-[A-Z0-9]{4,}", "PROJECT_CODE", 0.95),
         (r"EMP-\d{5,}", "EMPLOYEE_ID", 0.95),
         (r"\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})\b", "CREDIT_CARD", 0.95),
-        # Capitalized two-word names (heuristic for PERSON)
-        (r"\b[A-Z][a-z]+ [A-Z][a-z]+\b", "PERSON", 0.86),
+        # Capitalized two-word names with optional hyphenated surname (heuristic for PERSON)
+        (r"\b[A-Z][a-z]+ [A-Z][a-z]+(?:-[A-Za-z]+)?\b", "PERSON", 0.86),
+        # US Street Address pattern: e.g. 2 Overlook Pointe, Sewickley, PA 15143
+        (r"\b\d+\s+[A-Za-z0-9\s,.-]+?(?:Street|St|Avenue|Ave|Road|Rd|Drive|Dr|Lane|Ln|Boulevard|Blvd|Court|Ct|Way|Circle|Cir|Pointe|Place|Pl|Terrace|Ter|Row)\b(?:,\s*[A-Za-z\s]+)?(?:,\s*[A-Z]{2}\s+\d{5})?", "LOCATION", 0.90),
     ]
 
     def detect(
@@ -57,13 +59,15 @@ class FallbackPIIDetector:
                 "senior engineer", "junior engineer", "software engineer", "staff engineer",
                 "vice president", "human resources", "compensation review", "project manager",
                 "product manager", "team lead", "executive officer", "finance team", "engineering team",
-                "chief executive", "chief technology", "chief financial", "security review"
+                "chief executive", "chief technology", "chief financial", "security review",
+                "social security", "security number", "security officer", "information security",
             }
 
             for match in re.finditer(pattern, text):
                 val = match.group(0)
-                if entity_type == "PERSON" and val.lower() in NON_PERSON_WORDS:
+                if entity_type == "PERSON" and (val.lower() in NON_PERSON_WORDS or "social security" in val.lower()):
                     continue
+
                 detected.append(
                     DetectedEntity(
                         entity_type=entity_type,
@@ -131,7 +135,16 @@ class PresidioDetectionEngine:
             score_threshold=min_confidence,
         )
 
-        results = self._resolve_overlaps(results)
+        # Expand PERSON entities if immediately followed by a hyphenated surname
+        expanded_results = []
+        for r in results:
+            if r.entity_type == "PERSON":
+                m = re.match(r"^-[A-Za-z]+(?:\b|$)", text[r.end :])
+                if m:
+                    r.end = r.end + len(m.group(0))
+            expanded_results.append(r)
+
+        results = self._resolve_overlaps(expanded_results)
 
         return [
             DetectedEntity(

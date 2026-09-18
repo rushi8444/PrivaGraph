@@ -41,11 +41,12 @@ class PromptSanitizer:
         (r"(?:fetch|curl|wget|http|https)://", "URL injection attempt"),
         # Vault probing
         (
-            r"(?:vault|password|secret|key|token|credential|api.?key)",
+            r"\b(?:vault\s+(?:contents?|passwords?|keys?|data|secrets?)|api[_\s\-]?keys?|master[_\s\-]?keys?|private[_\s\-]?keys?|token[_\s\-]?vault|encryption[_\s\-]?keys?)\b|"
+            r"\b(?:show|reveal|display|dump|extract|leak|expose|steal)\b(?:\s+\w+){0,4}\s+\b(?:vault|passwords?|credentials?|api[_\s\-]?keys?|master[_\s\-]?keys?|private[_\s\-]?keys?|token[_\s\-]?vault)\b",
             "Vault probing attempt",
         ),
         (
-            r"(?:decrypt|decryption|master.?key|private.?key)",
+            r"\b(?:decrypt\s+(?:all|the|tokens?|data)|decryption\s+key|master[_\s\-]?key|private[_\s\-]?key)\b",
             "Decryption probing attempt",
         ),
     ]
