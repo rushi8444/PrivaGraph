@@ -1,10 +1,16 @@
 import { useState, useRef } from 'react';
 import { api } from '../../api/client';
+import {
+  UploadCloudIcon,
+  CheckCircleIcon,
+  AlertTriangleIcon,
+  FileTextIcon,
+} from '../Common/Icons';
 
 export default function DocumentUploader({ onUploaded }) {
   const [dragover, setDragover] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [message, setMessage] = useState(null); // { type: 'error' | 'success', text: string }
+  const [message, setMessage] = useState(null);
   const fileInput = useRef(null);
 
   const handleFiles = async (files) => {
@@ -13,7 +19,7 @@ export default function DocumentUploader({ onUploaded }) {
     setMessage(null);
 
     let successCount = 0;
-    let errors = [];
+    const errors = [];
 
     for (const file of files) {
       const formData = new FormData();
@@ -32,12 +38,12 @@ export default function DocumentUploader({ onUploaded }) {
     if (errors.length > 0) {
       setMessage({
         type: 'error',
-        text: errors.join(' | ') + ' (Markdown files require OKF YAML frontmatter; PDFs must contain extractable text)',
+        text: `${errors.join(' | ')} (Markdown requires OKF frontmatter; PDFs must contain extractable text)`,
       });
     } else if (successCount > 0) {
       setMessage({
         type: 'success',
-        text: `Successfully ingested ${successCount} document${successCount > 1 ? 's' : ''}!`,
+        text: `Successfully ingested ${successCount} document${successCount > 1 ? 's' : ''} into knowledge graph.`,
       });
     }
 
@@ -47,9 +53,9 @@ export default function DocumentUploader({ onUploaded }) {
   };
 
   return (
-    <div style={{ marginBottom: 'var(--space-lg)' }}>
+    <div style={{ marginBottom: 'var(--space-md)' }}>
       <div
-        className={`upload-zone ${dragover ? 'dragover' : ''}`}
+        className={`upload-dropzone ${dragover ? 'dragover' : ''}`}
         onClick={() => fileInput.current?.click()}
         onDragOver={(e) => { e.preventDefault(); setDragover(true); }}
         onDragLeave={() => setDragover(false)}
@@ -59,15 +65,28 @@ export default function DocumentUploader({ onUploaded }) {
           handleFiles(e.dataTransfer.files);
         }}
       >
-        <div className="upload-zone-icon">📄</div>
-        <div className="upload-zone-text">
-          {uploading ? 'Ingesting & Tokenizing Document...' : 'Drop Markdown (.md) or PDF (.pdf) files here or click to browse'}
+        <div className="upload-icon-container">
+          <UploadCloudIcon size={24} />
         </div>
-        <div className="upload-zone-hint">Supports .md (with OKF YAML frontmatter) and .pdf (auto-converted to OKF)</div>
+        <div>
+          <div className="upload-primary-text">
+            {uploading ? 'Processing, Tokenizing & Linking Triples...' : 'Upload enterprise documents to knowledge graph'}
+          </div>
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '3px' }}>
+            Drag and drop files here, or click to browse your local filesystem
+          </p>
+        </div>
+
+        <div className="upload-formats-strip">
+          <span className="upload-format-tag">PDF (Native PyMuPDF)</span>
+          <span className="upload-format-tag">Markdown (.md with OKF YAML)</span>
+          <span className="upload-format-tag">Text (.txt)</span>
+        </div>
+
         <input
           ref={fileInput}
           type="file"
-          accept=".md,.pdf"
+          accept=".md,.pdf,.txt"
           multiple
           hidden
           onChange={(e) => handleFiles(e.target.files)}
@@ -77,17 +96,20 @@ export default function DocumentUploader({ onUploaded }) {
       {message && (
         <div
           style={{
-            marginTop: '12px',
-            padding: '12px 16px',
-            borderRadius: '8px',
-            fontSize: '14px',
-            background: message.type === 'error' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(16, 185, 129, 0.15)',
-            border: `1px solid ${message.type === 'error' ? 'rgba(239, 68, 68, 0.4)' : 'rgba(16, 185, 129, 0.4)'}`,
-            color: message.type === 'error' ? '#fca5a5' : '#86efac',
+            marginTop: '10px',
+            padding: '10px 14px',
+            borderRadius: 'var(--radius-md)',
+            fontSize: '0.825rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: message.type === 'error' ? 'var(--class-restricted-bg)' : 'var(--class-public-bg)',
+            border: `1px solid ${message.type === 'error' ? 'var(--class-restricted-border)' : 'var(--class-public-border)'}`,
+            color: message.type === 'error' ? 'var(--class-restricted-text)' : 'var(--class-public-text)',
           }}
         >
-          {message.type === 'error' ? '⚠️ ' : '✅ '}
-          {message.text}
+          {message.type === 'error' ? <AlertTriangleIcon size={14} /> : <CheckCircleIcon size={14} />}
+          <span>{message.text}</span>
         </div>
       )}
     </div>

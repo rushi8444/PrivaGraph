@@ -16,7 +16,6 @@ import pymupdf
 import yaml
 
 from app.models.document import (
-    AccessControl,
     Classification,
     DocumentMeta,
     GraphConfig,
@@ -54,7 +53,6 @@ class PDFToOKFConverter:
         classification: Classification | str | None = None,
         department: str | None = None,
         author: str | None = None,
-        allowed_roles: list[str] | None = None,
         entity_categories: list[str] | None = None,
     ) -> OKFDocument:
         """Convert a PDF file on disk to an OKFDocument."""
@@ -67,7 +65,6 @@ class PDFToOKFConverter:
             classification=classification,
             department=department,
             author=author,
-            allowed_roles=allowed_roles,
             entity_categories=entity_categories,
         )
 
@@ -80,7 +77,6 @@ class PDFToOKFConverter:
         classification: Classification | str | None = None,
         department: str | None = None,
         author: str | None = None,
-        allowed_roles: list[str] | None = None,
         entity_categories: list[str] | None = None,
     ) -> OKFDocument:
         """Convert in-memory PDF binary content to an OKFDocument.
@@ -92,7 +88,6 @@ class PDFToOKFConverter:
             classification: Optional Classification override.
             department: Optional department override.
             author: Optional author override.
-            allowed_roles: Optional allowed roles override for RBAC.
             entity_categories: Optional entity categories for privacy scanning.
 
         Returns:
@@ -231,21 +226,14 @@ class PDFToOKFConverter:
         dept_str = department if isinstance(department, str) and department.strip() else None
         resolved_dept = dept_str or "General"
 
-        # 7. Roles & Access Control
-        resolved_roles = (
-            allowed_roles
-            if allowed_roles is not None
-            else ["admin", "employee", "hr_manager", "cfo", "compliance_officer"]
-        )
-
-        # 8. Privacy scanning categories
+        # 7. Privacy scanning categories
         resolved_categories = (
             entity_categories
             if entity_categories is not None
             else self.DEFAULT_ENTITY_CATEGORIES
         )
 
-        # 9. Graph namespace
+        # 8. Graph namespace
         slug = re.sub(r"[^a-zA-Z0-9_]", "_", clean_stem).lower()
         namespace = f"pdf.{slug}"
 
@@ -264,10 +252,6 @@ class PDFToOKFConverter:
                 entity_categories=resolved_categories,
                 redaction_policy=RedactionPolicy.TOKENIZE,
                 min_confidence=0.85,
-            ),
-            access_control=AccessControl(
-                allowed_roles=resolved_roles,
-                denied_roles=[],
             ),
             graph=GraphConfig(
                 namespace=namespace,

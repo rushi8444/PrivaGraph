@@ -57,7 +57,7 @@ def test_state():
 @pytest.mark.asyncio
 async def test_case_1_single_fact_ssn_concise(test_state):
     """1. What is Priya Nandakumar's SSN? -> Concise answer with SSN, no property dump."""
-    user = UserContext(user_id="1", username="admin", roles=["admin"], department="Engineering")
+    user = UserContext(user_id="1", username="admin", department="Engineering")
     query = "What is Priya Nandakumar's SSN?"
 
     detector = test_state.get_detector()
@@ -82,7 +82,7 @@ async def test_case_2_department_boundary_filtering(test_state):
     """2. List every employee in the Engineering department along with their SSN.
     -> EXACTLY 5 employees (Priya, David, Marcus, Yuki, Ibrahim). Zero from Sales, Finance, Operations.
     """
-    user = UserContext(user_id="1", username="admin", roles=["admin"], department="Engineering")
+    user = UserContext(user_id="1", username="admin", department="Engineering")
     query = "List every employee in the Engineering department along with their SSN."
 
     detector = test_state.get_detector()
@@ -113,7 +113,7 @@ async def test_case_2_department_boundary_filtering(test_state):
 @pytest.mark.asyncio
 async def test_case_3_alias_and_address_resolution(test_state):
     """3. What is Harold Mbeki-Sorensen's home address? -> 2 Overlook Pointe, Sewickley, PA 15143."""
-    user = UserContext(user_id="1", username="admin", roles=["admin"], department="Executive")
+    user = UserContext(user_id="1", username="admin", department="Executive")
     query = "What is Harold Mbeki-Sorensen's home address?"
 
     detector = test_state.get_detector()
@@ -133,7 +133,7 @@ async def test_case_4_multi_hop_hierarchy_chain(test_state):
     """4. Who does Ibrahim Al-Sayed report to, and who does that person report to?
     -> Ibrahim reports to Priya Nandakumar, who reports to Marcus Feldstein.
     """
-    user = UserContext(user_id="1", username="admin", roles=["admin"], department="Engineering")
+    user = UserContext(user_id="1", username="admin", department="Engineering")
     query = "Who does Ibrahim Al-Sayed report to, and who does that person report to?"
 
     detector = test_state.get_detector()
@@ -156,7 +156,7 @@ async def test_case_5_predicate_promotion_filter(test_state):
     """5. Which employees got a salary increase specifically because of a promotion?
     -> Only employees with promotion reasons (David Okonkwo-Reyes, Julian Osei-Kastrati). Excludes merit increases.
     """
-    user = UserContext(user_id="1", username="admin", roles=["admin"], department="HR")
+    user = UserContext(user_id="1", username="admin", department="HR")
     query = "Which employees got a salary increase specifically because of a promotion?"
 
     detector = test_state.get_detector()
@@ -183,7 +183,7 @@ async def test_case_6_narrative_retention_terms(test_state):
     """6. What retention bonus terms were offered to the CEO and CFO?
     -> Retention bonus equal to 100% of base salary upon deal close.
     """
-    user = UserContext(user_id="1", username="admin", roles=["admin", "compliance_officer", "cfo"], department="Executive")
+    user = UserContext(user_id="1", username="admin", department="Executive")
     query = "What retention bonus terms were offered to the CEO and CFO?"
 
     detector = test_state.get_detector()

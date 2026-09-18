@@ -21,7 +21,7 @@ Instead of sending raw confidential text containing Personally Identifiable Info
 2. **Anti-Cartesian Table Isolation**: Parses structured markdown and delimited text tables into strictly row-scoped sentences, preventing cross-row entity contamination and combinatorial graph explosion.
 3. **PII Detection & Tokenization**: Detects and extracts sensitive entities using Microsoft Presidio (with regex fallback), replacing them with **deterministic HMAC-SHA256 tokens** (e.g., `⟦E7_PERSON_001⟧`, `⟦B1_SALARY_002⟧`).
 4. **Encrypted Local Vault**: Stores real entity values in a local **AES-256-GCM authenticated vault** with random 96-bit nonces.
-5. **Role-Aware Knowledge Graph**: Builds an anonymized multi-document **NetworkX Knowledge Graph** tagged with classification levels (`PUBLIC`, `INTERNAL`, `CONFIDENTIAL`, `RESTRICTED`) and Role-Based Access Control (RBAC) lists.
+5. **Enterprise Knowledge Graph**: Builds an anonymized multi-document **NetworkX Knowledge Graph** tagged with classification levels (`PUBLIC`, `INTERNAL`, `CONFIDENTIAL`, `RESTRICTED`).
 6. **Multi-Hop Traversal & Department Boundary Filtering**: Extracts k-hop subgraphs with strict organizational boundary controls (e.g., isolating Engineering employees without leaking Sales or Finance).
 7. **OWASP Prompt Injection Scanner**: Evaluates sanitized contexts against instruction overrides, role hijacking, exfiltration, and vault probing before cloud dispatch.
 8. **Local Answer Reconstruction & Offline Synthesis**: Passes only tokenized subgraph context to the cloud LLM, then locally reconstructs decrypted values—or falls back to a query-aware local **Answer Synthesizer** when operating offline.
@@ -42,8 +42,8 @@ Instead of sending raw confidential text containing Personally Identifiable Info
                         ▼ (Stage 3: Graph Construction & Alias Normalization)
     [SVO Triple Extractor] ──► [NetworkX Knowledge Graph (MultiDiGraph)]
                         │
-                        ▼ (Stage 4: Query Retrieval, Multi-Hop BFS & RBAC)
-    [Department Filter & Multi-Hop BFS] ──► [RBAC Subgraph Filter] ──► [OWASP Sanitizer]
+                        ▼ (Stage 4: Query Retrieval & Multi-Hop BFS)
+    [Department Filter & Multi-Hop BFS] ─────────────────────────────► [OWASP Sanitizer]
                         │
                         ▼ (Stage 5: LLM Proxying / Local Answer Synthesis)
     [Cloud LLM Gateway] (Tokens Only)  OR  [Local Query-Aware Answer Synthesizer]
@@ -61,8 +61,6 @@ Instead of sending raw confidential text containing Personally Identifiable Info
 - 📊 **Anti-Cartesian Table Parser**: Isolates table rows into independent subject-property pairs to prevent cross-contamination (e.g., employee A's SSN never associates with employee B's salary) with built-in circuit-breaker thresholds.
 - 🔑 **Deterministic Tokenization**: Keyed HMAC-SHA256 ensures identical entities across distinct documents produce the exact same token, enabling rich cross-document graph linkage.
 - 🏷️ **Alias & Compound Surname Resolution**: Normalizes hyphenated surnames (e.g., *Harold Mbeki-Sorensen* vs. *Harold Mbeki*) to the same canonical token while upgrading vault entries with full names.
-- 🛡️ **Authenticated Local Vault**: AES-256-GCM with 96-bit random nonces guarantees both confidentiality and ciphertext integrity.
-- 👥 **Fine-Grained Graph RBAC**: Subgraphs are filtered per-user against `allowed_roles` and `denied_roles`. Nodes and edges outside user privileges are pruned before prompt assembly.
 - 🏢 **Department Boundary Filtering**: Restricts query context strictly to the target department (e.g., Engineering) without leaking personnel from Sales, Finance, or Executive tiers.
 - 🔗 **Multi-Hop Hierarchy Traversal**: Traverses organizational reporting lines (e.g., "Who does X report to, and who does that person report to?").
 - 🧠 **Query-Aware Answer Synthesizer**: Produces concise, direct answers for specific property lookups (SSN, salary, address, promotions), honest reporting of absent facts, and provides high-fidelity offline fallback.
@@ -189,7 +187,6 @@ privacy-guard/
 │   ├── retrieval/            # Knowledge graph search & answer generation
 │   │   ├── context_builder.py# Graph neighborhood assembly & department filter
 │   │   ├── query_analyzer.py # Query keyword/token extractor & hyphen expansion
-│   │   ├── rbac_filter.py    # Node/edge filtering based on UserContext roles
 │   │   └── synthesizer.py    # Query-aware local answer synthesizer
 │   ├── security/             # Cryptographic security layer
 │   │   ├── cipher.py         # AES-256-GCM authenticated encryption/decryption
@@ -246,12 +243,6 @@ privacy:
     - EMAIL
   redaction_policy: "TOKENIZE"
   min_confidence: 0.85
-access_control:
-  allowed_roles:
-    - hr_manager
-    - cfo
-  denied_roles:
-    - intern
 graph:
   namespace: "hr.compensation"
   link_strategy: "cross_document"
@@ -268,7 +259,7 @@ She works in the Engineering department and reports to Marcus Feldstein.
 When uploading `.pdf` files, `PDFToOKFConverter` automatically:
 - Extracts text content and structural tables across all pages via PyMuPDF.
 - Synthesizes document metadata (computing a SHA-256 checksum ID `DOC-<hash>`).
-- Infers or applies user-supplied classification, department, author, and role restrictions.
+- Infers or applies user-supplied classification, department, and author.
 - Injects standard privacy scanning configurations.
 
 ---
@@ -293,7 +284,7 @@ When uploading `.pdf` files, `PDFToOKFConverter` automatically:
 2. **OWASP LLM Top 10 Mitigation**:
    - **LLM01 (Prompt Injection)**: Pattern analysis inspects retrieved context for instruction overrides and jailbreaks prior to prompt construction.
    - **LLM02 (Sensitive Information Disclosure)**: AES-256-GCM vault encryption ensures real PII cannot be exposed via prompt leakage.
-   - **LLM06 (Excessive Agency)**: Subgraphs are restricted via strict, immutable RBAC access control lists.
+   - **LLM06 (Excessive Agency)**: Subgraphs are restricted via strict department boundary filtering and multi-hop radius boundaries.
 3. **Anti-Cartesian Isolation**: Prevents tabular data from leaking relationships between unrelated entities across rows.
 4. **Cryptographic Auditability**: Every operation is logged with an incremental SHA-256 hash chain (`entry_hash = SHA-256(entry + prev_hash)`), ensuring non-repudiation and tamper detection.
 

@@ -9,7 +9,7 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 
 from app.api.dependencies import get_state, get_default_user
 from app.ingestion.schema_registry import validate_entity_categories
-from app.security.audit_log import DOCUMENT_INGESTED, ENTITY_DETECTED, TOKEN_CREATED
+from app.security.audit_log import DOCUMENT_INGESTED, DOCUMENT_DELETED, ENTITY_DETECTED, TOKEN_CREATED
 
 router = APIRouter(prefix="/documents", tags=["documents"])
 
@@ -157,3 +157,36 @@ async def get_document(doc_id: str):
     if not doc:
         raise HTTPException(status_code=404, detail=f"Document {doc_id} not found")
     return doc
+
+
+@router.delete("/{doc_id}")
+async def delete_document(doc_id: str):
+    """Delete a document from the system, pruning its triples, nodes, and vault tokens."""
+    state = get_state()
+    doc = state.documents.get(doc_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail=f"Document '{doc_id}' not found")
+
+    del state.documents[doc_id]
+    graph_stats = state.graph_builder.remove_document(doc_id)
+    tokens_purged = state.vault.delete_by_doc_id(doc_id)
+
+    state.audit.log(
+        DOCUMENT_DELETED,
+        {
+            "doc_id": doc_id,
+            "title": doc.get("title", ""),
+            "edges_removed": graph_stats.get("edges_removed", 0),
+            "nodes_removed": graph_stats.get("nodes_removed", 0),
+            "tokens_purged": tokens_purged,
+        },
+    )
+
+    return {
+        "status": "deleted",
+        "doc_id": doc_id,
+        "edges_removed": graph_stats.get("edges_removed", 0),
+        "nodes_removed": graph_stats.get("nodes_removed", 0),
+        "tokens_purged": tokens_purged,
+    }
+

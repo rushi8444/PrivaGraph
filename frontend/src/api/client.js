@@ -25,6 +25,7 @@ export const api = {
   },
   listDocuments: () => request('/documents'),
   getDocument: (id) => request(`/documents/${id}`),
+  deleteDocument: (id) => request(`/documents/${id}`, { method: 'DELETE' }),
   submitQuery: (query, model) =>
     request('/query', {
       method: 'POST',

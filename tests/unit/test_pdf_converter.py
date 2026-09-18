@@ -51,14 +51,12 @@ class TestPDFToOKFConverter:
             classification="CONFIDENTIAL",
             department="Cloud Engineering",
             author="custom.auditor@acme.corp",
-            allowed_roles=["cfo", "auditor"],
         )
 
         assert doc.header.document.title == "Executive Salary Review"
         assert doc.header.document.classification == Classification.CONFIDENTIAL
         assert doc.header.document.department == "Cloud Engineering"
         assert doc.header.document.author == "custom.auditor@acme.corp"
-        assert doc.header.access_control.allowed_roles == ["cfo", "auditor"]
 
     def test_convert_raw_bytes(self):
         """Convert in-memory PDF bytes directly."""

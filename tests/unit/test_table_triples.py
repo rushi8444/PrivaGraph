@@ -9,7 +9,7 @@ from app.graph.graph_builder import KnowledgeGraphBuilder, GraphContaminationErr
 from app.detection.presidio_engine import PresidioDetectionEngine
 from app.tokenization.tokenizer import DeterministicTokenizer
 from app.tokenization.vault import EncryptedVault
-from app.models.document import OKFHeader, DocumentMeta, Classification, PrivacyConfig, AccessControl, GraphConfig
+from app.models.document import OKFHeader, DocumentMeta, Classification, PrivacyConfig, GraphConfig
 
 
 SAMPLE_5_ROW_TABLE = """---

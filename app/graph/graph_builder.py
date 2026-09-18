@@ -1,7 +1,7 @@
 """NetworkX-based knowledge graph builder.
 
 Constructs a directed multigraph from extracted triples.
-Nodes carry metadata (entity_type, namespace, ACL roles).
+Nodes carry metadata (entity_type, namespace, classification).
 Edges carry metadata (predicate, source sentence, doc_id).
 """
 
@@ -49,16 +49,12 @@ class KnowledgeGraphBuilder:
                 doc_id=triple.doc_id,
                 namespace=header.graph.namespace,
                 classification=header.document.classification.value,
-                allowed_roles=header.access_control.allowed_roles,
-                denied_roles=header.access_control.denied_roles,
             )
             self._ensure_node(
                 triple.object,
                 doc_id=triple.doc_id,
                 namespace=header.graph.namespace,
                 classification=header.document.classification.value,
-                allowed_roles=header.access_control.allowed_roles,
-                denied_roles=header.access_control.denied_roles,
             )
             # Check if identical edge already exists
             existing_edges = self.graph.get_edge_data(triple.subject, triple.object) or {}
@@ -157,8 +153,6 @@ class KnowledgeGraphBuilder:
                     entity_type=data.get("entity_type"),
                     namespace=data.get("namespace", ""),
                     classification=data.get("classification", ""),
-                    allowed_roles=data.get("allowed_roles", []),
-                    denied_roles=data.get("denied_roles", []),
                     doc_ids=data.get("doc_ids", []),
                     label=node_id,
                 )
@@ -198,3 +192,41 @@ class KnowledgeGraphBuilder:
             namespaces=sorted(namespaces),
             entity_types=dict(entity_types),
         )
+
+    def remove_document(self, doc_id: str) -> dict[str, int]:
+        """Remove all edges and isolated nodes associated with a document.
+
+        Args:
+            doc_id: The document identifier to remove.
+
+        Returns:
+            Dict containing count of edges and nodes removed.
+        """
+        # 1. Collect and remove edges belonging to this document
+        edges_to_remove = [
+            (u, v, k)
+            for u, v, k, data in self.graph.edges(data=True, keys=True)
+            if data.get("doc_id") == doc_id
+        ]
+        for u, v, k in edges_to_remove:
+            self.graph.remove_edge(u, v, key=k)
+
+        # 2. Update nodes: remove doc_id from node metadata
+        nodes_to_remove = []
+        for node, data in list(self.graph.nodes(data=True)):
+            doc_ids = data.get("doc_ids", [])
+            if doc_id in doc_ids:
+                doc_ids = [d for d in doc_ids if d != doc_id]
+                data["doc_ids"] = doc_ids
+            # If node has no remaining linked documents AND no connected edges, remove it
+            if not doc_ids and self.graph.degree(node) == 0:
+                nodes_to_remove.append(node)
+
+        for node in nodes_to_remove:
+            self.graph.remove_node(node)
+
+        return {
+            "edges_removed": len(edges_to_remove),
+            "nodes_removed": len(nodes_to_remove),
+        }
+

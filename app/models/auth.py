@@ -1,4 +1,4 @@
-"""Authentication and RBAC models."""
+"""Authentication and user context models."""
 
 from __future__ import annotations
 
@@ -10,5 +10,4 @@ class UserContext(BaseModel):
 
     user_id: str
     username: str
-    roles: list[str] = []
     department: str = ""

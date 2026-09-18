@@ -1,26 +1,44 @@
 import { useState, useRef, useEffect } from 'react';
 import MessageBubble from './MessageBubble';
 import { api } from '../../api/client';
+import {
+  ShieldIcon,
+  SendIcon,
+  SearchIcon,
+  AlertTriangleIcon,
+  LockIcon,
+  NetworkIcon,
+  TerminalIcon,
+} from '../Common/Icons';
+
+
 
 export default function ChatPanel() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showContext, setShowContext] = useState({});
+  const [errorMessage, setErrorMessage] = useState(null);
   const messagesEnd = useRef(null);
+  const textareaRef = useRef(null);
 
   useEffect(() => {
     messagesEnd.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, [messages, loading]);
 
-  const handleSend = async () => {
-    const query = input.trim();
+  const handleSendQuery = async (queryText) => {
+    const query = (queryText || input).trim();
     if (!query || loading) return;
 
+    setErrorMessage(null);
     const userMsg = { id: Date.now(), role: 'user', text: query };
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
     setLoading(true);
+
+    // Reset textarea height
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+    }
 
     try {
       const data = await api.submitQuery(query);
@@ -33,9 +51,15 @@ export default function ChatPanel() {
       };
       setMessages((prev) => [...prev, assistantMsg]);
     } catch (err) {
+      setErrorMessage(err.message);
       setMessages((prev) => [
         ...prev,
-        { id: Date.now() + 1, role: 'assistant', text: `⚠️ Error: ${err.message}` },
+        {
+          id: Date.now() + 1,
+          role: 'assistant',
+          text: `Query failed: ${err.message}`,
+          metadata: { model_used: 'error-handler', entities_reconstructed: 0 },
+        },
       ]);
     } finally {
       setLoading(false);
@@ -45,65 +69,123 @@ export default function ChatPanel() {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      handleSend();
+      handleSendQuery();
     }
   };
 
-  const toggleContext = (msgId) => {
-    setShowContext((prev) => ({ ...prev, [msgId]: !prev[msgId] }));
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+    // Auto-adjust height up to 160px
+    e.target.style.height = 'auto';
+    e.target.style.height = `${Math.min(e.target.scrollHeight, 160)}px`;
   };
 
   return (
     <div className="chat-container">
-      <div className="chat-messages">
+
+
+      {/* Messages Scroll Area */}
+      <div className="chat-messages-area">
         {messages.length === 0 ? (
-          <div className="chat-empty">
-            <div className="chat-empty-icon">🛡️</div>
-            <div className="chat-empty-title">Privacy-Preserving Query</div>
-            <div className="chat-empty-hint">
-              Ask questions about your enterprise documents. All PII is tokenized
-              before reaching the cloud LLM and reconstructed locally.
+          <div className="chat-empty-state">
+            <div className="chat-empty-icon-box">
+              <ShieldIcon size={24} />
+            </div>
+            <div className="chat-empty-title">Confidential Query Gateway</div>
+            <p className="chat-empty-description">
+              Query across enterprise repositories with zero raw PII cloud exposure.
+              Entities are tokenized deterministically via keyed HMAC-SHA256, mapped to an in-memory
+              knowledge graph, and resolved through an encrypted local AES-256-GCM vault.
+            </p>
+
+            <div className="chat-empty-features">
+              <div className="chat-empty-feature-card">
+                <h4>
+                  <LockIcon size={14} style={{ color: 'var(--status-verified)' }} />
+                  Local Vault Protection
+                </h4>
+                <p>Real names, SSNs, and salaries are isolated on-premises in encrypted memory.</p>
+              </div>
+              <div className="chat-empty-feature-card">
+                <h4>
+                  <NetworkIcon size={14} style={{ color: 'var(--status-verified)' }} />
+                  Multi-Hop BFS Traversal
+                </h4>
+                <p>Resolves reporting hierarchies and department boundaries without cross-leakage.</p>
+              </div>
+              <div className="chat-empty-feature-card">
+                <h4>
+                  <TerminalIcon size={14} style={{ color: 'var(--status-verified)' }} />
+                  Offline Synthesizer
+                </h4>
+                <p>Generates deterministic natural answers directly from graph triples when offline.</p>
+              </div>
             </div>
           </div>
         ) : (
-          messages.map((msg) => (
-            <div key={msg.id}>
-              <MessageBubble message={msg} />
-              {msg.graphContext && (
-                <>
-                  <div
-                    className="chat-context-toggle"
-                    onClick={() => toggleContext(msg.id)}
-                  >
-                    {showContext[msg.id] ? '▾ Hide' : '▸ Show'} anonymized context sent to LLM
-                  </div>
-                  {showContext[msg.id] && (
-                    <div className="chat-context-panel">{msg.graphContext}</div>
-                  )}
-                </>
-              )}
-            </div>
-          ))
+          messages.map((msg) => <MessageBubble key={msg.id} message={msg} />)
         )}
+
+        {loading && (
+          <div className="message-entry assistant animate-in">
+            <div className="message-card" style={{ padding: '12px 16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div className="sidebar-pulse-dot" style={{ width: '8px', height: '8px' }} />
+              <span style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', fontFamily: 'var(--font-mono)' }}>
+                Traversing knowledge graph & verifying trust boundary...
+              </span>
+            </div>
+          </div>
+        )}
+
         <div ref={messagesEnd} />
       </div>
-      <div className="chat-input-row">
+
+      {/* Error alert if any */}
+      {errorMessage && (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '8px 12px',
+            background: 'var(--class-restricted-bg)',
+            border: '1px solid var(--class-restricted-border)',
+            borderRadius: 'var(--radius-md)',
+            color: 'var(--class-restricted-text)',
+            fontSize: '0.8rem',
+          }}
+        >
+          <AlertTriangleIcon size={14} />
+          <span>{errorMessage}</span>
+        </div>
+      )}
+
+      {/* Input Form */}
+      <div className="chat-input-container">
         <textarea
-          className="chat-input"
+          ref={textareaRef}
+          className="chat-input-textarea"
           rows={1}
-          placeholder="Ask a question about your documents..."
+          placeholder="Ask a question..."
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           disabled={loading}
         />
-        <button
-          className="chat-send-btn"
-          onClick={handleSend}
-          disabled={loading || !input.trim()}
-        >
-          {loading ? '⏳' : 'Send'}
-        </button>
+        <div className="chat-input-footer">
+          <div className="chat-input-hint">
+            <span>Press Enter to send, Shift+Enter for newline</span>
+          </div>
+          <button
+            type="button"
+            className="btn btn-primary btn-sm"
+            onClick={() => handleSendQuery()}
+            disabled={loading || !input.trim()}
+          >
+            <SendIcon size={13} />
+            <span>Send</span>
+          </button>
+        </div>
       </div>
     </div>
   );

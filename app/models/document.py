@@ -51,13 +51,6 @@ class PrivacyConfig(BaseModel):
     min_confidence: float = Field(default=0.85, ge=0.0, le=1.0)
 
 
-class AccessControl(BaseModel):
-    """RBAC access control from OKF header."""
-
-    allowed_roles: list[str] = []
-    denied_roles: list[str] = []
-
-
 class GraphConfig(BaseModel):
     """Knowledge graph configuration from OKF header."""
 
@@ -72,7 +65,6 @@ class OKFHeader(BaseModel):
     okf_version: str = "1.0"
     document: DocumentMeta
     privacy: PrivacyConfig
-    access_control: AccessControl = AccessControl()
     graph: GraphConfig
 
 

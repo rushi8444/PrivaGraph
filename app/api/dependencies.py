@@ -7,7 +7,6 @@ from app.tokenization.tokenizer import DeterministicTokenizer
 from app.tokenization.vault import EncryptedVault
 from app.detection.presidio_engine import PresidioDetectionEngine
 from app.retrieval.context_builder import ContextBuilder
-from app.retrieval.rbac_filter import RBACFilter
 from app.retrieval.query_analyzer import QueryAnalyzer
 from app.proxy.llm_gateway import LLMGateway
 from app.proxy.reconstructor import TokenReconstructor
@@ -40,11 +39,9 @@ class AppState:
         self.graph_builder = KnowledgeGraphBuilder()
 
         # Stage 4: Retrieval
-        self.rbac_filter = RBACFilter()
         self.query_analyzer = QueryAnalyzer()
         self.context_builder = ContextBuilder(
             graph_builder=self.graph_builder,
-            rbac_filter=self.rbac_filter,
             query_analyzer=self.query_analyzer,
         )
 
@@ -80,6 +77,5 @@ def get_default_user() -> UserContext:
     return UserContext(
         user_id="default",
         username="admin",
-        roles=["hr_manager", "cfo", "compliance_officer", "admin"],
         department="Engineering",
     )

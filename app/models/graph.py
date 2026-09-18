@@ -12,8 +12,6 @@ class GraphNode(BaseModel):
     entity_type: str | None = None
     namespace: str = ""
     classification: str = ""
-    allowed_roles: list[str] = []
-    denied_roles: list[str] = []
     doc_ids: list[str] = []
     label: str | None = None
 

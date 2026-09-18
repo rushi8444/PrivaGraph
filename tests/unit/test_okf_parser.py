@@ -29,8 +29,6 @@ class TestOKFParser:
         assert doc.header.privacy.min_confidence == 0.85
         assert "PERSON" in doc.header.privacy.entity_categories
         assert "SALARY" in doc.header.privacy.entity_categories
-        assert "hr_manager" in doc.header.access_control.allowed_roles
-        assert "intern" in doc.header.access_control.denied_roles
         assert doc.header.graph.namespace == "hr.compensation"
         assert len(doc.sentences) > 0
         assert "John Smith" in doc.body
@@ -41,8 +39,6 @@ class TestOKFParser:
 
         assert doc.header.document.id == "FIN-2026-00089"
         assert doc.header.document.classification == Classification.RESTRICTED
-        assert "cfo" in doc.header.access_control.allowed_roles
-        assert "hr_manager" in doc.header.access_control.denied_roles
 
     def test_parse_text_directly(self):
         """Parse OKF content from a string."""
@@ -59,8 +55,6 @@ privacy:
   entity_categories: [PERSON]
   redaction_policy: "TOKENIZE"
   min_confidence: 0.9
-access_control:
-  allowed_roles: []
 graph:
   namespace: "test.ns"
 ---

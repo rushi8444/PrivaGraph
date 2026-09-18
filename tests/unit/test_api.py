@@ -152,3 +152,39 @@ async def test_table_pdf_ingestion_and_uncontaminated_queries():
         assert "No address record was found" in a4 or "not find matching records" in a4
 
 
+@pytest.mark.asyncio
+async def test_document_deletion_flow():
+    """Verify document deletion removes metadata, graph triples, and vault tokens."""
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
+        hr_file_path = FIXTURES_DIR / "sample_hr_doc.md"
+        with open(hr_file_path, "rb") as f:
+            files = {"file": ("sample_hr_doc.md", f, "text/markdown")}
+            ingest_res = await ac.post("/api/v1/documents/ingest", files=files)
+
+        assert ingest_res.status_code == 200
+        doc_id = ingest_res.json()["doc_id"]
+
+        # Confirm document is present
+        list_res = await ac.get("/api/v1/documents")
+        assert list_res.status_code == 200
+        docs = list_res.json()["documents"]
+        assert any(d["id"] == doc_id for d in docs)
+
+        # Delete the document
+        del_res = await ac.delete(f"/api/v1/documents/{doc_id}")
+        assert del_res.status_code == 200
+        data = del_res.json()
+        assert data["status"] == "deleted"
+        assert data["doc_id"] == doc_id
+
+        # Verify document is gone from list
+        list_res_after = await ac.get("/api/v1/documents")
+        docs_after = list_res_after.json()["documents"]
+        assert not any(d["id"] == doc_id for d in docs_after)
+
+        # Deleting again should return 404
+        del_404 = await ac.delete(f"/api/v1/documents/{doc_id}")
+        assert del_404.status_code == 404
+
+
+

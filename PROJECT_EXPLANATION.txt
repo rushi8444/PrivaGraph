@@ -34,7 +34,7 @@ TABLE OF CONTENTS
    5.5 AES-256-GCM Authenticated Encryption & Value Upgrades
    5.6 Cryptographic Hash-Chained Audit Trail (Tamper-Evidence)
    5.7 OWASP LLM Top 10 Mitigations (Injection, Exfiltration, Probing)
-   5.8 Fine-Grained Graph RBAC Filtering
+   5.8 Department Boundary & Organizational Scoping
 6. TOP 30 INTERVIEW QUESTIONS & MODEL ANSWERS
 7. TECH STACK SUMMARY & PRODUCTION ROADMAP (MVP VS ENTERPRISE SCALE)
 ================================================================================
@@ -75,8 +75,8 @@ The PrivaGraph Solution:
    locally with authenticated 256-bit AES-GCM and stored inside a local secure vault.
 6. Department Boundary & Multi-Hop Traversal: Queries are scoped with department
    boundaries (preventing leaks across divisions) and traverse multi-hop reporting lines.
-7. RBAC & OWASP Sanitization: Subgraphs retrieved for a user query are filtered
-   against user roles (RBAC) and scanned for prompt injection before being sent.
+7. OWASP Sanitization: Subgraphs retrieved for a user query are scoped with department
+   boundaries and scanned for prompt injection before being sent.
 8. Query-Aware Local Answer Synthesis: When cloud models return tokens, local proxy
    reconstruction replaces tokens with decrypted values. If run offline or if the
    cloud LLM fails, a local Answer Synthesizer generates fluent, concise, single-property
@@ -113,10 +113,9 @@ The PrivaGraph Solution:
                                         |
                                         v
 +-------------------------------------------------------------------------------+
-| STAGE 4: QUERY RETRIEVAL, DEPARTMENT FILTERING & RBAC                         |
+| STAGE 4: QUERY RETRIEVAL & DEPARTMENT BOUNDARY FILTERING                      |
 | - QueryAnalyzer: keyword extraction, token matching, hyphen expansion         |
 | - ContextBuilder: department boundary filtering & multi-hop BFS traversal     |
-| - RBACFilter: node- and edge-level role filtering (allowed/denied roles)      |
 +---------------------------------------+---------------------------------------+
                                         |
                                         v
@@ -248,14 +247,7 @@ Step 3: Graph Neighborhood Traversal (Multi-Hop BFS)
 - SubgraphExtractor traverses the NetworkX MultiDiGraph using Breadth-First Search (BFS)
   around all candidate seed nodes and composes them into a unified candidate subgraph.
 
-Step 4: Fine-Grained Role-Based Access Control (RBAC)
-- RBACFilter inspects the authenticated UserContext (user roles):
-  * If user has ANY denied_role -> Node is REMOVED.
-  * If allowed_roles is specified and user lacks ALL allowed roles -> Node is REMOVED.
-  * If no ACL restrictions exist -> Node is KEPT (PUBLIC).
-  * Edges are retained ONLY if both source AND target nodes are accessible.
-
-Step 5: Subgraph Context Serialization
+Step 4: Subgraph Context Serialization
 - The accessible subgraph is serialized into an anonymized markdown format:
   # Knowledge Graph Context
   ## Entities: - ⟦E7_PERSON_001⟧ (namespace: hr.compensation), ...
@@ -340,7 +332,6 @@ Step 9: Audit Logging & Client Response
      * `self.vault` = EncryptedVault()
      * `self.triple_extractor` = TripleExtractor()
      * `self.graph_builder` = KnowledgeGraphBuilder()
-     * `self.rbac_filter` = RBACFilter()
      * `self.query_analyzer` = QueryAnalyzer()
      * `self.context_builder` = ContextBuilder(...)
      * `self.llm_gateway` = LLMGateway()
@@ -502,9 +493,6 @@ Step 9: Audit Logging & Client Response
     - Analyzes queries, extracts explicit tokens and keywords.
     - Expands hyphenated search terms (e.g. "mbeki-sorensen" -> "mbeki", "sorensen") to ensure node matching.
 
-27. app/retrieval/rbac_filter.py
-    - Prunes nodes and edges that violate the user's `UserContext` roles.
-    - Ensures both source and target nodes are authorized before retaining edges.
 
 28. app/retrieval/subgraph_extractor.py
     - Multi-seed BFS traversal extracting k-hop graph neighborhoods.
@@ -669,11 +657,10 @@ Step 9: Audit Logging & Client Response
 5.7 OWASP LLM TOP 10 MITIGATIONS
 - LLM01 (Prompt Injection): Scanned by PromptSanitizer before prompt assembly.
 - LLM02 (Sensitive Information Disclosure): Raw PII is never sent to cloud models.
-- LLM06 (Excessive Agency): Read-only RBAC subgraphs restrict model knowledge.
+- LLM06 (Excessive Agency): Scoped department boundary filtering restricts model knowledge.
 
-5.8 FINE-GRAINED GRAPH RBAC FILTERING
-- Node-Level ACL: Nodes inherit `allowed_roles` and `denied_roles`.
-- Edge Pruning: An edge is pruned if either endpoint is unauthorized.
+5.8 DEPARTMENT BOUNDARY & ORGANIZATIONAL SCOPING
+- Scopes seed entities strictly to entities matching the query's target department.
 
 
 ================================================================================
@@ -715,8 +702,7 @@ Q5: How does the query pipeline work from user input to final answer?
 A5: (1) QueryAnalyzer extracts tokens and expanded keywords.
     (2) ContextBuilder checks department boundaries and sets department seed nodes.
     (3) SubgraphExtractor runs multi-hop BFS around seeds in NetworkX.
-    (4) RBACFilter prunes nodes and edges that the user's roles are not allowed to view.
-    (5) PromptSanitizer scans context for prompt injection patterns.
+    (4) PromptSanitizer scans context for prompt injection patterns.
     (6) LLMGateway sends tokenized context + question to OpenAI/Anthropic/Gemini.
     (7) If cloud fails or is offline, local AnswerSynthesizer generates the answer.
     (8) TokenReconstructor decrypts tokens locally from EncryptedVault.
@@ -770,16 +756,15 @@ A13: The system includes a zero-dependency `FallbackPIIDetector` using compiled 
      and rule-based heuristics that detect SSNs, emails, phones, salaries, credit cards,
      project codes, employee IDs, and names, ensuring the application remains functional.
 
-Q14: How does RBAC work across the knowledge graph?
-A14: Every node and edge in the NetworkX graph stores metadata: `classification`,
-     `allowed_roles`, and `denied_roles`. When a user queries the graph, `RBACFilter`
-     evaluates their `UserContext.roles`. If the user has a denied role or lacks an allowed
-     role, the node is pruned. Edges are removed if either endpoint is inaccessible.
+Q14: How does organizational boundary filtering work across the knowledge graph?
+A14: When a query targets a specific organizational division (e.g., Engineering),
+     ContextBuilder identifies nodes linked via `IN_DEPARTMENT` and scopes BFS traversal
+     strictly to that boundary, preventing personnel from other divisions from being leaked.
 
 Q15: What is the Open Knowledge Format (OKF)?
 A15: OKF is a structured Markdown specification with YAML frontmatter. It allows document
      owners to declaratively specify security classification, PII scanning policies,
-     minimum confidence thresholds, allowed/denied roles, and knowledge graph namespaces.
+     minimum confidence thresholds, and knowledge graph namespaces.
 
 Q16: How does the system handle pronouns and multi-sentence relationships?
 A16: `TripleExtractor` performs lightweight coreference resolution. When a sentence begins
@@ -825,7 +810,7 @@ A22: In `DeterministicTokenizer.tokenize_text()`, detected entities are sorted i
 Q23: What OWASP LLM Top 10 vulnerabilities are addressed?
 A23: LLM01 (Prompt Injection via `PromptSanitizer`), LLM02 (Sensitive Information Disclosure
      via deterministic tokenization + vault encryption + `ResponseFilter`), and LLM06
-     (Excessive Agency via strict read-only RBAC graph filtering).
+     (Excessive Agency via strict department boundary filtering).
 
 Q24: How does the system resolve overlapping entity detections?
 A24: `_resolve_overlaps()` compares overlapping character spans and selects the candidate

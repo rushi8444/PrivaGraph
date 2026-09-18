@@ -112,3 +112,15 @@ class EncryptedVault:
     def count(self) -> int:
         """Return the number of stored tokens."""
         return len(self._store)
+
+    def delete_by_doc_id(self, doc_id: str) -> int:
+        """Purge all stored tokens associated with a document ID."""
+        to_delete = [
+            token
+            for token, entry in self._store.items()
+            if entry.get("doc_id") == doc_id
+        ]
+        for token in to_delete:
+            del self._store[token]
+        return len(to_delete)
+
