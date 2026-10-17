@@ -14,6 +14,7 @@ from app.proxy.prompt_sanitizer import PromptSanitizer
 from app.security.audit_log import AuditLogger
 from app.ingestion.okf_parser import OKFParser
 from app.ingestion.pdf_converter import PDFToOKFConverter
+from app.ingestion.csv_converter import CSVToOKFConverter
 from app.graph.triple_extractor import TripleExtractor
 from app.models.auth import UserContext
 
@@ -28,6 +29,7 @@ class AppState:
         # Stage 1: Ingestion
         self.parser = OKFParser()
         self.pdf_converter = PDFToOKFConverter()
+        self.csv_converter = CSVToOKFConverter()
 
         # Stage 2: Detection & Tokenization
         self.detector: PresidioDetectionEngine | None = None  # Lazy-loaded

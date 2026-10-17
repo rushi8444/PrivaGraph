@@ -140,6 +140,12 @@ class TableParser:
             if any(cells):
                 clean_rows.append(cells)
 
+        return self.parse_cell_rows(clean_rows, raw_text="\n".join(lines))
+
+    def parse_cell_rows(
+        self, clean_rows: list[list[str]], raw_text: str = ""
+    ) -> ParsedTable | None:
+        """Build a ParsedTable from already-split rows (first row = headers)."""
         if len(clean_rows) < 2:
             return None
 
@@ -170,7 +176,7 @@ class TableParser:
         return ParsedTable(
             headers=headers,
             rows=table_rows,
-            raw_text="\n".join(lines),
+            raw_text=raw_text,
         )
 
     def table_to_row_sentences(

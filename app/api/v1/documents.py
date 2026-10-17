@@ -50,13 +50,22 @@ async def ingest_document(
                 department=opt_dept,
                 author=opt_author,
             )
+        elif ext in (".csv", ".xlsx", ".xls") or (file.content_type and "csv" in file.content_type):
+            doc = state.csv_converter.convert(
+                content=content,
+                filename=filename,
+                title=opt_title,
+                classification=opt_class,
+                department=opt_dept,
+                author=opt_author,
+            )
         elif ext in (".md", ".markdown", ".txt") or (file.content_type and "text" in file.content_type):
             text = content.decode("utf-8")
             doc = state.parser.parse_text(text, source_path=filename)
         else:
             raise HTTPException(
                 status_code=400,
-                detail=f"Unsupported file format '{filename}'. Please upload a .md (OKF Markdown) or .pdf document.",
+                detail=f"Unsupported file format '{filename}'. Please upload a .md (OKF Markdown), .pdf, .csv, or .xlsx document.",
             )
     except UnicodeDecodeError as e:
         raise HTTPException(status_code=422, detail=f"Failed to decode text file: {e}")
