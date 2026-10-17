@@ -106,7 +106,7 @@ DEFAULT_MODEL=gpt-4o
 pip install -e .
 
 # Or install dependencies directly via pip:
-pip install fastapi uvicorn cryptography pydantic-settings python-dotenv pyyaml httpx networkx pymupdf presidio-analyzer presidio-anonymizer spacy pytest pytest-asyncio
+pip install fastapi uvicorn cryptography pydantic-settings python-dotenv pyyaml httpx networkx pymupdf openpyxl presidio-analyzer presidio-anonymizer spacy pytest pytest-asyncio
 ```
 
 Run the FastAPI server:

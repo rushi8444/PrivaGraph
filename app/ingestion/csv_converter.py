@@ -35,8 +35,8 @@ class CSVToOKFConverter:
         self.table_parser = TableParser()
 
     @staticmethod
-    def _read_xlsx_rows(content: bytes, filename: str) -> list[list[str]]:
-        """Read the first non-empty sheet of an .xlsx workbook as rows of strings."""
+    def _read_xlsx_sheets(content: bytes, filename: str) -> list[tuple[str, list[list[str]]]]:
+        """Read all non-empty sheets of an .xlsx workbook as (sheet_title, rows) tuples."""
         try:
             from openpyxl import load_workbook
         except ImportError as e:  # pragma: no cover
@@ -47,6 +47,7 @@ class CSVToOKFConverter:
         except Exception as e:
             raise ValueError(f"'{filename}' is not a readable .xlsx workbook: {e}") from e
 
+        sheets_data = []
         try:
             for ws in wb.worksheets:
                 rows = [
@@ -55,10 +56,16 @@ class CSVToOKFConverter:
                 ]
                 rows = [r for r in rows if any(r)]
                 if rows:
-                    return rows
+                    sheets_data.append((ws.title or "Sheet", rows))
         finally:
             wb.close()
-        return []
+        return sheets_data
+
+    @classmethod
+    def _read_xlsx_rows(cls, content: bytes, filename: str) -> list[list[str]]:
+        """Backwards-compatible helper: read first non-empty sheet."""
+        sheets = cls._read_xlsx_sheets(content, filename)
+        return sheets[0][1] if sheets else []
 
     def convert(
         self,
@@ -71,23 +78,39 @@ class CSVToOKFConverter:
         author: str | None = None,
         entity_categories: list[str] | None = None,
     ) -> OKFDocument:
-        """Convert raw CSV bytes to an OKFDocument.
+        """Convert raw CSV or Excel .xlsx bytes to an OKFDocument.
 
         Raises:
-            ValueError: If the CSV is empty, undecodable, or has no data rows.
+            ValueError: If the file is empty, undecodable, or has no data rows.
         """
         if not content:
-            raise ValueError(f"Empty CSV file: '{filename}'")
+            raise ValueError(f"Empty document file: '{filename}'")
 
-        # .xlsx is a ZIP archive; legacy .xls is an OLE2 container.
+        # Legacy binary .xls is an OLE2 container.
         if content.startswith(b"\xd0\xcf\x11\xe0"):
             raise ValueError(
                 f"'{filename}' is a legacy .xls workbook, which is not supported. "
                 "Open it in Excel and use File > Save As > '.xlsx' (or CSV UTF-8), then upload again."
             )
 
-        if content.startswith(b"PK\x03\x04"):
-            rows = self._read_xlsx_rows(content, filename)
+        is_xlsx = content.startswith(b"PK\x03\x04") or Path(filename).suffix.lower() in (".xlsx", ".xlsm")
+
+        all_sentences: list[str] = []
+        all_hints: list[dict] = []
+
+        if is_xlsx:
+            sheets_data = self._read_xlsx_sheets(content, filename)
+            if not sheets_data:
+                raise ValueError(
+                    f"No usable data rows in '{filename}'. "
+                    "Excel workbook has no non-empty sheets."
+                )
+            for sheet_name, rows in sheets_data:
+                table = self.table_parser.parse_cell_rows(rows, infer_types=True)
+                if table and table.rows:
+                    sents, hints = self.table_parser.table_to_typed_sentences(table)
+                    all_sentences.extend(sents)
+                    all_hints.extend(hints)
         else:
             try:
                 text = content.decode("utf-8-sig")
@@ -104,21 +127,27 @@ class CSVToOKFConverter:
                 for row in csv.reader(io.StringIO(text), dialect)
                 if any(c.strip() for c in row)
             ]
+            table = self.table_parser.parse_cell_rows(rows, infer_types=True)
+            if table and table.rows:
+                sents, hints = self.table_parser.table_to_typed_sentences(table)
+                all_sentences.extend(sents)
+                all_hints.extend(hints)
 
-        table = self.table_parser.parse_cell_rows(rows, infer_types=True)
-        if table is None or not table.rows:
+        if not all_sentences:
             raise ValueError(
                 f"No usable data rows in '{filename}'. "
-                "CSV needs a header row and at least one row with a value in the first column."
+                "File needs a header row and at least one row with data."
             )
 
         resolved_dept = department if isinstance(department, str) and department.strip() else "General"
-        sentences, sentence_hints = self.table_parser.table_to_typed_sentences(table)
+        sentences = all_sentences
+        sentence_hints = all_hints
         body = "\n".join(sentences)
 
         clean_stem = re.sub(r"[^\w\-_]", "", Path(filename).stem) or "doc"
         content_hash = hashlib.sha256(content[:1024]).hexdigest()[:6]
-        doc_id = f"CSV-{clean_stem[:24]}-{content_hash}".upper()
+        prefix = "XLSX" if is_xlsx else "CSV"
+        doc_id = f"{prefix}-{clean_stem[:24]}-{content_hash}".upper()
 
         resolved_title = (
             title if isinstance(title, str) and title.strip()
@@ -137,6 +166,7 @@ class CSVToOKFConverter:
             resolved_class = Classification.INTERNAL
 
         slug = re.sub(r"[^a-zA-Z0-9_]", "_", clean_stem).lower()
+        ns_prefix = "xlsx" if is_xlsx else "csv"
 
         header = OKFHeader(
             okf_version="1.0",
@@ -154,7 +184,7 @@ class CSVToOKFConverter:
                 min_confidence=0.85,
             ),
             graph=GraphConfig(
-                namespace=f"csv.{slug}",
+                namespace=f"{ns_prefix}.{slug}",
                 link_strategy=LinkStrategy.CROSS_DOCUMENT,
                 max_traversal_depth=3,
             ),

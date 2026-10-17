@@ -149,15 +149,16 @@ export default function DocumentUploader({ onUploaded }) {
 
         <div className="upload-formats-strip">
           <span className="upload-format-tag">PDF (Native PyMuPDF)</span>
+          <span className="upload-format-tag">Excel (.xlsx workbooks)</span>
+          <span className="upload-format-tag">CSV (.csv tables)</span>
           <span className="upload-format-tag">Markdown (.md with OKF YAML)</span>
           <span className="upload-format-tag">Text (.txt)</span>
-          <span className="upload-format-tag">CSV (.csv tables)</span>
         </div>
 
         <input
           ref={fileInput}
           type="file"
-          accept=".md,.pdf,.txt,.csv"
+          accept=".md,.pdf,.txt,.csv,.xlsx"
           multiple
           hidden
           onChange={(e) => handleFiles(e.target.files)}

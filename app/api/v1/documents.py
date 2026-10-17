@@ -210,8 +210,13 @@ async def ingest_document(
     is_pdf_type = file.content_type and "pdf" in file.content_type
     is_csv_type = file.content_type and "csv" in file.content_type
     is_txt_type = file.content_type and "text" in file.content_type
+    is_xlsx_type = file.content_type and (
+        "excel" in file.content_type
+        or "spreadsheet" in file.content_type
+        or "openxmlformats" in file.content_type
+    )
 
-    if ext not in supported_exts and not (is_pdf_type or is_csv_type or is_txt_type):
+    if ext not in supported_exts and not (is_pdf_type or is_csv_type or is_txt_type or is_xlsx_type):
         raise HTTPException(
             status_code=400,
             detail=f"Unsupported file format '{filename}'. Please upload a .md (OKF Markdown), .pdf, .csv, or .xlsx document.",
