@@ -48,6 +48,8 @@ export default function ChatPanel() {
         text: data.answer,
         metadata: data.metadata,
         graphContext: data.graph_context,
+        citations: data.citations || [],
+        zeroPiiProof: data.zero_pii_proof || null,
       };
       setMessages((prev) => [...prev, assistantMsg]);
     } catch (err) {

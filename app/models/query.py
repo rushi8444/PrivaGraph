@@ -24,12 +24,37 @@ class QueryMetadata(BaseModel):
     latency_ms: int = 0
 
 
+class Citation(BaseModel):
+    """Source document citation for a retrieved fact."""
+
+    doc_id: str
+    title: str
+    department: str = "General"
+    classification: str = "INTERNAL"
+    snippet: str | None = None
+    predicate: str | None = None
+
+
+class ZeroPIIProof(BaseModel):
+    """Audit proof demonstrating that only anonymized tokens left the private perimeter."""
+
+    tokenized_query: str
+    anonymized_context: str
+    raw_llm_response: str
+    tokens_detected: list[str] = []
+    entities_reconstructed: int = 0
+    vault_storage_mode: str = "AES-256-GCM Encrypted (Local-Only)"
+    egress_destination: str = "Cloud LLM (Zero Plaintext PII)"
+
+
 class QueryResponse(BaseModel):
     """Final response returned to the user."""
 
     answer: str
     metadata: QueryMetadata = QueryMetadata()
     graph_context: str | None = None
+    citations: list[Citation] = []
+    zero_pii_proof: ZeroPIIProof | None = None
 
 
 class LLMRequest(BaseModel):

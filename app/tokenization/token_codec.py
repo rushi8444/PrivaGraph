@@ -26,3 +26,6 @@ def find_tokens(text: str) -> list[str]:
 def is_token(value: str) -> bool:
     """Check if a string is a valid PrivaGraph token."""
     return bool(TOKEN_PATTERN.fullmatch(value))
+
+
+extract_tokens = find_tokens

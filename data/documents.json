@@ -1,12 +1,12 @@
 {
-  "XLSX-INTERNSHIP_COMPANIES_-45748C": {
-    "id": "XLSX-INTERNSHIP_COMPANIES_-45748C",
-    "title": "Internship Companies ",
-    "classification": "INTERNAL",
-    "department": "General",
-    "author": "System Ingest",
-    "created": "2026-10-17",
-    "entity_count": 1505,
-    "triple_count": 1075
+  "HR-2026-00142": {
+    "id": "HR-2026-00142",
+    "title": "Q3 Compensation Review",
+    "classification": "CONFIDENTIAL",
+    "department": "Human Resources",
+    "author": "jane.doe@acme.corp",
+    "created": "2026-07-15",
+    "entity_count": 6,
+    "triple_count": 3
   }
 }

@@ -4,7 +4,6 @@ import { LockIcon, ShieldIcon } from '../Common/Icons';
 const pageTitles = {
   '/query': 'Privacy-Preserving Query Engine',
   '/documents': 'Document Management & Ingestion',
-  '/graph': 'Knowledge Graph Explorer',
   '/audit': 'Cryptographic Security Ledger',
 };
 

@@ -11,7 +11,6 @@ import {
 const navItems = [
   { to: '/query', icon: ChatIcon, label: 'Query Engine' },
   { to: '/documents', icon: FileTextIcon, label: 'Documents' },
-  { to: '/graph', icon: NetworkIcon, label: 'Knowledge Graph' },
   { to: '/audit', icon: AuditIcon, label: 'Security Ledger' },
 ];
 

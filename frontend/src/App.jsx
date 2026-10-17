@@ -3,7 +3,6 @@ import Sidebar from './components/Layout/Sidebar';
 import TopBar from './components/Layout/TopBar';
 import DocumentsPage from './pages/DocumentsPage';
 import QueryPage from './pages/QueryPage';
-import GraphPage from './pages/GraphPage';
 import AuditPage from './pages/AuditPage';
 
 export default function App() {
@@ -17,7 +16,7 @@ export default function App() {
             <Route path="/" element={<Navigate to="/query" replace />} />
             <Route path="/documents" element={<DocumentsPage />} />
             <Route path="/query" element={<QueryPage />} />
-            <Route path="/graph" element={<GraphPage />} />
+            <Route path="/graph" element={<Navigate to="/query" replace />} />
             <Route path="/audit" element={<AuditPage />} />
           </Routes>
         </main>
