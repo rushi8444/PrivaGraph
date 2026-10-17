@@ -26,6 +26,18 @@ class Triple:
 
 # Canonical predicates mapped from verb phrases and attributes (longest phrase first)
 VERB_MAP: dict[str, str] = {
+    "has google maps link": "HAS_LINK",
+    "has google maps": "HAS_LINK",
+    "has maps link": "HAS_LINK",
+    "has website": "HAS_WEBSITE",
+    "has rating": "HAS_RATING",
+    "has reviews": "HAS_REVIEWS",
+    "has details": "HAS_DETAILS",
+    "has operating hours": "HAS_HOURS",
+    "has hours": "HAS_HOURS",
+    "has phone": "HAS_PHONE",
+    "has notes": "HAS_DETAILS",
+    "has category": "HAS_CATEGORY",
     "manages a budget of": "MANAGES_BUDGET",
 
     "reports to": "REPORTS_TO",
@@ -170,7 +182,7 @@ class TripleExtractor:
                             text_after = clause[verb_pos + len(verb_phrase):].strip().strip(".!?,")
                             # Strip trailing qualifier words like "department" for IN_DEPARTMENT
                             clean_text_after = re.sub(r"\s+department\b", "", text_after, flags=re.IGNORECASE).strip()
-                            if clean_text_after and len(clean_text_after) < 100:
+                            if clean_text_after and len(clean_text_after) < 1000:
                                 triples.append(
                                     Triple(
                                         subject=subj,
@@ -219,7 +231,7 @@ class TripleExtractor:
                         else:
                             text_after = tokenized_sentence[verb_pos + len(verb_phrase):].strip().strip(".!?,")
                             clean_text_after = re.sub(r"\s+department\b", "", text_after, flags=re.IGNORECASE).strip()
-                            if clean_text_after and len(clean_text_after) < 100:
+                            if clean_text_after and len(clean_text_after) < 1000:
                                 triples.append(
                                     Triple(
                                         subject=effective_subject,
@@ -243,11 +255,11 @@ class TripleExtractor:
                 if "deal close" in sentence_lower and "deal close" not in ret_val.lower():
                     ret_val = f"{ret_val} upon deal close"
 
-                if "chief executive officer" in sentence_lower or "ceo" in sentence_lower:
+                if "chief executive" in sentence_lower or re.search(r"\bceo\b", sentence_lower):
                     triples.append(Triple(subject="CEO", predicate="HAS_RETENTION_BONUS", object=ret_val, source_sentence=tokenized_sentence, doc_id=doc_id))
-                if "chief financial officer" in sentence_lower or "cfo" in sentence_lower:
+                if "chief financial" in sentence_lower or re.search(r"\bcfo\b", sentence_lower):
                     triples.append(Triple(subject="CFO", predicate="HAS_RETENTION_BONUS", object=ret_val, source_sentence=tokenized_sentence, doc_id=doc_id))
-                if "chief operating officer" in sentence_lower or "coo" in sentence_lower:
+                if "chief operating" in sentence_lower or re.search(r"\bcoo\b", sentence_lower):
                     triples.append(Triple(subject="COO", predicate="HAS_RETENTION_BONUS", object=ret_val, source_sentence=tokenized_sentence, doc_id=doc_id))
 
                 for t in tokens_in_sentence:

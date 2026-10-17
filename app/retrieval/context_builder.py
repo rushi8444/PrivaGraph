@@ -68,7 +68,13 @@ class ContextBuilder:
                 if data.get("predicate") == "IN_DEPARTMENT" and target_dept in str(v).lower()
             ]
             if dept_nodes:
-                mentioned_tokens = dept_nodes
+                if mentioned_tokens:
+                    # Enforce department boundary: only retain entities that belong to target_dept
+                    filtered = [t for t in mentioned_tokens if t in dept_nodes]
+                    mentioned_tokens = filtered
+                else:
+                    # Roster/aggregate query for the entire department
+                    mentioned_tokens = dept_nodes
 
         # Step 2: If no explicit tokens or department filter, keyword-match against graph nodes
         if not mentioned_tokens:
@@ -79,9 +85,9 @@ class ContextBuilder:
             return "# Knowledge Graph Context\n\nNo matching entities found in the graph."
 
         # Step 3: Extract subgraphs around each matched entity (using multi-hop for hierarchies)
-        traversal_depth = self.max_depth
-        if "report" in query_lower or "hierarchy" in query_lower or "manager" in query_lower:
-            traversal_depth = max(traversal_depth, 3)
+        traversal_depth = 1
+        if any(w in query_lower for w in ("report", "hierarchy", "manager", "supervisor", "chain", "who does", "leads", "oversees")):
+            traversal_depth = max(self.max_depth, 3)
 
         combined_subgraph = nx.MultiDiGraph()
         for token in mentioned_tokens:

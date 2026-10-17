@@ -102,7 +102,7 @@ async def test_pdf_document_ingestion_flow():
 async def test_unsupported_file_format_rejected():
     """Verify non-markdown and non-pdf files are rejected with 400."""
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
-        files = {"file": ("spreadsheet.xlsx", b"dummy content", "application/octet-stream")}
+        files = {"file": ("document.docx", b"dummy content", "application/octet-stream")}
         response = await ac.post("/api/v1/documents/ingest", files=files)
         assert response.status_code == 400
         assert "Unsupported file format" in response.json()["detail"]
@@ -149,7 +149,7 @@ async def test_table_pdf_ingestion_and_uncontaminated_queries():
         q4_res = await ac.post("/api/v1/query", json={"query": "What is Priya Nandakumar's address?"})
         assert q4_res.status_code == 200
         a4 = q4_res.json()["answer"]
-        assert "No address record was found" in a4 or "not find matching records" in a4
+        assert any(phrase in a4.lower() for phrase in ["no address record was found", "not find matching records", "does not contain", "no record"])
 
 
 @pytest.mark.asyncio

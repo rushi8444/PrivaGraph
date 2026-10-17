@@ -121,25 +121,10 @@ class PDFToOKFConverter:
                 re.IGNORECASE,
             )
             if roster_match:
-                dept_raw = roster_match.group(1).strip().lower()
-                if "engineering" in dept_raw:
-                    page_dept = "Engineering"
-                elif "sales" in dept_raw:
-                    page_dept = "Sales"
-                elif "operations" in dept_raw:
-                    page_dept = "Operations"
-                elif "marketing" in dept_raw:
-                    page_dept = "Marketing"
-                elif "customer success" in dept_raw:
-                    page_dept = "Customer Success"
-                elif "legal" in dept_raw:
-                    page_dept = "Legal"
-                elif "finance" in dept_raw:
-                    page_dept = "Finance"
-                elif "executive" in dept_raw:
-                    page_dept = "Executive"
-                else:
-                    page_dept = roster_match.group(1).strip()
+                dept_raw = roster_match.group(1).strip()
+                # Clean up any section numbering prefix (e.g. "3. Engineering" -> "Engineering")
+                dept_clean = re.sub(r"^(?:section\s+)?(?:\d+[a-z]?\.?\s*[-:]?\s*)?", "", dept_raw, flags=re.IGNORECASE).strip()
+                page_dept = dept_clean.title() if (dept_clean.islower() or dept_clean.isupper()) else dept_clean
 
             table_bboxes = []
             try:

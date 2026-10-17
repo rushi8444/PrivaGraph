@@ -38,7 +38,7 @@ class PromptSanitizer:
             r"(?:output|print|show|reveal|display)\s+(?:the\s+)?(?:system|original|real|hidden)\s+",
             "Data exfiltration attempt",
         ),
-        (r"(?:fetch|curl|wget|http|https)://", "URL injection attempt"),
+        (r"\b(?:fetch|curl|wget)\s+https?://|(?:fetch|curl|wget)://", "URL injection attempt"),
         # Vault probing
         (
             r"\b(?:vault\s+(?:contents?|passwords?|keys?|data|secrets?)|api[_\s\-]?keys?|master[_\s\-]?keys?|private[_\s\-]?keys?|token[_\s\-]?vault|encryption[_\s\-]?keys?)\b|"

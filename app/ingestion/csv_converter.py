@@ -105,7 +105,7 @@ class CSVToOKFConverter:
                 if any(c.strip() for c in row)
             ]
 
-        table = self.table_parser.parse_cell_rows(rows)
+        table = self.table_parser.parse_cell_rows(rows, infer_types=True)
         if table is None or not table.rows:
             raise ValueError(
                 f"No usable data rows in '{filename}'. "
@@ -113,7 +113,7 @@ class CSVToOKFConverter:
             )
 
         resolved_dept = department if isinstance(department, str) and department.strip() else "General"
-        sentences = self.table_parser.table_to_row_sentences(table)
+        sentences, sentence_hints = self.table_parser.table_to_typed_sentences(table)
         body = "\n".join(sentences)
 
         clean_stem = re.sub(r"[^\w\-_]", "", Path(filename).stem) or "doc"
@@ -160,4 +160,10 @@ class CSVToOKFConverter:
             ),
         )
 
-        return OKFDocument(source_path=filename, header=header, body=body, sentences=sentences)
+        return OKFDocument(
+            source_path=filename,
+            header=header,
+            body=body,
+            sentences=sentences,
+            sentence_hints=sentence_hints,
+        )

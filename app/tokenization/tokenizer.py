@@ -27,6 +27,8 @@ class DeterministicTokenizer:
         self.secret_key = secret_key or settings.TOKENIZER_SECRET_KEY.encode()
         # Maps (entity_type, hmac_digest) → token_id for deterministic reuse
         self._token_map: dict[str, str] = {}
+        # Maps token_id → lookup_key for collision detection and verification
+        self._reverse_token_map: dict[str, str] = {}
         self._type_counters: dict[str, int] = defaultdict(int)
 
     def tokenize(self, entity: DetectedEntity) -> TokenizedEntity:
@@ -42,12 +44,12 @@ class DeterministicTokenizer:
         norm_type = entity.entity_type.upper().strip()
         norm_val = entity.original_value.strip().lower()
 
-        # For PERSON entities, normalize hyphenated compound surnames to canonical base name
-        # to ensure e.g. "Harold Mbeki-Sorensen" and "Harold Mbeki" map to the same canonical token.
+        # For PERSON entities, normalize hyphenated compound surnames only when preceded by a space
+        # (e.g. "Harold Mbeki-Sorensen" -> "harold mbeki"), preserving hyphenated first names (e.g. "Jean-Luc")
         import re
         if norm_type in ("PERSON", "NAME"):
-            norm_val = re.sub(r"-[a-z]+$", "", norm_val)
-
+            if " " in norm_val:
+                norm_val = re.sub(r"(\s+[a-z]+)-[a-z]+$", r"\1", norm_val)
 
         digest = hmac.new(
             self.secret_key,
@@ -59,9 +61,18 @@ class DeterministicTokenizer:
 
         if lookup_key not in self._token_map:
             prefix = digest[:2].upper()
-            suffix_num = int(digest[2:6], 16) % 1000
-            token = f"\u27e6{prefix}_{norm_type}_{suffix_num:03d}\u27e7"
+            entropy = digest[2:10].upper()
+            token = f"\u27e6{prefix}_{norm_type}_{entropy}\u27e7"
+
+            # Collision guard: guarantee zero collisions even across millions of entities
+            offset = 10
+            while token in self._reverse_token_map and self._reverse_token_map[token] != lookup_key:
+                extra = digest[offset : offset + 4].upper()
+                token = f"\u27e6{prefix}_{norm_type}_{entropy}{extra}\u27e7"
+                offset += 4
+
             self._token_map[lookup_key] = token
+            self._reverse_token_map[token] = lookup_key
 
         return TokenizedEntity(
             token=self._token_map[lookup_key],

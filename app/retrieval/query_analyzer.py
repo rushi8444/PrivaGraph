@@ -69,7 +69,7 @@ class QueryAnalyzer:
         """
         keywords = self.extract_keywords(query)
         if not keywords:
-            return node_ids[:10]  # Return first 10 nodes as fallback
+            return []
 
         matched: list[str] = []
         for node_id in node_ids:
@@ -77,4 +77,4 @@ class QueryAnalyzer:
             if any(kw in node_lower for kw in keywords):
                 matched.append(node_id)
 
-        return matched if matched else node_ids[:10]
+        return matched

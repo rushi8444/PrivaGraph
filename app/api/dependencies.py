@@ -19,6 +19,11 @@ from app.graph.triple_extractor import TripleExtractor
 from app.models.auth import UserContext
 
 
+import json
+import uuid
+from datetime import datetime, timezone
+from app.config import settings
+
 class AppState:
     """Shared application state holding all pipeline components.
 
@@ -34,11 +39,11 @@ class AppState:
         # Stage 2: Detection & Tokenization
         self.detector: PresidioDetectionEngine | None = None  # Lazy-loaded
         self.tokenizer = DeterministicTokenizer()
-        self.vault = EncryptedVault()
+        self.vault = EncryptedVault(db_path=settings.DATA_DIR / "vault.db")
 
         # Stage 3: Knowledge Graph
         self.triple_extractor = TripleExtractor()
-        self.graph_builder = KnowledgeGraphBuilder()
+        self.graph_builder = KnowledgeGraphBuilder(persist_path=settings.DATA_DIR / "graph.json")
 
         # Stage 4: Retrieval
         self.query_analyzer = QueryAnalyzer()
@@ -55,8 +60,85 @@ class AppState:
         # Security
         self.audit = AuditLogger()
 
-        # Document registry
-        self.documents: dict[str, dict] = {}
+        # Document registry (persisted to data/documents.json)
+        self.documents: dict[str, dict] = self._load_documents()
+
+        # Asynchronous ingestion job registry
+        self.jobs: dict[str, dict] = {}
+
+    def create_job(self, filename: str) -> str:
+        """Create and register a new asynchronous ingestion job."""
+        job_id = f"job_{uuid.uuid4().hex[:12]}"
+        now = datetime.now(timezone.utc).isoformat()
+        self.jobs[job_id] = {
+            "job_id": job_id,
+            "filename": filename,
+            "status": "queued",
+            "stage": "queued",
+            "progress_pct": 0,
+            "error": None,
+            "result": None,
+            "created_at": now,
+            "updated_at": now,
+        }
+        return job_id
+
+    def update_job(
+        self,
+        job_id: str,
+        status: str,
+        stage: str,
+        progress_pct: int,
+        error: str | None = None,
+        result: dict | None = None,
+    ) -> None:
+        """Update job stage, completion percentage, and execution status."""
+        if job_id in self.jobs:
+            self.jobs[job_id].update({
+                "status": status,
+                "stage": stage,
+                "progress_pct": progress_pct,
+                "error": error,
+                "result": result,
+                "updated_at": datetime.now(timezone.utc).isoformat(),
+            })
+
+    def get_job(self, job_id: str) -> dict | None:
+        """Retrieve job status dictionary by job ID."""
+        return self.jobs.get(job_id)
+
+    def list_jobs(self) -> list[dict]:
+        """List all tracked ingestion jobs sorted by creation timestamp."""
+        return sorted(self.jobs.values(), key=lambda j: j.get("created_at", ""), reverse=True)
+
+    def _load_documents(self) -> dict[str, dict]:
+        """Load document metadata registry from disk."""
+        doc_path = settings.DATA_DIR / "documents.json"
+        if doc_path.exists():
+            try:
+                with open(doc_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        return {}
+
+    def save_documents(self) -> None:
+        """Persist document metadata registry to disk."""
+        doc_path = settings.DATA_DIR / "documents.json"
+        doc_path.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            with open(doc_path, "w", encoding="utf-8") as f:
+                json.dump(self.documents, f, indent=2)
+        except Exception:
+            pass
+
+    def reset_state(self) -> None:
+        """Completely reset in-memory and persistent state for clean test runs."""
+        self.graph_builder.clear()
+        self.vault.clear()
+        self.documents.clear()
+        self.jobs.clear()
+        self.save_documents()
 
     def get_detector(self) -> PresidioDetectionEngine:
         """Lazy-load the Presidio detection engine (heavy spaCy model)."""

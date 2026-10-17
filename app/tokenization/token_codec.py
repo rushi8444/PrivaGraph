@@ -7,8 +7,8 @@ from __future__ import annotations
 
 import re
 
-# Pattern to match tokens in text: ⟦XX_TYPE_NNN⟧
-TOKEN_PATTERN = re.compile(r"\u27e6[A-Z0-9]{2}_[A-Z_]+_\d{3}\u27e7")
+# Pattern to match tokens in text: ⟦XX_TYPE_NNN...⟧ (supports both legacy 3-digit and high-entropy 8+ char tokens)
+TOKEN_PATTERN = re.compile(r"\u27e6[A-Z0-9]{2}_[A-Z_]+_[A-Z0-9]{3,16}\u27e7")
 
 
 def find_tokens(text: str) -> list[str]:

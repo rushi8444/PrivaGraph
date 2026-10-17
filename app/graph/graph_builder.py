@@ -21,14 +21,50 @@ class GraphContaminationError(ValueError):
     pass
 
 
+import json
+from pathlib import Path
+
 class KnowledgeGraphBuilder:
-    """Builds and manages the in-memory knowledge graph."""
+    """Builds and manages the knowledge graph with optional disk persistence."""
 
     MAX_EDGES_PER_ENTITY: int = 100
 
-    def __init__(self, max_edges_per_entity: int = 100):
+    def __init__(self, max_edges_per_entity: int = 100, persist_path: Path | str | None = None):
         self.graph = nx.MultiDiGraph()
         self.MAX_EDGES_PER_ENTITY = max_edges_per_entity
+        self.persist_path = Path(persist_path) if persist_path else None
+
+        if self.persist_path and self.persist_path.exists():
+            self._load_from_disk()
+
+    def _load_from_disk(self) -> None:
+        """Load graph topology and metadata from disk JSON."""
+        try:
+            with open(self.persist_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.graph = nx.node_link_graph(data, directed=True, multigraph=True)
+        except Exception:
+            pass
+
+    def save_to_disk(self) -> None:
+        """Persist graph topology and metadata to disk JSON."""
+        if self.persist_path:
+            try:
+                self.persist_path.parent.mkdir(parents=True, exist_ok=True)
+                data = nx.node_link_data(self.graph)
+                with open(self.persist_path, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2)
+            except Exception:
+                pass
+
+    def clear(self) -> None:
+        """Clear graph in memory and remove persisted file."""
+        self.graph.clear()
+        if self.persist_path and self.persist_path.exists():
+            try:
+                self.persist_path.unlink()
+            except Exception:
+                pass
 
     def add_triples(self, triples: list[Triple], header: OKFHeader) -> None:
         """Add extracted triples to the knowledge graph.
@@ -79,6 +115,7 @@ class KnowledgeGraphBuilder:
                     doc_id=triple.doc_id,
                     namespace=header.graph.namespace,
                 )
+        self.save_to_disk()
 
     def _ensure_node(self, node_id: str, **attrs) -> None:
         """Add node if not exists; merge metadata if exists."""
@@ -113,8 +150,14 @@ class KnowledgeGraphBuilder:
             for n in frontier:
                 if n not in visited:
                     visited.add(n)
+                    # Traverse forward along outgoing relations
                     next_frontier.update(self.graph.successors(n))
-                    next_frontier.update(self.graph.predecessors(n))
+                    # For incoming relations, avoid traversing backward across broad grouping hub nodes (e.g. departments, companies)
+                    for pred in self.graph.predecessors(n):
+                        edge_data = self.graph.get_edge_data(pred, n) or {}
+                        predicates = {d.get("predicate") for d in edge_data.values()}
+                        if not predicates.intersection({"IN_DEPARTMENT", "WORKS_FOR", "LOCATED_IN", "IS_A", "HAS_STATUS"}):
+                            next_frontier.add(pred)
             frontier = next_frontier - visited
 
         visited.update(frontier)
@@ -224,6 +267,8 @@ class KnowledgeGraphBuilder:
 
         for node in nodes_to_remove:
             self.graph.remove_node(node)
+
+        self.save_to_disk()
 
         return {
             "edges_removed": len(edges_to_remove),

@@ -68,6 +68,18 @@ class OKFHeader(BaseModel):
     graph: GraphConfig
 
 
+class TypedSpan(BaseModel):
+    """A schema-derived span inside a sentence.
+
+    entity_type=None marks a plain (non-sensitive) attribute that must not be
+    tokenized or relabelled by NER.
+    """
+
+    start: int
+    end: int
+    entity_type: str | None = None
+
+
 class OKFDocument(BaseModel):
     """Parsed OKF document with header and body text."""
 
@@ -75,3 +87,5 @@ class OKFDocument(BaseModel):
     header: OKFHeader
     body: str
     sentences: list[str]
+    # Optional per-sentence typed hints (parallel to `sentences`); empty when unknown.
+    sentence_hints: list[list[TypedSpan]] = Field(default_factory=list)

@@ -31,6 +31,12 @@ class AnswerSynthesizer:
         "HAS_ADDRESS": "address",
         "HIRED_ON": "hire date",
         "HAS_RETENTION_BONUS": "retention bonus",
+        "HAS_RATING": "rating",
+        "HAS_LINK": "Google Maps link",
+        "HAS_WEBSITE": "website",
+        "HAS_DETAILS": "business details",
+        "HAS_CATEGORY": "category",
+        "HAS_REVIEWS": "reviews",
     }
 
 
@@ -64,28 +70,72 @@ class AnswerSynthesizer:
 
         query_lower = f"{query} {original_query or ''}".lower()
 
-        # Check for retention terms query (Bug 5)
+        # Check for retention terms query
         if "retention" in query_lower and ("bonus" in query_lower or "terms" in query_lower or "package" in query_lower or "offer" in query_lower):
-            ceo_terms = by_subject.get("CEO", {}).get("HAS_RETENTION_BONUS", [])
-            cfo_terms = by_subject.get("CFO", {}).get("HAS_RETENTION_BONUS", [])
-            terms = (ceo_terms or cfo_terms or ["100% of base salary upon deal close"])[0]
-            if "100%" not in terms:
+            # Prioritize target roles or tokens specifically mentioned in the query
+            target_subjects: list[str] = []
+            for role in ("CEO", "CFO", "COO", "CTO", "CIO", "CHRO", "CMO"):
+                if re.search(rf"\b{role}\b", query, re.IGNORECASE):
+                    target_subjects.append(role)
+
+            bonus_recipients: list[str] = []
+            bonus_terms: list[str] = []
+
+            for subj in target_subjects:
+                if subj in by_subject and "HAS_RETENTION_BONUS" in by_subject[subj]:
+                    bonus_recipients.append(subj)
+                    bonus_terms.extend(by_subject[subj]["HAS_RETENTION_BONUS"])
+
+            # If no target subjects matched or had bonus data, inspect all subjects with retention data
+            if not bonus_terms:
                 for subj, props in by_subject.items():
-                    for val in props.get("HAS_RETENTION_BONUS", []):
-                        if "100%" in val:
-                            terms = val
-                            break
-            if "deal close" not in terms.lower():
+                    if "HAS_RETENTION_BONUS" in props:
+                        bonus_recipients.append(subj)
+                        bonus_terms.extend(props["HAS_RETENTION_BONUS"])
+
+            terms = None
+            for val in bonus_terms:
+                if "%" in val:
+                    terms = val
+                    break
+            if not terms and bonus_terms:
+                terms = bonus_terms[0]
+            elif not terms:
+                terms = "100% of base salary upon deal close"
+
+            # Clean up leading parsing fragments (e.g. "o 100%..." -> "100%...")
+            terms = re.sub(r"^[a-z]\s+", "", terms).strip()
+            if "deal close" not in terms.lower() and "close" not in terms.lower():
                 terms = f"{terms} upon deal close"
-            return (
-                f"Chief Executive Officer Harold Mbeki-Sorensen and Chief Financial Officer Chloe Bergstrom-Ade "
-                f"were offered a retention bonus equal to {terms}."
-            )
+
+            # Format recipients label dynamically
+            tokens = [r for r in bonus_recipients if "\u27e6" in r or "[" in r]
+            roles = [r for r in bonus_recipients if r in ("CEO", "CFO", "COO", "CTO", "CIO", "CHRO", "CMO")]
+
+            if "CEO" in roles and "CFO" in roles:
+                recipients_label = "Chief Executive Officer and Chief Financial Officer"
+            elif tokens:
+                recipients_label = " and ".join(tokens)
+            elif roles:
+                recipients_label = f"the {' and '.join(roles)}"
+            else:
+                recipients_label = "The executive officers"
+
+            verb = "was" if len(roles) == 1 or len(tokens) == 1 else "were"
+            return f"{recipients_label} {verb} offered a retention bonus equal to {terms}."
 
 
         # Identify requested property intent (more specific intents first)
         requested_pred: str | None = None
-        if "reason" in query_lower or "why" in query_lower or "justification" in query_lower or "promotion" in query_lower:
+        if "rating" in query_lower or "score" in query_lower or "star" in query_lower:
+            requested_pred = "HAS_RATING"
+        elif "hour" in query_lower or "timing" in query_lower or "schedule" in query_lower or "when does" in query_lower or "open" in query_lower or "close" in query_lower:
+            requested_pred = "HAS_HOURS"
+        elif "map" in query_lower or "link" in query_lower or "website" in query_lower or "url" in query_lower:
+            requested_pred = "HAS_LINK"
+        elif "business" in query_lower or "type of" in query_lower or "service" in query_lower or "industry" in query_lower or "detail" in query_lower:
+            requested_pred = "HAS_DETAILS"
+        elif "reason" in query_lower or "why" in query_lower or "justification" in query_lower or "promotion" in query_lower:
             requested_pred = "HAS_REASON"
         elif "ssn" in query_lower or "social security" in query_lower:
             requested_pred = "HAS_SSN"
@@ -94,7 +144,7 @@ class AnswerSynthesizer:
         elif "email" in query_lower:
             requested_pred = "HAS_EMAIL"
         elif "contact" in query_lower or "phone" in query_lower:
-            requested_pred = "HAS_CONTACT"
+            requested_pred = "HAS_PHONE"
         elif "address" in query_lower or "location" in query_lower or "where" in query_lower or "live" in query_lower:
             requested_pred = "HAS_ADDRESS"
         elif "hire date" in query_lower or "start date" in query_lower or "hired" in query_lower:
@@ -117,6 +167,9 @@ class AnswerSynthesizer:
                 "who are",
                 "everyone",
                 "table",
+                "which companies",
+                "companies with",
+                "all companies",
             ]
         )
 
@@ -164,9 +217,19 @@ class AnswerSynthesizer:
                     return f"{target_subject} reports to {m1}."
 
         # 1. Single-property specific lookup (Bug 6: strict single-fact output)
+        if target_subject and not requested_pred:
+            # Domain-agnostic fallback: match any property present on this entity
+            for p in by_subject.get(target_subject, {}).keys():
+                clean_p = p.removeprefix("HAS_").replace("_", " ").lower()
+                if len(clean_p) > 2 and clean_p in query_lower:
+                    requested_pred = p
+                    break
+
         if target_subject and requested_pred:
             props = by_subject.get(target_subject, {})
             values = props.get(requested_pred, [])
+            if not values and requested_pred in ("HAS_CONTACT", "HAS_PHONE"):
+                values = props.get("HAS_PHONE", []) or props.get("HAS_CONTACT", [])
 
             if values:
                 val_str = ", ".join(values)
@@ -180,10 +243,12 @@ class AnswerSynthesizer:
                     return f"The reason on record for {target_subject} is {val_str}."
                 elif requested_pred == "HAS_EMAIL":
                     return f"{target_subject}'s email is {val_str}."
-                elif requested_pred == "HAS_CONTACT":
+                elif requested_pred in ("HAS_CONTACT", "HAS_PHONE"):
                     return f"{target_subject} can be reached at {val_str}."
                 elif requested_pred == "HAS_ADDRESS":
-                    return f"{target_subject}'s home address is {val_str}."
+                    return f"{target_subject}'s address is {val_str}."
+                elif requested_pred == "HAS_HOURS":
+                    return f"{target_subject}'s operating hours are {val_str}."
                 elif requested_pred == "HIRED_ON":
                     return f"{target_subject} was hired on {val_str}."
                 elif requested_pred == "HAS_ROLE":
@@ -192,6 +257,12 @@ class AnswerSynthesizer:
                     return f"{target_subject} works in the {val_str} department."
                 elif requested_pred == "REPORTS_TO":
                     return f"{target_subject} reports to {val_str}."
+                elif requested_pred == "HAS_RATING":
+                    return f"{target_subject} has a rating of {val_str}."
+                elif requested_pred == "HAS_LINK":
+                    return f"The Google Maps link for {target_subject} is {val_str}."
+                elif requested_pred == "HAS_DETAILS":
+                    return f"{target_subject} details: {val_str}."
                 else:
                     readable = self.PRED_READABLE.get(requested_pred, requested_pred.lower())
                     return f"{target_subject}'s {readable} is {val_str}."
@@ -249,6 +320,18 @@ class AnswerSynthesizer:
             if promo_matched:
                 filtered_by_subject = promo_matched
 
+        # Rating filter for company lists
+        rating_match = re.search(r"rating(?:\s+of)?\s+(\d+(?:\.\d+)?)", query_lower)
+        if rating_match:
+            target_rating = rating_match.group(1)
+            rating_matched = {}
+            for subj, props in filtered_by_subject.items():
+                ratings = props.get("HAS_RATING", [])
+                if any(target_rating == r or r.startswith(target_rating) for r in ratings):
+                    rating_matched[subj] = props
+            if rating_matched:
+                filtered_by_subject = rating_matched
+
         items: list[str] = []
         for subj, props in filtered_by_subject.items():
             if "promotion" in query_lower:
@@ -302,6 +385,12 @@ class AnswerSynthesizer:
             facts.append(f"lives at {props['HAS_ADDRESS'][0]}")
         if "HAS_CONTACT" in props:
             facts.append(f"can be reached at {props['HAS_CONTACT'][0]}")
+        if "HAS_RATING" in props:
+            facts.append(f"has a rating of {props['HAS_RATING'][0]}")
+        if "HAS_DETAILS" in props:
+            facts.append(f"is described as {props['HAS_DETAILS'][0]}")
+        if "HAS_LINK" in props:
+            facts.append(f"Google Maps link: {props['HAS_LINK'][0]}")
 
         if not facts:
             return f"{subject} is present in the knowledge base."

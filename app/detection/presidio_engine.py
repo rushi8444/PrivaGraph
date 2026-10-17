@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import re
 from app.detection.custom_recognizers import get_custom_recognizers
+from app.detection.org_patterns import ORG_TEXT_PATTERN, contains_org_word
 from app.models.entity import DetectedEntity
 
 try:
@@ -36,6 +37,8 @@ class FallbackPIIDetector:
         (r"\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})\b", "CREDIT_CARD", 0.95),
         # Capitalized two-word names with optional hyphenated surname (heuristic for PERSON)
         (r"\b[A-Z][a-z]+ [A-Z][a-z]+(?:-[A-Za-z]+)?\b", "PERSON", 0.86),
+        # Company names ending in a typical suffix (Inc, Solutions, Labs...) outrank the PERSON heuristic
+        (ORG_TEXT_PATTERN, "ORGANIZATION", 0.90),
         # US Street Address pattern: e.g. 2 Overlook Pointe, Sewickley, PA 15143
         (r"\b\d+\s+[A-Za-z0-9\s,.-]+?(?:Street|St|Avenue|Ave|Road|Rd|Drive|Dr|Lane|Ln|Boulevard|Blvd|Court|Ct|Way|Circle|Cir|Pointe|Place|Pl|Terrace|Ter|Row)\b(?:,\s*[A-Za-z\s]+)?(?:,\s*[A-Z]{2}\s+\d{5})?", "LOCATION", 0.90),
     ]
@@ -65,7 +68,11 @@ class FallbackPIIDetector:
 
             for match in re.finditer(pattern, text):
                 val = match.group(0)
-                if entity_type == "PERSON" and (val.lower() in NON_PERSON_WORDS or "social security" in val.lower()):
+                if entity_type == "PERSON" and (
+                    val.lower() in NON_PERSON_WORDS
+                    or "social security" in val.lower()
+                    or contains_org_word(val)
+                ):
                     continue
 
                 detected.append(
@@ -135,13 +142,16 @@ class PresidioDetectionEngine:
             score_threshold=min_confidence,
         )
 
-        # Expand PERSON entities if immediately followed by a hyphenated surname
+        # Expand PERSON entities if immediately followed by a hyphenated surname;
+        # relabel PERSON spans that are clearly company names.
         expanded_results = []
         for r in results:
             if r.entity_type == "PERSON":
                 m = re.match(r"^-[A-Za-z]+(?:\b|$)", text[r.end :])
                 if m:
                     r.end = r.end + len(m.group(0))
+                if contains_org_word(text[r.start : r.end]):
+                    r.entity_type = "ORGANIZATION"
             expanded_results.append(r)
 
         results = self._resolve_overlaps(expanded_results)

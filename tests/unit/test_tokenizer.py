@@ -90,3 +90,27 @@ class TestDeterministicTokenizer:
         token2 = tokenizer2.tokenize(entity)
 
         assert token1.token != token2.token
+
+    def test_zero_collisions_high_entropy(self):
+        """1,000 distinct entities must produce 1,000 completely unique tokens (zero collisions)."""
+        tokens = set()
+        for i in range(1000):
+            ent = DetectedEntity(
+                entity_type="PERSON", start=0, end=10,
+                original_value=f"Employee Name {i}", confidence=0.95,
+            )
+            tok = self.tokenizer.tokenize(ent)
+            tokens.add(tok.token)
+        assert len(tokens) == 1000
+
+    def test_compound_surname_vs_hyphenated_firstname(self):
+        """Hyphenated compound surnames normalize to base name, but hyphenated first names are preserved."""
+        # Compound surname with space -> maps to same token
+        harold_full = DetectedEntity(entity_type="PERSON", start=0, end=20, original_value="Harold Mbeki-Sorensen", confidence=0.9)
+        harold_base = DetectedEntity(entity_type="PERSON", start=0, end=12, original_value="Harold Mbeki", confidence=0.9)
+        assert self.tokenizer.tokenize(harold_full).token == self.tokenizer.tokenize(harold_base).token
+
+        # Hyphenated first name without space -> must NOT collapse into "Jean"
+        jean_luc = DetectedEntity(entity_type="PERSON", start=0, end=8, original_value="Jean-Luc", confidence=0.9)
+        jean_only = DetectedEntity(entity_type="PERSON", start=0, end=4, original_value="Jean", confidence=0.9)
+        assert self.tokenizer.tokenize(jean_luc).token != self.tokenizer.tokenize(jean_only).token

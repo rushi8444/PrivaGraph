@@ -11,6 +11,7 @@ import {
 // Natural Earth & Mineral Palette (Non-AI-slop)
 const NODE_COLORS = {
   PERSON: '#4a678f',      // Muted Slate Navy
+  ORGANIZATION: '#8a6a2f',// Antique Brass
   SALARY: '#356b4f',      // Restrained Moss Green
   SSN: '#873934',         // Muted Terracotta / Rust
   EMAIL: '#2c6270',       // Muted Petrol Teal
@@ -22,6 +23,7 @@ const NODE_COLORS = {
 
 const LEGEND_ITEMS = [
   { label: 'PERSON', color: '#4a678f' },
+  { label: 'ORGANIZATION', color: '#8a6a2f' },
   { label: 'SALARY', color: '#356b4f' },
   { label: 'SSN / ID', color: '#873934' },
   { label: 'CONTACT', color: '#2c6270' },

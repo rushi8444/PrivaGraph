@@ -1,0 +1,5391 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {},
+  "nodes": [
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6FE_PERSON_3263AE52\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62E_PERSON_44DF0272\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e66F_PERSON_CECE28C7\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "document contains synthetic test data generated for software evaluation purposes"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e610_PERSON_8948A5A7\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e653_PERSON_616875A4\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e644_PERSON_7BF4A480\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "tory \u2022 8"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e667_PERSON_ABD7A026\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e662_PERSON_C15AADA1\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6BF_PERSON_5E961DE0\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C7_PERSON_51F14320\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e61B_PERSON_12F70BEE\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "master file consolidates personnel records maintained by the Human Resources"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e67B_PERSON_7BFEC53C\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "file contains Social Security Numbers, home addresses, direct phone numbers"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "stribution is restricted to HR business partners, the Finance leadership team"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "document is intentionally structured as a realistic internal HR file \u2014 including narrative sections, tables"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "e can be evaluated against varied formatting: prose paragraphs, tabular records"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6A9_PERSON_7BC24ABD\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e65C_PERSON_033070B1\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e68E_PERSON_C6164FCC\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e666_PERSON_ACB1F756\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e69E_PERSON_E48FDB9F\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "organized into two pods: Platform"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e67D_PERSON_EB6AD85F\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6A6_PERSON_9C582EA5\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e675_PERSON_14C4988B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e66E_PERSON_65B9C088\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6D6_PERSON_00426A33\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "ts of the CEO"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "sions above the Director level"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e697_PERSON_4C1D914F\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "considered highly sensitive"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C3_PERSON_9A1E7D67\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6DF_ORGANIZATION_CA9CE8B8\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "roster is included to give the test corpus additional diversity for RBAC scoping tests"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e64A_PERSON_3D9BFFB1\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "led by Helena Brand\u00e3o-Whitfield (VP of Marketing)"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6AE_PERSON_10D2EE68\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e68F_PERSON_51631C72\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e679_PERSON_69E40429\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "s responsible for post-sale account health, renewals"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6B9_PERSON_6B289ECF\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6B3_PERSON_F1D6BBA6\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63E_PERSON_8D45E394\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e686_PERSON_CB7AF205\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "the designated approver for access to Section 8 of this document under the RBAC model described in Section 10"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "s since been responsible for scaling Operations, Marketing"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6DE_PERSON_C9C0FED3\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "tics company"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6BA_PERSON_E2A68146\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "s of Section 7 of this document"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63F_PERSON_73541699\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62D_PERSON_F2107598\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e618_PERSON_D940BE36\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e68B_ORGANIZATION_C008CF63\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6DD_PERSON_F14CDD1D\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6E0_PERSON_4FFD7788\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e678_PERSON_FE5D0922\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "sion rollover recorded in Section 7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6F5_PERSON_074F5105\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e638_PERSON_8403A0EF\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "r, \u27e638_PERSON_8403A0EF\u27e7 completed the Q2 SOC2 payroll audit with zero material findings"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "sued by the external auditor"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63C_PERSON_63A80F2F\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "sk given competing offers in the market"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e630_PERSON_08159866\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C4_PERSON_2F491E92\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e64E_PERSON_E3FDFCBD\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Q2 performance 4.4/5.0"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e69E_PERSON_1E7F953E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6DB_PERSON_4F67DCAC\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62F_PERSON_45B12E07\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "work on the RBAC access-control framework documented in Section 10 as a key differentiator"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "tory"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "classified above standard HR access"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "s included to test role-based access control (RBAC) enforcement"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6B0_PERSON_D211F9F6\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "o 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "CEO"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "100% of base salary upon deal close"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "CFO"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6EF_PERSON_4057E222\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "75% of base salary under the same terms"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62E_PERSON_2856AA82\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6A7_PERSON_68EA055B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e629_PERSON_98669CD7\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "includes medical, dental"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6D7_PERSON_2D052598\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "ppendix documents the intended access-control model for this file, for use in evaluating privacy-preserving middleware such as PII detection, tokenization"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63E_PERSON_DF53C1D4\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e659_SALARY_8672B6A6\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e673_SALARY_F0C57DCA\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e620_PERSON_EB762D0C\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "cussed the retention package terms referenced in Section 8 of this file in connection with the pending acquisition discussions"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6E1_SALARY_8624CEB9\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "s file"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e64D_PERSON_2076D393\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "file is classified as Tier 1 \u2014 Restricted"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e690_PERSON_29C83042\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e641_PERSON_70958F98\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e60B_PERSON_5454CE78\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e687_PERSON_1D94408F\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "policy section is included in the present test file specifically so that document-ingestion pipelines can be evaluated on their ability to extract"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "ion if disclosed"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "s not been released publicly"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6FD_SALARY_0A252230\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6E3_SALARY_D5399184\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e626_SALARY_7CB272C5\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e68D_SALARY_07611B5B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6F2_SALARY_1D6C9AC0\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e649_SALARY_41B1491E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63E_SALARY_2C054DF3\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Engineering"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e623_US_SSN_77A479DA\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6F2_SALARY_1E78F87B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e603_PERSON_62C46EB9\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6A4_ORGANIZATION_3BB94A12\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e69E_US_SSN_583F86AB\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e66D_SALARY_AA3AC5A3\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e65F_US_SSN_4204F674\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62A_SALARY_1D8601F7\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6B4_PERSON_804D656C\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6AA_US_SSN_F2EA2FAE\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e631_SALARY_28A134BB\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e671_ORGANIZATION_F62E9ECC\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e607_US_SSN_61DA8A6B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e642_SALARY_48E49615\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "priya.nandakumar@meridiannorwood.e"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "xa4m1p2le-555-0148"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6D4_LOCATION_7FF9334A\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "2019-03-11"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "david.okonkworeyes@meridiannorwood"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "e4xa1m2-p5l5e5-0192"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e677_LOCATION_17D67C8E\u27e7, PA 152"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "062021-07-19"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e667_EMAIL_ADDRESS_723AEA92\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "m4p1le2-555-0113"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e648_LOCATION_5C2D5223\u27e7, PA 151"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "432016-01-25"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e679_EMAIL_ADDRESS_29E34A5A\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "am4p1l2e-555-0176"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e66C_LOCATION_6069F6B5\u27e7, PA 1523"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "22020-09-02"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6F3_EMAIL_ADDRESS_14974229\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "mp4l1e2-555-0201"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e624_LOCATION_2015D3F1\u27e7, PA"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "152202213-02-14"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Sales"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "VP of Sales"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e637_US_SSN_F9692069\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e692_PERSON_35960462\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e67C_US_SSN_F873A53E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e679_SALARY_757EA1D9\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C8_PERSON_E08FCCA1\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e65D_US_SSN_B5747834\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e600_SALARY_D1AB93FF\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "renata.costalindqvist@meridiannorwood"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "e4x1a2m-p5l5e5-0234"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62E_LOCATION_9A6207CA\u27e7, PA 152"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "112015-11-03"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "owen.fitzgeraldnjoku@meridiannorwood"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "e4x1a2m-p5l5e5-0267"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6E0_LOCATION_10A4137F\u27e7, PA 152"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "132022-04-18"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "sofia.beaumontkaur@meridiannorwood"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "ex4a1m2p-5le55-0288"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C3_LOCATION_720AD865\u27e7, PA 152"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "192023-08-07"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Executive & Finance"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C6_US_SSN_D980C987\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Chief Executive Officer"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Board of Directors"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e60E_US_SSN_8E1C24C8\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e690_SALARY_B4916923\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "z angela.whitcombesuarez@meridiannor"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "wo4o1d2.e-5xa5m5-p0l3e01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6D8_LOCATION_D54A150E\u27e7, PA 151"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "432013-06-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "harold.mbekisorensen@meridiannorwo"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "od.4e1x2a-m55p5le-0300"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e642_LOCATION_2EE48567\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "2011-01-10"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Chief Financial Officer"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63D_US_SSN_0E03DFAF\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e672_SALARY_0E86CAFE\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e65F_PERSON_4FA6EAC9\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e693_PERSON_81126953\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6DD_US_SSN_5176DA9E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e643_SALARY_1A73DE97\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6A2_PERSON_7CEA541F\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6F2_US_SSN_B15CD3F6\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6E7_SALARY_EBD1EBB8\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Operations"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "VP of Operations"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e671_US_SSN_D1D91A53\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6FB_SALARY_1787473E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e677_PERSON_9493F7C6\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6CC_PERSON_97BDD26A\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e68B_US_SSN_66DD836D\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e634_SALARY_42900703\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63E_PERSON_456B9F9D\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e63A_ORGANIZATION_F1902152\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e678_US_SSN_E96D550B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e659_SALARY_11A2EDC6\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "inedesmond.ackerleyfontaine@meridianno"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "rw4o1o2d-.5e5x5a-m0p3l5e6"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6CB_LOCATION_3F8E5235\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "2016-08-04"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "camila.reinholtadeyinka@meridiannorw"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "oo4d1.e2x-a5m55p-l0e362"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6EC_LOCATION_D43CD9C7\u27e7, PA 15"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "2124019-10-21"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "tomasz.wieczorekidowu@meridiannorw"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "oo4d1.e2x-5a5m5p-l0e374"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6E1_LOCATION_358FA61C\u27e7, PA 1521"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "8 2020-01-13"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Marketing"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "r"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Helena Brand\u00e3o-Whitfield"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e698_US_SSN_B2F43D89\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6D2_SALARY_97232A99\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6B4_PERSON_D9277EAD\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6EE_US_SSN_F6F9A900\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e623_SALARY_1CA2924B\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62A_LOCATION_FA3D7882\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e62A_LOCATION_FA3D7882\u27e7, PA 1523"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e634_EMAIL_ADDRESS_05C265BC\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "am4p1l2e-555-0395"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e64B_LOCATION_3217B1C9\u27e7, PA 1"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "52200121-03-08"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "aoife.callahanmbatha@meridiannorwoo"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "d.e4x1a2m-5p5l5e-0402"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "175 \u27e673_PERSON_5CC7B0B0\u27e7, Pittsburgh, PA 15"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "2226022-09-12"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e609_US_SSN_FCED5177\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6D1_SALARY_A1D52A30\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6A5_US_SSN_92FDC0AD\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6BF_SALARY_12E0D53A\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C4_PERSON_EC4538AE\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6F0_PERSON_8A180BB2\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6FC_US_SSN_9CFC669C\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e69E_SALARY_DC2B758E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "arrdafael.contreraslindegaard@meridianno"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "rw4o1o2d-.5e5xa5m-0p4l1e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6FB_LOCATION_E35DA50A\u27e7, PA 1523"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "7 2018-04-16"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "g naledi.okonjofalkenberg@meridiannorw"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "oo4d1.e2x-5a5m5p-l0e423"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e638_LOCATION_6D1A6251\u27e7, PA 152"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "362020-06-29"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "kian.delacroixosman@meridiannorwood"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "e4x1a2m-p5l5e5-0431"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6EC_LOCATION_2A9D1A83\u27e7, PA 1522"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "7 2022-01-05"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Legal"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C7_US_SSN_F2BE8763\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6C5_SALARY_60CEF76E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e664_US_SSN_93B5C657\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e69E_SALARY_D46EF917\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "vivienne.laurentosagie@meridiannorwo"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "od4.e1x2a-m55p5le-0440"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e675_LOCATION_E899EBCE\u27e7, PA 15"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "1432015-05-19"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "baxter.ihenachosolum@meridiannorwoo"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "d.4e1x2a-m55p5le-0447"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6CD_LOCATION_BDD70929\u27e7, PA 1521"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "3 2019-12-02"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2026-01-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e652_SALARY_D264E858\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Annual merit increase"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2025-07-15"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e644_SALARY_D371AFAE\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Promotion to Engineer II"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2026-02-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6EB_SALARY_5E6BD5FD\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Quota over-attainment bonus rollov"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "t"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2025-11-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e696_SALARY_EE608E33\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2026-03-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Executive compensation review"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2025-09-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e6EE_SALARY_4D8DAD64\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2026-01-15"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e653_SALARY_8EE0F7C0\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Promotion to Manager"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "approved by Helena Brand\u00e3o-Whitfie"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2025-10-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e618_SALARY_5CA501FC\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2026-02-15"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e654_SALARY_9A19B31E\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "Retention adjustment"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "effective date 2025-08-01"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "\u27e64A_SALARY_A1C3C248\u27e7"
+    },
+    {
+      "namespace": "pdf.doc1_hr_compensation",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "PDF-DOC1_HR_COMPENSATION-75E6A1"
+      ],
+      "id": "r _ has access scope Read access to their own's roster"
+    }
+  ],
+  "edges": [
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u2014 CONFIDENTIAL \u2014 \u27e6FE_PERSON_3263AE52\u27e7 \u27e62E_PERSON_44DF0272\u27e7 1 MERIDIAN NORWOOD INC.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6FE_PERSON_3263AE52\u27e7",
+      "target": "\u27e62E_PERSON_44DF0272\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This master file consolidates personnel records maintained by the Human Resources and Finance departments for internal compensation planning, payroll auditing, and executive reporting.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6FE_PERSON_3263AE52\u27e7",
+      "target": "master file consolidates personnel records maintained by the Human Resources",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u2014 CONFIDENTIAL \u2014 \u27e6FE_PERSON_3263AE52\u27e7 \u27e62E_PERSON_44DF0272\u27e7 20 Glossary of \u27e6D6_PERSON_558C0121\u27e7 in \u27e69B_PERSON_42D79FBF\u27e7 MNPI \u2014 \u27e6B6_PERSON_92DAB486\u27e7 Information \u2014 information about a company that could affect its stock price or a business decision if disclosed, and which has not been released publicly.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6FE_PERSON_3263AE52\u27e7",
+      "target": "ion if disclosed",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u2014 CONFIDENTIAL \u2014 \u27e6FE_PERSON_3263AE52\u27e7 \u27e62E_PERSON_44DF0272\u27e7 20 Glossary of \u27e6D6_PERSON_558C0121\u27e7 in \u27e69B_PERSON_42D79FBF\u27e7 MNPI \u2014 \u27e6B6_PERSON_92DAB486\u27e7 Information \u2014 information about a company that could affect its stock price or a business decision if disclosed, and which has not been released publicly.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6FE_PERSON_3263AE52\u27e7",
+      "target": "s not been released publicly",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Human Resources & \u27e66F_PERSON_CECE28C7\u27e7 \u27e609_PERSON_6D1FEDBE\u27e7 Year 2026 \u2014 \u27e6F2_PERSON_2A3E1F42\u27e7 Records CLASSIFICATION: RESTRICTED \u2014 HR & EXECUTIVE ACCESS ONLY This document contains synthetic test data generated for software evaluation purposes.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e66F_PERSON_CECE28C7\u27e7",
+      "target": "document contains synthetic test data generated for software evaluation purposes",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e610_PERSON_8948A5A7\u27e7 & \u27e653_PERSON_616875A4\u27e7 \u2022 3.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e610_PERSON_8948A5A7\u27e7",
+      "target": "\u27e653_PERSON_616875A4\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e644_PERSON_7BF4A480\u27e7 Log \u2014 \u27e664_PERSON_9E032186\u27e7 History \u2022 8.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e644_PERSON_7BF4A480\u27e7",
+      "target": "tory \u2022 8",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e644_PERSON_7BF4A480\u27e7 Log \u2014 \u27e664_PERSON_9E032186\u27e7 History",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e644_PERSON_7BF4A480\u27e7",
+      "target": "tory",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e667_PERSON_ABD7A026\u27e7: \u27e662_PERSON_C15AADA1\u27e7 \u2014 \u27e6BF_PERSON_5E961DE0\u27e7 Terms \u2022 9.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e667_PERSON_ABD7A026\u27e7",
+      "target": "\u27e662_PERSON_C15AADA1\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e667_PERSON_ABD7A026\u27e7: \u27e662_PERSON_C15AADA1\u27e7 \u2014 \u27e6BF_PERSON_5E961DE0\u27e7 Terms \u2022 9.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e667_PERSON_ABD7A026\u27e7",
+      "target": "\u27e6BF_PERSON_5E961DE0\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e667_PERSON_ABD7A026\u27e7: \u27e662_PERSON_C15AADA1\u27e7 \u2014 \u27e6BF_PERSON_5E961DE0\u27e7 \u27e674_PERSON_84FC062E\u27e7 section is classified above standard HR access and is included to test role-based access control (RBAC) enforcement.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e667_PERSON_ABD7A026\u27e7",
+      "target": "classified above standard HR access",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e667_PERSON_ABD7A026\u27e7: \u27e662_PERSON_C15AADA1\u27e7 \u2014 \u27e6BF_PERSON_5E961DE0\u27e7 \u27e674_PERSON_84FC062E\u27e7 section is classified above standard HR access and is included to test role-based access control (RBAC) enforcement.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e667_PERSON_ABD7A026\u27e7",
+      "target": "s included to test role-based access control (RBAC) enforcement",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e6C7_PERSON_51F14320\u27e7 & \u27e61B_PERSON_12F70BEE\u27e7 Appendix",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C7_PERSON_51F14320\u27e7",
+      "target": "\u27e61B_PERSON_12F70BEE\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "This appendix documents the intended access-control model for this file, for use in evaluating privacy-preserving middleware such as PII detection, tokenization, and RBAC-gated reconstruction layers.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C7_PERSON_51F14320\u27e7",
+      "target": "ppendix documents the intended access-control model for this file, for use in evaluating privacy-preserving middleware such as PII detection, tokenization",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Because this file contains Social Security Numbers, home addresses, direct phone numbers, and exact compensation figures for named individuals, distribution is restricted to HR business partners, the Finance leadership team, and members of the \u27e67B_PERSON_7BFEC53C\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67B_PERSON_7BFEC53C\u27e7",
+      "target": "file contains Social Security Numbers, home addresses, direct phone numbers",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Because this file contains Social Security Numbers, home addresses, direct phone numbers, and exact compensation figures for named individuals, distribution is restricted to HR business partners, the Finance leadership team, and members of the \u27e67B_PERSON_7BFEC53C\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67B_PERSON_7BFEC53C\u27e7",
+      "target": "stribution is restricted to HR business partners, the Finance leadership team",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This document is intentionally structured as a realistic internal HR file \u2014 including narrative sections, tables, and an audit log \u2014 so that document-processing and privacy-preserving middleware can be evaluated against varied formatting: prose paragraphs, tabular records, and semi-structured log entries.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67B_PERSON_7BFEC53C\u27e7",
+      "target": "document is intentionally structured as a realistic internal HR file \u2014 including narrative sections, tables",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This document is intentionally structured as a realistic internal HR file \u2014 including narrative sections, tables, and an audit log \u2014 so that document-processing and privacy-preserving middleware can be evaluated against varied formatting: prose paragraphs, tabular records, and semi-structured log entries.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67B_PERSON_7BFEC53C\u27e7",
+      "target": "e can be evaluated against varied formatting: prose paragraphs, tabular records",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "These terms are not to be disclosed to any employee outside the \u27e67B_PERSON_7BFEC53C\u27e7 and \u27e6A7_PERSON_68EA055B\u27e7 Committee prior to public announcement.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67B_PERSON_7BFEC53C\u27e7",
+      "target": "\u27e6A7_PERSON_68EA055B\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "Engineering reports to \u27e6A9_PERSON_7BC24ABD\u27e7 (\u27e65C_PERSON_033070B1\u27e7), who reports to \u27e68E_PERSON_C6164FCC\u27e7 (\u27e666_PERSON_ACB1F756\u27e7 Officer).",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e65C_PERSON_033070B1\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 is a \u27e65C_PERSON_033070B1\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e65C_PERSON_033070B1\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "Engineering reports to \u27e6A9_PERSON_7BC24ABD\u27e7 (\u27e65C_PERSON_033070B1\u27e7), who reports to \u27e68E_PERSON_C6164FCC\u27e7 (\u27e666_PERSON_ACB1F756\u27e7 Officer).",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "Engineering reports to \u27e6A9_PERSON_7BC24ABD\u27e7 (\u27e65C_PERSON_033070B1\u27e7), who reports to \u27e68E_PERSON_C6164FCC\u27e7 (\u27e666_PERSON_ACB1F756\u27e7 Officer).",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e666_PERSON_ACB1F756\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Rated 4.3/5.0 by \u27e6A9_PERSON_7BC24ABD\u27e7; flagged as a retention risk given competing offers in the market, and recommended for an off-cycle equity refresh.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "sk given competing offers in the market",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 works in Engineering department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "Engineering",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 has SSN \u27e65F_US_SSN_4204F674\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e65F_US_SSN_4204F674\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 earns \u27e62A_SALARY_1D8601F7\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e62A_SALARY_1D8601F7\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 has email \u27e667_EMAIL_ADDRESS_723AEA92\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e667_EMAIL_ADDRESS_723AEA92\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 has contact m4p1le2-555-0113.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "m4p1le2-555-0113",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 has address \u27e648_LOCATION_5C2D5223\u27e7, PA 151.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "\u27e648_LOCATION_5C2D5223\u27e7, PA 151",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6A9_PERSON_7BC24ABD\u27e7 was hired on 432016-01-25.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "432016-01-25",
+      "key": 0
+    },
+    {
+      "predicate": "MANAGES",
+      "source_sentence": "department manager _ has access scope Read access to their own department's roster and contact detail rows only (e.g., \u27e6A9_PERSON_7BC24ABD\u27e7 m.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "target": "r _ has access scope Read access to their own's roster",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "The company grew steadily through organic sales until a Series B financing round in 2016 enabled the buildout of a dedicated Engineering organization under founding \u27e65C_PERSON_033070B1\u27e7 \u27e6A9_PERSON_7BC24ABD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65C_PERSON_033070B1\u27e7",
+      "target": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 joined as \u27e666_PERSON_ACB1F756\u27e7 Officer in 2013 from a competing analytics firm and has since been responsible for scaling Operations, Marketing, and \u27e6AE_PERSON_10D2EE68\u27e7 as the company expanded from a single product line to a four-product platform.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "s since been responsible for scaling Operations, Marketing",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Item 1: \u27e620_PERSON_EB762D0C\u27e7 reviewed and approved the executive compensation adjustment for \u27e68E_PERSON_C6164FCC\u27e7, raising her base salary from \u27e659_SALARY_8672B6A6\u27e7 to \u27e673_SALARY_F0C57DCA\u27e7 effective March 1, 2026, citing expanded scope of responsibility following the consolidation of Operations, Marketing, and \u27e6AE_PERSON_10D2EE68\u27e7 under her leadership.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e659_SALARY_8672B6A6\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has old salary \u27e659_SALARY_8672B6A6\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e659_SALARY_8672B6A6\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Item 1: \u27e620_PERSON_EB762D0C\u27e7 reviewed and approved the executive compensation adjustment for \u27e68E_PERSON_C6164FCC\u27e7, raising her base salary from \u27e659_SALARY_8672B6A6\u27e7 to \u27e673_SALARY_F0C57DCA\u27e7 effective March 1, 2026, citing expanded scope of responsibility following the consolidation of Operations, Marketing, and \u27e6AE_PERSON_10D2EE68\u27e7 under her leadership.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e673_SALARY_F0C57DCA\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 earns \u27e673_SALARY_F0C57DCA\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e673_SALARY_F0C57DCA\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has new salary \u27e673_SALARY_F0C57DCA\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e673_SALARY_F0C57DCA\u27e7",
+      "key": 2
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 works in Executive & Finance department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "Executive & Finance",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 is a \u27e666_PERSON_ACB1F756\u27e7 Officer.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e666_PERSON_ACB1F756\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 reports to \u27e63E_PERSON_DF53C1D4\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has approved by \u27e63E_PERSON_DF53C1D4\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has SSN \u27e6C6_US_SSN_D980C987\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e6C6_US_SSN_D980C987\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has email z angela.whitcombesuarez@meridiannor.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "z angela.whitcombesuarez@meridiannor",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has contact wo4o1d2.e-5xa5m5-p0l3e01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "wo4o1d2.e-5xa5m5-p0l3e01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has address \u27e6D8_LOCATION_D54A150E\u27e7, PA 151.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "\u27e6D8_LOCATION_D54A150E\u27e7, PA 151",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 was hired on 432013-06-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "432013-06-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has effective date 2026-03-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "effective date 2026-03-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e68E_PERSON_C6164FCC\u27e7 has reason Executive compensation review.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "target": "Executive compensation review",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "\u27e666_PERSON_ACB1F756\u27e7 \u27e62E_PERSON_2856AA82\u27e7 Whitcombe-Suarez has been offered a retention package of 75% of base salary under the same terms.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e666_PERSON_ACB1F756\u27e7",
+      "target": "75% of base salary under the same terms",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "The department is organized into two pods: Platform and \u27e69E_PERSON_E48FDB9F\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_E48FDB9F\u27e7",
+      "target": "organized into two pods: Platform",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e67D_PERSON_EB6AD85F\u27e7 organization is led by \u27e6A6_PERSON_9C582EA5\u27e7 (VP of Sales), who reports directly to \u27e68E_PERSON_C6164FCC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67D_PERSON_EB6AD85F\u27e7",
+      "target": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e67D_PERSON_EB6AD85F\u27e7 organization is led by \u27e6A6_PERSON_9C582EA5\u27e7 (VP of Sales), who reports directly to \u27e68E_PERSON_C6164FCC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e67D_PERSON_EB6AD85F\u27e7",
+      "target": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 recommends fast-tracking Owen for the \u27e6F5_PERSON_074F5105\u27e7 Executive band (E3) at the next compensation cycle.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "\u27e6F5_PERSON_074F5105\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 works in Sales department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "Sales",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 is a VP of Sales.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "VP of Sales",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 reports to \u27e68E_PERSON_C6164FCC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 has SSN \u27e637_US_SSN_F9692069\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "\u27e637_US_SSN_F9692069\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 earns \u27e649_SALARY_41B1491E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "\u27e649_SALARY_41B1491E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 has email renata.costalindqvist@meridiannorwood.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "renata.costalindqvist@meridiannorwood",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 has contact .e4x1a2m-p5l5e5-0234.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "e4x1a2m-p5l5e5-0234",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 has address \u27e62E_LOCATION_9A6207CA\u27e7, PA 152.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "\u27e62E_LOCATION_9A6207CA\u27e7, PA 152",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6A6_PERSON_9C582EA5\u27e7 was hired on 112015-11-03.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "target": "112015-11-03",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e675_PERSON_14C4988B\u27e7 carry individual quota targets reviewed quarterly; \u27e66E_PERSON_65B9C088\u27e7 Representatives support top-of-funnel pipeline generation.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e675_PERSON_14C4988B\u27e7",
+      "target": "\u27e66E_PERSON_65B9C088\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6D6_PERSON_00426A33\u27e7 team consists of the CEO and COO, who together set overall company strategy and approve compensation decisions above the Director level.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6D6_PERSON_00426A33\u27e7",
+      "target": "ts of the CEO",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6D6_PERSON_00426A33\u27e7 team consists of the CEO and COO, who together set overall company strategy and approve compensation decisions above the Director level.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6D6_PERSON_00426A33\u27e7",
+      "target": "sions above the Director level",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Executive compensation figures below are considered highly sensitive and are typically restricted to the \u27e697_PERSON_4C1D914F\u27e7 of the Board.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e697_PERSON_4C1D914F\u27e7",
+      "target": "considered highly sensitive",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e697_PERSON_4C1D914F\u27e7 \u2014 \u27e68A_PERSON_C6341E44\u27e7 Minutes (Excerpt) The following is an excerpt of minutes from the March 2026 \u27e697_PERSON_4C1D914F\u27e7 meeting, attended by \u27e63E_PERSON_DF53C1D4\u27e7 (CEO), \u27e6DE_PERSON_C9C0FED3\u27e7 (CFO), \u27e68E_PERSON_C6164FCC\u27e7 (COO), and two independent Board members.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e697_PERSON_4C1D914F\u27e7",
+      "target": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e697_PERSON_4C1D914F\u27e7 \u2014 \u27e68A_PERSON_C6341E44\u27e7 Minutes (Excerpt) The following is an excerpt of minutes from the March 2026 \u27e697_PERSON_4C1D914F\u27e7 meeting, attended by \u27e63E_PERSON_DF53C1D4\u27e7 (CEO), \u27e6DE_PERSON_C9C0FED3\u27e7 (CFO), \u27e68E_PERSON_C6164FCC\u27e7 (COO), and two independent Board members.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e697_PERSON_4C1D914F\u27e7",
+      "target": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e697_PERSON_4C1D914F\u27e7 \u2014 \u27e68A_PERSON_C6341E44\u27e7 Minutes (Excerpt) The following is an excerpt of minutes from the March 2026 \u27e697_PERSON_4C1D914F\u27e7 meeting, attended by \u27e63E_PERSON_DF53C1D4\u27e7 (CEO), \u27e6DE_PERSON_C9C0FED3\u27e7 (CFO), \u27e68E_PERSON_C6164FCC\u27e7 (COO), and two independent Board members.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e697_PERSON_4C1D914F\u27e7",
+      "target": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Operations is led by \u27e6C3_PERSON_9A1E7D67\u27e7 (VP of Operations), covering Facilities and \u27e6DF_ORGANIZATION_CA9CE8B8\u27e7",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "\u27e6DF_ORGANIZATION_CA9CE8B8\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This roster is included to give the test corpus additional department diversity for RBAC scoping tests.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "roster is included to give the test corpus additional diversity for RBAC scoping tests",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 works in Operations department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "Operations",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 is a VP of Operations.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "VP of Operations",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 reports to \u27e68E_PERSON_C6164FCC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 has SSN \u27e671_US_SSN_D1D91A53\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "\u27e671_US_SSN_D1D91A53\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 earns \u27e6FB_SALARY_1787473E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "\u27e6FB_SALARY_1787473E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 has email inedesmond.ackerleyfontaine@meridianno.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "inedesmond.ackerleyfontaine@meridianno",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 has contact rw4o1o2d-.5e5x5a-m0p3l5e6.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "rw4o1o2d-.5e5x5a-m0p3l5e6",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 has address \u27e6CB_LOCATION_3F8E5235\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "\u27e6CB_LOCATION_3F8E5235\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6C3_PERSON_9A1E7D67\u27e7 was hired on 2016-08-04.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "target": "2016-08-04",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Marketing is led by Helena Brand\u00e3o-Whitfield (VP of Marketing) and covers Content and \u27e64A_PERSON_3D9BFFB1\u27e7 functions.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e64A_PERSON_3D9BFFB1\u27e7",
+      "target": "led by Helena Brand\u00e3o-Whitfield (VP of Marketing)",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e6AE_PERSON_10D2EE68\u27e7 \u27e68F_PERSON_51631C72\u27e7",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "target": "\u27e68F_PERSON_51631C72\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6AE_PERSON_10D2EE68\u27e7 is led by \u27e679_PERSON_69E40429\u27e7 (Head of \u27e6AE_PERSON_10D2EE68\u27e7) and is responsible for post-sale account health, renewals, and technical support escalations.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "target": "\u27e679_PERSON_69E40429\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6AE_PERSON_10D2EE68\u27e7 is led by \u27e679_PERSON_69E40429\u27e7 (Head of \u27e6AE_PERSON_10D2EE68\u27e7) and is responsible for post-sale account health, renewals, and technical support escalations.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "target": "s responsible for post-sale account health, renewals",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 notes she is on track for promotion to \u27e6DB_PERSON_4F67DCAC\u27e7 \u27e62F_PERSON_45B12E07\u27e7 at the next review cycle.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e6DB_PERSON_4F67DCAC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 notes she is on track for promotion to \u27e6DB_PERSON_4F67DCAC\u27e7 \u27e62F_PERSON_45B12E07\u27e7 at the next review cycle.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e62F_PERSON_45B12E07\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 works in \u27e6AE_PERSON_10D2EE68\u27e7 department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 is a Head of \u27e6AE_PERSON_10D2EE68\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 reports to \u27e68E_PERSON_C6164FCC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e68E_PERSON_C6164FCC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 has SSN \u27e609_US_SSN_FCED5177\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e609_US_SSN_FCED5177\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 earns \u27e6D1_SALARY_A1D52A30\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e6D1_SALARY_A1D52A30\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 has email arrdafael.contreraslindegaard@meridianno.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "arrdafael.contreraslindegaard@meridianno",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 has contact rw4o1o2d-.5e5xa5m-0p4l1e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "rw4o1o2d-.5e5xa5m-0p4l1e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 has address \u27e6FB_LOCATION_E35DA50A\u27e7, PA 1523.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "\u27e6FB_LOCATION_E35DA50A\u27e7, PA 1523",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e679_PERSON_69E40429\u27e7 was hired on 7 2018-04-16.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e679_PERSON_69E40429\u27e7",
+      "target": "7 2018-04-16",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6B9_PERSON_6B289ECF\u27e7 department is led by \u27e6B3_PERSON_F1D6BBA6\u27e7 (\u27e63E_PERSON_8D45E394\u27e7), who reports directly to the CEO.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B9_PERSON_6B289ECF\u27e7",
+      "target": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6B9_PERSON_6B289ECF\u27e7 department is led by \u27e6B3_PERSON_F1D6BBA6\u27e7 (\u27e63E_PERSON_8D45E394\u27e7), who reports directly to the CEO.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B9_PERSON_6B289ECF\u27e7",
+      "target": "\u27e63E_PERSON_8D45E394\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 joined as \u27e63E_PERSON_8D45E394\u27e7 in 2015 and built out the company's compliance function, including the RBAC model documented in Section 10.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "\u27e63E_PERSON_8D45E394\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 is a \u27e63E_PERSON_8D45E394\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "\u27e63E_PERSON_8D45E394\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 notes his work on the RBAC access-control framework documented in Section 10 as a key differentiator.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "work on the RBAC access-control framework documented in Section 10 as a key differentiator",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 works in Legal department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "Legal",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 reports to \u27e63E_PERSON_DF53C1D4\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 has SSN \u27e6C7_US_SSN_F2BE8763\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "\u27e6C7_US_SSN_F2BE8763\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 earns \u27e6C5_SALARY_60CEF76E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "\u27e6C5_SALARY_60CEF76E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 has email vivienne.laurentosagie@meridiannorwo.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "vivienne.laurentosagie@meridiannorwo",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 has contact od4.e1x2a-m55p5le-0440.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "od4.e1x2a-m55p5le-0440",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 has address \u27e675_LOCATION_E899EBCE\u27e7, PA 15.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "\u27e675_LOCATION_E899EBCE\u27e7, PA 15",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6B3_PERSON_F1D6BBA6\u27e7 was hired on 1432015-05-19.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "target": "1432015-05-19",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7, \u27e60B_PERSON_5454CE78\u27e7, is the designated approver for access to Section 8 of this document under the RBAC model described in Section 10.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "the designated approver for access to Section 8 of this document under the RBAC model described in Section 10",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Employee: \u27e686_PERSON_CB7AF205\u27e7 \u27e686_PERSON_CB7AF205\u27e7 received a retention adjustment in February 2026 following an external offer.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e686_PERSON_CB7AF205\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 works in Legal department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "Legal",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 is a \u27e60B_PERSON_5454CE78\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e60B_PERSON_5454CE78\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 reports to \u27e6B3_PERSON_F1D6BBA6\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has approved by \u27e6B3_PERSON_F1D6BBA6\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e6B3_PERSON_F1D6BBA6\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has SSN \u27e664_US_SSN_93B5C657\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e664_US_SSN_93B5C657\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 earns \u27e69E_SALARY_D46EF917\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e69E_SALARY_D46EF917\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has new salary \u27e69E_SALARY_D46EF917\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e69E_SALARY_D46EF917\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has email baxter.ihenachosolum@meridiannorwoo.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "baxter.ihenachosolum@meridiannorwoo",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has contact d.4e1x2a-m55p5le-0447.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "d.4e1x2a-m55p5le-0447",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has address \u27e6CD_LOCATION_BDD70929\u27e7, PA 1521.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e6CD_LOCATION_BDD70929\u27e7, PA 1521",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 was hired on 3 2019-12-02.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "3 2019-12-02",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has effective date 2026-02-15.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "effective date 2026-02-15",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has old salary \u27e654_SALARY_9A19B31E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "\u27e654_SALARY_9A19B31E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e686_PERSON_CB7AF205\u27e7 has reason Retention adjustment.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e686_PERSON_CB7AF205\u27e7",
+      "target": "Retention adjustment",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 joined as Chief Financial Officer in 2014, prior to which she served as a controller at a publicly traded logistics company.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "tics company",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 cites Grace's work as a key factor in the clean audit opinion issued by the external auditor.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "sued by the external auditor",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 works in Executive & Finance department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "Executive & Finance",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 is a Chief Financial Officer.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "Chief Financial Officer",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 reports to \u27e63E_PERSON_DF53C1D4\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 has SSN \u27e63D_US_SSN_0E03DFAF\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "\u27e63D_US_SSN_0E03DFAF\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6DE_PERSON_C9C0FED3\u27e7 earns \u27e672_SALARY_0E86CAFE\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "target": "\u27e672_SALARY_0E86CAFE\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Under her tenure, \u27e6BA_PERSON_E2A68146\u27e7 implemented its current payroll and compensation audit system, the output of which forms the basis of Section 7 of this document.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6BA_PERSON_E2A68146\u27e7",
+      "target": "s of Section 7 of this document",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Q2 2026 \u27e63F_PERSON_73541699\u27e7 \u27e62D_PERSON_F2107598\u27e7: \u27e618_PERSON_D940BE36\u27e7 \u27e618_PERSON_D940BE36\u27e7 continues to exceed expectations as \u27e68B_ORGANIZATION_C008CF63\u27e7 Engineer on the Platform pod.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63F_PERSON_73541699\u27e7",
+      "target": "\u27e62D_PERSON_F2107598\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Q2 2026 \u27e63F_PERSON_73541699\u27e7 \u27e62D_PERSON_F2107598\u27e7: \u27e618_PERSON_D940BE36\u27e7 \u27e618_PERSON_D940BE36\u27e7 continues to exceed expectations as \u27e68B_ORGANIZATION_C008CF63\u27e7 Engineer on the Platform pod.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63F_PERSON_73541699\u27e7",
+      "target": "\u27e618_PERSON_D940BE36\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Q2 2026 \u27e63F_PERSON_73541699\u27e7 \u27e62D_PERSON_F2107598\u27e7: \u27e618_PERSON_D940BE36\u27e7 \u27e618_PERSON_D940BE36\u27e7 continues to exceed expectations as \u27e68B_ORGANIZATION_C008CF63\u27e7 Engineer on the Platform pod.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63F_PERSON_73541699\u27e7",
+      "target": "\u27e68B_ORGANIZATION_C008CF63\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 works in Engineering department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "Engineering",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 is a \u27e68B_ORGANIZATION_C008CF63\u27e7 Engineer.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e68B_ORGANIZATION_C008CF63\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 reports to \u27e6A9_PERSON_7BC24ABD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has approved by \u27e6A9_PERSON_7BC24ABD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has SSN \u27e623_US_SSN_77A479DA\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e623_US_SSN_77A479DA\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 earns \u27e6F2_SALARY_1E78F87B\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e6F2_SALARY_1E78F87B\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has new salary \u27e6F2_SALARY_1E78F87B\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e6F2_SALARY_1E78F87B\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has email priya.nandakumar@meridiannorwood.e.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "priya.nandakumar@meridiannorwood.e",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has contact xa4m1p2le-555-0148.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "xa4m1p2le-555-0148",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has address \u27e6D4_LOCATION_7FF9334A\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e6D4_LOCATION_7FF9334A\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 was hired on 2019-03-11.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "2019-03-11",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has effective date 2026-01-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "effective date 2026-01-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has old salary \u27e652_SALARY_D264E858\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "\u27e652_SALARY_D264E858\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e618_PERSON_D940BE36\u27e7 has reason Annual merit increase.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e618_PERSON_D940BE36\u27e7",
+      "target": "Annual merit increase",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "\u27e6DD_PERSON_F14CDD1D\u27e7 Feldstein notes strong mentorship of \u27e6E0_PERSON_4FFD7788\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6DD_PERSON_F14CDD1D\u27e7",
+      "target": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 works in Engineering department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "Engineering",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 is a \u27e671_ORGANIZATION_F62E9ECC\u27e7 Engineer.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "\u27e671_ORGANIZATION_F62E9ECC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 reports to \u27e618_PERSON_D940BE36\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "\u27e618_PERSON_D940BE36\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 has SSN \u27e607_US_SSN_61DA8A6B\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "\u27e607_US_SSN_61DA8A6B\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 earns \u27e642_SALARY_48E49615\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "\u27e642_SALARY_48E49615\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 has email \u27e6F3_EMAIL_ADDRESS_14974229\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "\u27e6F3_EMAIL_ADDRESS_14974229\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 has contact mp4l1e2-555-0201.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "mp4l1e2-555-0201",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 has address \u27e624_LOCATION_2015D3F1\u27e7, PA.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "\u27e624_LOCATION_2015D3F1\u27e7, PA",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6E0_PERSON_4FFD7788\u27e7 was hired on 152202213-02-14.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E0_PERSON_4FFD7788\u27e7",
+      "target": "152202213-02-14",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Employee: \u27e678_PERSON_FE5D0922\u27e7 \u27e678_PERSON_FE5D0922\u27e7 closed 142% of quota in Q2, triggering the accelerator commission rollover recorded in Section 7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "sion rollover recorded in Section 7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 works in Sales department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "Sales",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 is a \u27e692_PERSON_35960462\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e692_PERSON_35960462\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 reports to \u27e6A6_PERSON_9C582EA5\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e6A6_PERSON_9C582EA5\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has SSN \u27e67C_US_SSN_F873A53E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e67C_US_SSN_F873A53E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 earns \u27e679_SALARY_757EA1D9\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e679_SALARY_757EA1D9\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has new salary \u27e679_SALARY_757EA1D9\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e679_SALARY_757EA1D9\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has email owen.fitzgeraldnjoku@meridiannorwood.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "owen.fitzgeraldnjoku@meridiannorwood",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has contact .e4x1a2m-p5l5e5-0267.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "e4x1a2m-p5l5e5-0267",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has address \u27e6E0_LOCATION_10A4137F\u27e7, PA 152.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e6E0_LOCATION_10A4137F\u27e7, PA 152",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 was hired on 132022-04-18.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "132022-04-18",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has effective date 2026-02-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "effective date 2026-02-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has old salary \u27e6EB_SALARY_5E6BD5FD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "\u27e6EB_SALARY_5E6BD5FD\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has reason Quota over-attainment bonus rollov.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "Quota over-attainment bonus rollov",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e678_PERSON_FE5D0922\u27e7 has approved by erRenata Costa-Lindqvist.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e678_PERSON_FE5D0922\u27e7",
+      "target": "t",
+      "key": 0
+    },
+    {
+      "predicate": "MANAGES",
+      "source_sentence": "Employee: \u27e638_PERSON_8403A0EF\u27e7 \u27e6F4_PERSON_A987FD80\u27e7 Manager, \u27e638_PERSON_8403A0EF\u27e7 completed the Q2 SOC2 payroll audit with zero material findings.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "r, \u27e638_PERSON_8403A0EF\u27e7 completed the Q2 SOC2 payroll audit with zero material findings",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 works in Executive & Finance department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "Executive & Finance",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 is a \u27e6A2_PERSON_7CEA541F\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e6A2_PERSON_7CEA541F\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 reports to \u27e6DE_PERSON_C9C0FED3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 has approved by \u27e6DE_PERSON_C9C0FED3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 has SSN \u27e6F2_US_SSN_B15CD3F6\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e6F2_US_SSN_B15CD3F6\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 earns \u27e6E7_SALARY_EBD1EBB8\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e6E7_SALARY_EBD1EBB8\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 has new salary \u27e6E7_SALARY_EBD1EBB8\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e6E7_SALARY_EBD1EBB8\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 has effective date 2025-08-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "effective date 2025-08-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 has old salary \u27e64A_SALARY_A1C3C248\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "\u27e64A_SALARY_A1C3C248\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e638_PERSON_8403A0EF\u27e7 has reason Annual merit increase.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e638_PERSON_8403A0EF\u27e7",
+      "target": "Annual merit increase",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Employee: \u27e63C_PERSON_63A80F2F\u27e7 \u27e63C_PERSON_63A80F2F\u27e7 led the automation initiative that reduced regression testing time by 38%.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 works in Engineering department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "Engineering",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 is a QA \u27e6B4_PERSON_804D656C\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e6B4_PERSON_804D656C\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 reports to \u27e6A9_PERSON_7BC24ABD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 has SSN \u27e6AA_US_SSN_F2EA2FAE\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e6AA_US_SSN_F2EA2FAE\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 earns \u27e631_SALARY_28A134BB\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e631_SALARY_28A134BB\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 has email \u27e679_EMAIL_ADDRESS_29E34A5A\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e679_EMAIL_ADDRESS_29E34A5A\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 has contact am4p1l2e-555-0176.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "am4p1l2e-555-0176",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 has address \u27e66C_LOCATION_6069F6B5\u27e7, PA 1523.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "\u27e66C_LOCATION_6069F6B5\u27e7, PA 1523",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e63C_PERSON_63A80F2F\u27e7 was hired on 22020-09-02.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63C_PERSON_63A80F2F\u27e7",
+      "target": "22020-09-02",
+      "key": 0
+    },
+    {
+      "predicate": "PROMOTED_TO",
+      "source_sentence": "Employee: \u27e630_PERSON_08159866\u27e7 \u27e630_PERSON_08159866\u27e7 was promoted to \u27e6C4_PERSON_2F491E92\u27e7 Manager in Q1 2026 after leading the rebrand campaign.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e6C4_PERSON_2F491E92\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 works in Marketing department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "Marketing",
+      "key": 0
+    },
+    {
+      "predicate": "MANAGES",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 is a \u27e6C4_PERSON_2F491E92\u27e7 Manager.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "r",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 reports to Helena Brand\u00e3o-Whitfield.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "Helena Brand\u00e3o-Whitfield",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has SSN \u27e698_US_SSN_B2F43D89\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e698_US_SSN_B2F43D89\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 earns \u27e6D2_SALARY_97232A99\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e6D2_SALARY_97232A99\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has new salary \u27e6D2_SALARY_97232A99\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e6D2_SALARY_97232A99\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has email \u27e634_EMAIL_ADDRESS_05C265BC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e634_EMAIL_ADDRESS_05C265BC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has contact am4p1l2e-555-0395.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "am4p1l2e-555-0395",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has address \u27e64B_LOCATION_3217B1C9\u27e7, PA 1.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e64B_LOCATION_3217B1C9\u27e7, PA 1",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 was hired on 52200121-03-08.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "52200121-03-08",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has effective date 2026-01-15.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "effective date 2026-01-15",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has old salary \u27e653_SALARY_8EE0F7C0\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "\u27e653_SALARY_8EE0F7C0\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has reason Promotion to Manager.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "Promotion to Manager",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e630_PERSON_08159866\u27e7 has approved by Helena Brand\u00e3o-Whitfie.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e630_PERSON_08159866\u27e7",
+      "target": "approved by Helena Brand\u00e3o-Whitfie",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Helena Brand\u00e3o-Whitfield rated his Q2 performance 4.4/5.0 and recommends him for the \u27e64E_PERSON_E3FDFCBD\u27e7 Development track.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e64E_PERSON_E3FDFCBD\u27e7",
+      "target": "Q2 performance 4.4/5.0",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Employee: \u27e69E_PERSON_1E7F953E\u27e7 \u27e69E_PERSON_1E7F953E\u27e7 maintained a 96% renewal rate across her account portfolio in Q2.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 works in \u27e6AE_PERSON_10D2EE68\u27e7 department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "MANAGES",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 is a \u27e6AE_PERSON_10D2EE68\u27e7 Manager.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "r",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 reports to \u27e679_PERSON_69E40429\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e679_PERSON_69E40429\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has approved by \u27e679_PERSON_69E40429\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e679_PERSON_69E40429\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has SSN d \u27e6A5_US_SSN_92FDC0AD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e6A5_US_SSN_92FDC0AD\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 earns \u27e6BF_SALARY_12E0D53A\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e6BF_SALARY_12E0D53A\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has new salary \u27e6BF_SALARY_12E0D53A\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e6BF_SALARY_12E0D53A\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has email g naledi.okonjofalkenberg@meridiannorw.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "g naledi.okonjofalkenberg@meridiannorw",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has contact oo4d1.e2x-5a5m5p-l0e423.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "oo4d1.e2x-5a5m5p-l0e423",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has address \u27e638_LOCATION_6D1A6251\u27e7, PA 152.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e638_LOCATION_6D1A6251\u27e7, PA 152",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 was hired on 362020-06-29.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "362020-06-29",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has effective date 2025-10-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "effective date 2025-10-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has old salary \u27e618_SALARY_5CA501FC\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "\u27e618_SALARY_5CA501FC\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e69E_PERSON_1E7F953E\u27e7 has reason Annual merit increase.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e69E_PERSON_1E7F953E\u27e7",
+      "target": "Annual merit increase",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "As part of the retention strategy, Chief Executive \u27e6EF_PERSON_4057E222\u27e7 Mbeki-Sorensen and Chief Financial \u27e6B0_PERSON_D211F9F6\u27e7 Bergstrom-Ade have each been offered a retention bonus equal to 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B0_PERSON_D211F9F6\u27e7",
+      "target": "o 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "As part of the retention strategy, Chief Executive \u27e6EF_PERSON_4057E222\u27e7 Mbeki-Sorensen and Chief Financial \u27e6B0_PERSON_D211F9F6\u27e7 Bergstrom-Ade have each been offered a retention bonus equal to 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B0_PERSON_D211F9F6\u27e7",
+      "target": "100% of base salary upon deal close",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "As part of the retention strategy, Chief Executive \u27e6EF_PERSON_4057E222\u27e7 Mbeki-Sorensen and Chief Financial \u27e6B0_PERSON_D211F9F6\u27e7 Bergstrom-Ade have each been offered a retention bonus equal to 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "CEO",
+      "target": "100% of base salary upon deal close",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "As part of the retention strategy, Chief Executive \u27e6EF_PERSON_4057E222\u27e7 Mbeki-Sorensen and Chief Financial \u27e6B0_PERSON_D211F9F6\u27e7 Bergstrom-Ade have each been offered a retention bonus equal to 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "CFO",
+      "target": "100% of base salary upon deal close",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "As part of the retention strategy, Chief Executive \u27e6EF_PERSON_4057E222\u27e7 Mbeki-Sorensen and Chief Financial \u27e6B0_PERSON_D211F9F6\u27e7 Bergstrom-Ade have each been offered a retention bonus equal to 100% of base salary, payable upon deal close, contingent on continued employment through the first 90 days post-close.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6EF_PERSON_4057E222\u27e7",
+      "target": "100% of base salary upon deal close",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_RETENTION_BONUS",
+      "source_sentence": "\u27e666_PERSON_ACB1F756\u27e7 \u27e62E_PERSON_2856AA82\u27e7 Whitcombe-Suarez has been offered a retention package of 75% of base salary under the same terms.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e62E_PERSON_2856AA82\u27e7",
+      "target": "75% of base salary under the same terms",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e629_PERSON_98669CD7\u27e7 \u27e6B8_PERSON_933A0EFB\u27e7 full-time employees are eligible for the standard \u27e6BA_PERSON_E2A68146\u27e7 benefits package beginning on the first day of the month following 30 days of employment.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e629_PERSON_98669CD7\u27e7",
+      "target": "\u27e6BA_PERSON_E2A68146\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This includes medical, dental, and vision coverage through \u27e6D7_PERSON_2D052598\u27e7 Plan, a 401(k) with a 4% company match, twenty days of accrued paid time off annually, and a \u27e6F8_SALARY_84C2A2BD\u27e7 annual professional development stipend.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e629_PERSON_98669CD7\u27e7",
+      "target": "includes medical, dental",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This includes medical, dental, and vision coverage through \u27e6D7_PERSON_2D052598\u27e7 Plan, a 401(k) with a 4% company match, twenty days of accrued paid time off annually, and a \u27e6F8_SALARY_84C2A2BD\u27e7 annual professional development stipend.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e629_PERSON_98669CD7\u27e7",
+      "target": "\u27e6D7_PERSON_2D052598\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 works in Executive & Finance department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "Executive & Finance",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 is a Chief Executive Officer.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "Chief Executive Officer",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 reports to Board of Directors.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "Board of Directors",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 has SSN \u27e60E_US_SSN_8E1C24C8\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "\u27e60E_US_SSN_8E1C24C8\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 earns \u27e690_SALARY_B4916923\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "\u27e690_SALARY_B4916923\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 has email harold.mbekisorensen@meridiannorwo.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "harold.mbekisorensen@meridiannorwo",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 has contact od.4e1x2a-m55p5le-0300.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "od.4e1x2a-m55p5le-0300",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 has address \u27e642_LOCATION_2EE48567\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "\u27e642_LOCATION_2EE48567\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e63E_PERSON_DF53C1D4\u27e7 was hired on 2011-01-10.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_DF53C1D4\u27e7",
+      "target": "2011-01-10",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Item 2: \u27e620_PERSON_EB762D0C\u27e7 discussed the retention package terms referenced in Section 8 of this file in connection with the pending acquisition discussions, and directed \u27e6DE_PERSON_C9C0FED3\u27e7 to finalize the retention agreements with outside counsel by April 15, 2026.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e620_PERSON_EB762D0C\u27e7",
+      "target": "cussed the retention package terms referenced in Section 8 of this file in connection with the pending acquisition discussions",
+      "key": 0
+    },
+    {
+      "predicate": "RELATED_TO",
+      "source_sentence": "Item 3: \u27e620_PERSON_EB762D0C\u27e7 approved a company-wide off-cycle market adjustment pool of \u27e6E1_SALARY_8624CEB9\u27e7 to address compensation compression identified in the Engineering and Finance departments, to be allocated by department leadership in consultation with HR no later than the July 2026 payroll cycle.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e620_PERSON_EB762D0C\u27e7",
+      "target": "\u27e6E1_SALARY_8624CEB9\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Item 4: \u27e620_PERSON_EB762D0C\u27e7 noted the retirement of the prior payroll vendor and the planned migration to a new payroll processor in Q3 2026, which will require re-export of all records currently reflected in Section 7 of this file.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e620_PERSON_EB762D0C\u27e7",
+      "target": "s file",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "\u27e64D_PERSON_2076D393\u27e7 & Third-Party AI \u27e6EC_PERSON_F44BC24A\u27e7 \u27e697_PERSON_617830C4\u27e7 Norwood's internal \u27e6FC_PERSON_234E03FC\u27e7 Policy (Policy ID: DCP-004), this file is classified as Tier 1 \u2014 Restricted.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e64D_PERSON_2076D393\u27e7",
+      "target": "file is classified as Tier 1 \u2014 Restricted",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Employees found to have transmitted unmasked Tier 1 data to a third-party AI service without going through an approved middleware layer are subject to disciplinary action under the \u27e690_PERSON_29C83042\u27e7's \u27e641_PERSON_70958F98\u27e7 provisions.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e690_PERSON_29C83042\u27e7",
+      "target": "\u27e641_PERSON_70958F98\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Approved middleware vendors are reviewed annually by the \u27e60B_PERSON_5454CE78\u27e7 (currently \u27e686_PERSON_CB7AF205\u27e7) and the results are reported to the \u27e687_PERSON_1D94408F\u27e7 Committee.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e60B_PERSON_5454CE78\u27e7",
+      "target": "\u27e686_PERSON_CB7AF205\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "Approved middleware vendors are reviewed annually by the \u27e60B_PERSON_5454CE78\u27e7 (currently \u27e686_PERSON_CB7AF205\u27e7) and the results are reported to the \u27e687_PERSON_1D94408F\u27e7 Committee.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e60B_PERSON_5454CE78\u27e7",
+      "target": "\u27e687_PERSON_1D94408F\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IS_A",
+      "source_sentence": "This policy section is included in the present test file specifically so that document-ingestion pipelines can be evaluated on their ability to extract and reason about policy text that references the very kind of sensitive data found elsewhere in the same document, without conflating the policy language itself with the PII it describes.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e60B_PERSON_5454CE78\u27e7",
+      "target": "policy section is included in the present test file specifically so that document-ingestion pipelines can be evaluated on their ability to extract",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "E1 has base salary range \u27e6FD_SALARY_0A252230\u27e7 \u2013 \u27e6E3_SALARY_D5399184\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6FD_SALARY_0A252230\u27e7",
+      "target": "\u27e6E3_SALARY_D5399184\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "E2 has base salary range \u27e6E3_SALARY_D5399184\u27e7 \u2013 \u27e626_SALARY_7CB272C5\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6E3_SALARY_D5399184\u27e7",
+      "target": "\u27e626_SALARY_7CB272C5\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "E3 has base salary range \u27e68D_SALARY_07611B5B\u27e7 \u2013 \u27e6F2_SALARY_1D6C9AC0\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e68D_SALARY_07611B5B\u27e7",
+      "target": "\u27e6F2_SALARY_1D6C9AC0\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "M1 has base salary range \u27e6F2_SALARY_1D6C9AC0\u27e7 \u2013 \u27e649_SALARY_41B1491E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6F2_SALARY_1D6C9AC0\u27e7",
+      "target": "\u27e649_SALARY_41B1491E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "X1 has base salary range \u27e649_SALARY_41B1491E\u27e7 \u2013 \u27e63E_SALARY_2C054DF3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e649_SALARY_41B1491E\u27e7",
+      "target": "\u27e63E_SALARY_2C054DF3\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 works in Engineering department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "Engineering",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 is a \u27e6A4_ORGANIZATION_3BB94A12\u27e7 Engineer II.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e6A4_ORGANIZATION_3BB94A12\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 reports to \u27e6A9_PERSON_7BC24ABD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has approved by \u27e6A9_PERSON_7BC24ABD\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e6A9_PERSON_7BC24ABD\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has SSN \u27e69E_US_SSN_583F86AB\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e69E_US_SSN_583F86AB\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 earns \u27e66D_SALARY_AA3AC5A3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e66D_SALARY_AA3AC5A3\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has new salary \u27e66D_SALARY_AA3AC5A3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e66D_SALARY_AA3AC5A3\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has email david.okonkworeyes@meridiannorwood.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "david.okonkworeyes@meridiannorwood",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has contact .e4xa1m2-p5l5e5-0192.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "e4xa1m2-p5l5e5-0192",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has address \u27e677_LOCATION_17D67C8E\u27e7, PA 152.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e677_LOCATION_17D67C8E\u27e7, PA 152",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 was hired on 062021-07-19.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "062021-07-19",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has effective date 2025-07-15.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "effective date 2025-07-15",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has old salary \u27e644_SALARY_D371AFAE\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "\u27e644_SALARY_D371AFAE\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e603_PERSON_62C46EB9\u27e7 has reason Promotion to Engineer II.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e603_PERSON_62C46EB9\u27e7",
+      "target": "Promotion to Engineer II",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 works in Sales department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "Sales",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 is a \u27e66E_PERSON_65B9C088\u27e7 Rep.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "\u27e66E_PERSON_65B9C088\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 reports to \u27e678_PERSON_FE5D0922\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "\u27e678_PERSON_FE5D0922\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 has SSN \u27e65D_US_SSN_B5747834\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "\u27e65D_US_SSN_B5747834\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 earns \u27e600_SALARY_D1AB93FF\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "\u27e600_SALARY_D1AB93FF\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 has email sofia.beaumontkaur@meridiannorwood..",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "sofia.beaumontkaur@meridiannorwood",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 has contact ex4a1m2p-5le55-0288.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "ex4a1m2p-5le55-0288",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 has address \u27e6C3_LOCATION_720AD865\u27e7, PA 152.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "\u27e6C3_LOCATION_720AD865\u27e7, PA 152",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6C8_PERSON_E08FCCA1\u27e7 was hired on 192023-08-07.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C8_PERSON_E08FCCA1\u27e7",
+      "target": "192023-08-07",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 works in Executive & Finance department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "Executive & Finance",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 is a \u27e693_PERSON_81126953\u27e7 Analyst.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e693_PERSON_81126953\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 reports to \u27e6DE_PERSON_C9C0FED3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 has approved by \u27e6DE_PERSON_C9C0FED3\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e6DE_PERSON_C9C0FED3\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 has SSN \u27e6DD_US_SSN_5176DA9E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e6DD_US_SSN_5176DA9E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 earns \u27e643_SALARY_1A73DE97\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e643_SALARY_1A73DE97\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 has new salary \u27e643_SALARY_1A73DE97\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e643_SALARY_1A73DE97\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 has effective date 2025-11-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "effective date 2025-11-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 has old salary \u27e696_SALARY_EE608E33\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "\u27e696_SALARY_EE608E33\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e65F_PERSON_4FA6EAC9\u27e7 has reason Annual merit increase.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e65F_PERSON_4FA6EAC9\u27e7",
+      "target": "Annual merit increase",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 works in Operations department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "Operations",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 is a \u27e6CC_PERSON_97BDD26A\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e6CC_PERSON_97BDD26A\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 reports to \u27e6C3_PERSON_9A1E7D67\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has approved by \u27e6C3_PERSON_9A1E7D67\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has SSN \u27e68B_US_SSN_66DD836D\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e68B_US_SSN_66DD836D\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 earns \u27e634_SALARY_42900703\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e634_SALARY_42900703\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has new salary \u27e634_SALARY_42900703\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e634_SALARY_42900703\u27e7",
+      "key": 1
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has email camila.reinholtadeyinka@meridiannorw.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "camila.reinholtadeyinka@meridiannorw",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has contact oo4d1.e2x-a5m55p-l0e362.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "oo4d1.e2x-a5m55p-l0e362",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has address \u27e6EC_LOCATION_D43CD9C7\u27e7, PA 15.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e6EC_LOCATION_D43CD9C7\u27e7, PA 15",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 was hired on 2124019-10-21.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "2124019-10-21",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has effective date 2025-09-01.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "effective date 2025-09-01",
+      "key": 0
+    },
+    {
+      "predicate": "HAS",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has old salary \u27e6EE_SALARY_4D8DAD64\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "\u27e6EE_SALARY_4D8DAD64\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_REASON",
+      "source_sentence": "\u27e677_PERSON_9493F7C6\u27e7 has reason Annual merit increase.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e677_PERSON_9493F7C6\u27e7",
+      "target": "Annual merit increase",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 works in Operations department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "Operations",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 is a \u27e63A_ORGANIZATION_F1902152\u27e7 Administrator.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "\u27e63A_ORGANIZATION_F1902152\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 reports to \u27e6C3_PERSON_9A1E7D67\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "\u27e6C3_PERSON_9A1E7D67\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 has SSN \u27e678_US_SSN_E96D550B\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "\u27e678_US_SSN_E96D550B\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 earns \u27e659_SALARY_11A2EDC6\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "\u27e659_SALARY_11A2EDC6\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 has email tomasz.wieczorekidowu@meridiannorw.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "tomasz.wieczorekidowu@meridiannorw",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 has contact oo4d1.e2x-5a5m5p-l0e374.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "oo4d1.e2x-5a5m5p-l0e374",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 has address \u27e6E1_LOCATION_358FA61C\u27e7, PA 1521.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "\u27e6E1_LOCATION_358FA61C\u27e7, PA 1521",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e63E_PERSON_456B9F9D\u27e7 was hired on 8 2020-01-13.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e63E_PERSON_456B9F9D\u27e7",
+      "target": "8 2020-01-13",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 works in Marketing department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "Marketing",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 is a \u27e64A_PERSON_3D9BFFB1\u27e7 Specialist.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "\u27e64A_PERSON_3D9BFFB1\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 reports to Helena Brand\u00e3o-Whitfield.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "Helena Brand\u00e3o-Whitfield",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 has SSN \u27e6EE_US_SSN_F6F9A900\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "\u27e6EE_US_SSN_F6F9A900\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 earns \u27e623_SALARY_1CA2924B\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "\u27e623_SALARY_1CA2924B\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 has email aoife.callahanmbatha@meridiannorwoo.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "aoife.callahanmbatha@meridiannorwoo",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 has contact d.e4x1a2m-5p5l5e-0402.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "d.e4x1a2m-5p5l5e-0402",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 has address 175 \u27e673_PERSON_5CC7B0B0\u27e7, Pittsburgh, PA 15.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "175 \u27e673_PERSON_5CC7B0B0\u27e7, Pittsburgh, PA 15",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6B4_PERSON_D9277EAD\u27e7 was hired on 2226022-09-12.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6B4_PERSON_D9277EAD\u27e7",
+      "target": "2226022-09-12",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "Helena Brand\u00e3o-Whitfield has address \u27e62A_LOCATION_FA3D7882\u27e7, PA 1523.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e62A_LOCATION_FA3D7882\u27e7",
+      "target": "\u27e62A_LOCATION_FA3D7882\u27e7, PA 1523",
+      "key": 0
+    },
+    {
+      "predicate": "IN_DEPARTMENT",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 works in \u27e6AE_PERSON_10D2EE68\u27e7 department.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "\u27e6AE_PERSON_10D2EE68\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 is a \u27e6F0_PERSON_8A180BB2\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "\u27e6F0_PERSON_8A180BB2\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "REPORTS_TO",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 reports to \u27e679_PERSON_69E40429\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "\u27e679_PERSON_69E40429\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SSN",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 has SSN d \u27e6FC_US_SSN_9CFC669C\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "\u27e6FC_US_SSN_9CFC669C\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 earns \u27e69E_SALARY_DC2B758E\u27e7.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "\u27e69E_SALARY_DC2B758E\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_EMAIL",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 has email kian.delacroixosman@meridiannorwood.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "kian.delacroixosman@meridiannorwood",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_CONTACT",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 has contact .e4x1a2m-p5l5e5-0431.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "e4x1a2m-p5l5e5-0431",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ADDRESS",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 has address \u27e6EC_LOCATION_2A9D1A83\u27e7, PA 1522.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "\u27e6EC_LOCATION_2A9D1A83\u27e7, PA 1522",
+      "key": 0
+    },
+    {
+      "predicate": "HIRED_ON",
+      "source_sentence": "\u27e6C4_PERSON_EC4538AE\u27e7 was hired on 7 2022-01-05.",
+      "doc_id": "PDF-DOC1_HR_COMPENSATION-75E6A1",
+      "namespace": "pdf.doc1_hr_compensation",
+      "source": "\u27e6C4_PERSON_EC4538AE\u27e7",
+      "target": "7 2022-01-05",
+      "key": 0
+    }
+  ]
+}

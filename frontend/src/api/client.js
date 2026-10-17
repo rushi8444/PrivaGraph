@@ -23,6 +23,17 @@ export const api = {
     }
     return response.json();
   },
+  ingestDocumentAsync: async (formData) => {
+    formData.append('background', 'true');
+    const response = await fetch(`${API_BASE}/documents/ingest`, { method: 'POST', body: formData });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ detail: response.statusText }));
+      throw new Error(error.detail || `Upload failed (${response.status})`);
+    }
+    return response.json();
+  },
+  getJobStatus: (jobId) => request(`/documents/jobs/${jobId}`),
+  listJobs: () => request('/documents/jobs'),
   listDocuments: () => request('/documents'),
   getDocument: (id) => request(`/documents/${id}`),
   deleteDocument: (id) => request(`/documents/${id}`, { method: 'DELETE' }),

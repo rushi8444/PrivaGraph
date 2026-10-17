@@ -197,3 +197,39 @@ async def test_case_6_narrative_retention_terms(test_state):
 
     assert "100% of base salary" in reconstructed
     assert "deal close" in reconstructed
+
+
+@pytest.mark.asyncio
+async def test_individual_query_with_department_does_not_leak_colleagues(test_state):
+    """When querying an individual within a department, colleagues in that department are not leaked."""
+    user = UserContext(user_id="1", username="admin", department="Engineering")
+    query = "What is Priya Nandakumar's SSN in Engineering?"
+
+    detector = test_state.get_detector()
+    query_entities = detector.detect(query)
+    tokenized_query, _ = test_state.tokenizer.tokenize_text(query, query_entities)
+
+    # Build context: should only contain Priya's node/edges, NOT David, Marcus, Yuki, Ibrahim
+    context = test_state.context_builder.build_context(tokenized_query if query_entities else query, user)
+
+    # Decode tokens in context to check actual content
+    reconstructed_context, _ = await test_state.reconstructor.reconstruct(context)
+
+    assert "Priya Nandakumar" in reconstructed_context
+    assert "David Okonkwo" not in reconstructed_context
+    assert "Yuki Tanaka" not in reconstructed_context
+    # Colleague/Manager private compensation must not be leaked
+    assert "$196,000" not in reconstructed_context
+    assert "927-18-3364" not in reconstructed_context
+
+
+@pytest.mark.asyncio
+async def test_unmatched_query_zero_leakage(test_state):
+    """When a query matches nothing in the graph, zero random nodes are leaked."""
+    user = UserContext(user_id="1", username="admin", department="Engineering")
+    query = "Where is the Quantum Teleporter stored on Mars?"
+
+    context = test_state.context_builder.build_context(query, user)
+    assert "No matching entities found in the graph" in context
+    assert "Priya" not in context
+    assert "Harold" not in context
