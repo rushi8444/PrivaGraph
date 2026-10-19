@@ -2,67 +2,6 @@
   "directed": true,
   "multigraph": true,
   "graph": {},
-  "nodes": [
-    {
-      "namespace": "hr.compensation",
-      "classification": "CONFIDENTIAL",
-      "doc_ids": [
-        "HR-2026-00142"
-      ],
-      "id": "\u27e6A4_PERSON_E94DAA43\u27e7"
-    },
-    {
-      "namespace": "hr.compensation",
-      "classification": "CONFIDENTIAL",
-      "doc_ids": [
-        "HR-2026-00142"
-      ],
-      "id": "\u27e6B3_SALARY_16E5987D\u27e7"
-    },
-    {
-      "namespace": "hr.compensation",
-      "classification": "CONFIDENTIAL",
-      "doc_ids": [
-        "HR-2026-00142"
-      ],
-      "id": "\u27e62D_SALARY_14B47410\u27e7"
-    },
-    {
-      "namespace": "hr.compensation",
-      "classification": "CONFIDENTIAL",
-      "doc_ids": [
-        "HR-2026-00142"
-      ],
-      "id": "\u27e61D_PERSON_6E8B37A5\u27e7"
-    }
-  ],
-  "edges": [
-    {
-      "predicate": "HAS_SALARY",
-      "source_sentence": "\u27e6A4_PERSON_E94DAA43\u27e7 (SSN: \u27e6B1_US_SSN_04736E41\u27e7) is a Senior Engineer earning \u27e6B3_SALARY_16E5987D\u27e7.",
-      "doc_id": "HR-2026-00142",
-      "namespace": "hr.compensation",
-      "source": "\u27e6A4_PERSON_E94DAA43\u27e7",
-      "target": "\u27e6B3_SALARY_16E5987D\u27e7",
-      "key": 0
-    },
-    {
-      "predicate": "MANAGES",
-      "source_sentence": "He manages a team budget of \u27e62D_SALARY_14B47410\u27e7 and reports to \u27e61D_PERSON_6E8B37A5\u27e7 (VP Engineering).",
-      "doc_id": "HR-2026-00142",
-      "namespace": "hr.compensation",
-      "source": "\u27e6A4_PERSON_E94DAA43\u27e7",
-      "target": "\u27e62D_SALARY_14B47410\u27e7",
-      "key": 0
-    },
-    {
-      "predicate": "REPORTS_TO",
-      "source_sentence": "He manages a team budget of \u27e62D_SALARY_14B47410\u27e7 and reports to \u27e61D_PERSON_6E8B37A5\u27e7 (VP Engineering).",
-      "doc_id": "HR-2026-00142",
-      "namespace": "hr.compensation",
-      "source": "\u27e6A4_PERSON_E94DAA43\u27e7",
-      "target": "\u27e61D_PERSON_6E8B37A5\u27e7",
-      "key": 0
-    }
-  ]
+  "nodes": [],
+  "edges": []
 }

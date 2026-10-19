@@ -2,16 +2,32 @@
 
 from __future__ import annotations
 
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.v1 import documents, query, graph, admin
+from app.api.v1 import documents, query, graph, admin, auth
 from app.config import settings
+from app.security.user_store import user_store
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Manage startup and shutdown lifecycle for database pools."""
+    try:
+        await user_store.init_db()
+    except Exception as e:
+        import logging
+        logging.getLogger("uvicorn.error").warning(f"Could not connect to PostgreSQL on startup: {e}")
+    yield
+    await user_store.close()
+
 
 app = FastAPI(
     title="PrivaGraph",
     description="Privacy-Preserving Graph RAG Middleware for Enterprise LLMs",
     version="0.1.0",
+    lifespan=lifespan,
 )
 
 # CORS middleware for React frontend
@@ -24,6 +40,7 @@ app.add_middleware(
 )
 
 # Register API routes
+app.include_router(auth.router, prefix="/api/v1")
 app.include_router(documents.router, prefix="/api/v1")
 app.include_router(query.router, prefix="/api/v1")
 app.include_router(graph.router, prefix="/api/v1")

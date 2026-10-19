@@ -156,10 +156,32 @@ def get_state() -> AppState:
     return app_state
 
 
+from fastapi import Depends
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+
+security = HTTPBearer(auto_error=False)
+
+
 def get_default_user() -> UserContext:
-    """Return a default user context for MVP (no auth required yet)."""
+    """Return a default user context for fallback."""
     return UserContext(
-        user_id="default",
+        user_id="usr_default",
         username="admin",
+        email="admin@privagraph.local",
         department="Engineering",
     )
+
+
+async def get_current_user_or_default(
+    credentials: HTTPAuthorizationCredentials | None = Depends(security),
+) -> UserContext:
+    """Return authenticated user if Bearer token present, else default user context."""
+    if credentials and credentials.credentials:
+        from app.api.v1.auth import get_current_user_with_token
+
+        user_ctx, _, _, _ = await get_current_user_with_token(credentials)
+        return user_ctx
+    return get_default_user()
+
+
+from app.api.v1.auth import get_current_user, get_current_user_with_token

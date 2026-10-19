@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import time
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 
-from app.api.dependencies import get_state, get_default_user
+from app.api.dependencies import get_state, get_current_user_or_default
+from app.models.auth import UserContext
 from app.models.query import (
     QueryRequest,
     QueryResponse,
@@ -25,10 +26,12 @@ synthesizer = AnswerSynthesizer()
 
 
 @router.post("", response_model=QueryResponse)
-async def submit_query(request: QueryRequest):
+async def submit_query(
+    request: QueryRequest,
+    user: UserContext = Depends(get_current_user_or_default),
+):
     """Submit a natural language query through the privacy-preserving pipeline."""
     state = get_state()
-    user = get_default_user()
     start_time = time.time()
 
     # Step 0: Tokenize PII in user query

@@ -277,5 +277,40 @@ export function BookOpenIcon({ size = 16, className = '', ...props }) {
   );
 }
 
+export function LogOutIcon({ size = 16, className = '', ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+      <polyline points="16 17 21 12 16 7" />
+      <line x1="21" y1="12" x2="9" y2="12" />
+    </svg>
+  );
+}
+
+export function GoogleIcon({ size = 18, className = '', ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...props}>
+      <path
+        fill="#EA4335"
+        d="M12 5c1.54 0 2.93.56 4.02 1.48l3.02-3.02C17.21 1.76 14.77 1 12 1 7.42 1 3.52 3.59 1.63 7.37l3.71 2.88C6.23 7.23 8.87 5 12 5z"
+      />
+      <path
+        fill="#4285F4"
+        d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58l3.71 2.88c2.16-1.99 3.71-4.94 3.71-8.7z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.34 14.75c-.24-.72-.38-1.49-.38-2.28s.14-1.56.38-2.28L1.63 7.37C.59 9.45 0 11.66 0 14s.59 4.55 1.63 6.63l3.71-2.88z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 23c3.24 0 5.95-1.08 7.93-2.91l-3.71-2.88c-1.04.7-2.39 1.12-4.22 1.12-3.13 0-5.77-2.23-6.66-5.25L1.63 15.96C3.52 19.74 7.42 23 12 23z"
+      />
+    </svg>
+  );
+}
+
+
+
 
 
