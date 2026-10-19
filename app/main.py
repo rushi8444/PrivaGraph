@@ -6,9 +6,10 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.v1 import documents, query, graph, admin, auth
+from app.api.v1 import documents, query, graph, admin, auth, conversations
 from app.config import settings
 from app.security.user_store import user_store
+from app.security.chat_store import chat_store
 
 
 @asynccontextmanager
@@ -16,6 +17,7 @@ async def lifespan(app: FastAPI):
     """Manage startup and shutdown lifecycle for database pools."""
     try:
         await user_store.init_db()
+        await chat_store.init_db()
     except Exception as e:
         import logging
         logging.getLogger("uvicorn.error").warning(f"Could not connect to PostgreSQL on startup: {e}")
@@ -41,6 +43,7 @@ app.add_middleware(
 
 # Register API routes
 app.include_router(auth.router, prefix="/api/v1")
+app.include_router(conversations.router, prefix="/api/v1")
 app.include_router(documents.router, prefix="/api/v1")
 app.include_router(query.router, prefix="/api/v1")
 app.include_router(graph.router, prefix="/api/v1")

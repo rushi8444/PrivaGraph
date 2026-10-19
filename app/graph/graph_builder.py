@@ -129,18 +129,39 @@ class KnowledgeGraphBuilder:
             attrs["doc_ids"] = [doc_id] if doc_id else []
             self.graph.add_node(node_id, **attrs)
 
-    def get_neighbors(self, node_id: str, depth: int = 2) -> nx.MultiDiGraph:
-        """Extract a subgraph around a node using BFS up to `depth` hops.
+    def get_neighbors(
+        self,
+        node_id: str,
+        depth: int = 2,
+        allowed_doc_ids: set[str] | list[str] | None = None,
+    ) -> nx.MultiDiGraph:
+        """Extract a subgraph around a node using BFS up to `depth` hops with document scoping.
 
         Args:
             node_id: The center node to expand from.
             depth: Maximum traversal depth.
+            allowed_doc_ids: Optional set/list of document IDs to restrict traversal to.
 
         Returns:
-            Subgraph containing all reachable nodes within depth.
+            Subgraph containing only edges and nodes belonging to allowed documents.
         """
         if node_id not in self.graph:
             return nx.MultiDiGraph()
+
+        allowed_set = set(allowed_doc_ids) if allowed_doc_ids is not None else None
+
+        # If scoped to documents, ensure the starting node touches at least one allowed document
+        if allowed_set is not None:
+            node_docs = set(self.graph.nodes[node_id].get("doc_ids", []))
+            has_edge_in_doc = any(
+                d.get("doc_id") in allowed_set
+                for _, _, d in self.graph.edges(node_id, data=True)
+            ) or any(
+                d.get("doc_id") in allowed_set
+                for _, _, d in self.graph.in_edges(node_id, data=True)
+            )
+            if not node_docs.intersection(allowed_set) and not has_edge_in_doc:
+                return nx.MultiDiGraph()
 
         visited: set[str] = set()
         frontier: set[str] = {node_id}
@@ -151,17 +172,46 @@ class KnowledgeGraphBuilder:
                 if n not in visited:
                     visited.add(n)
                     # Traverse forward along outgoing relations
-                    next_frontier.update(self.graph.successors(n))
-                    # For incoming relations, avoid traversing backward across broad grouping hub nodes (e.g. departments, companies)
+                    for succ in self.graph.successors(n):
+                        edge_data = self.graph.get_edge_data(n, succ) or {}
+                        if allowed_set is not None:
+                            if not any(d.get("doc_id") in allowed_set for d in edge_data.values()):
+                                continue
+                        next_frontier.add(succ)
+
+                    # For incoming relations, avoid traversing backward across broad grouping hub nodes
                     for pred in self.graph.predecessors(n):
                         edge_data = self.graph.get_edge_data(pred, n) or {}
+                        if allowed_set is not None:
+                            if not any(d.get("doc_id") in allowed_set for d in edge_data.values()):
+                                continue
                         predicates = {d.get("predicate") for d in edge_data.values()}
                         if not predicates.intersection({"IN_DEPARTMENT", "WORKS_FOR", "LOCATED_IN", "IS_A", "HAS_STATUS"}):
                             next_frontier.add(pred)
             frontier = next_frontier - visited
 
         visited.update(frontier)
-        return self.graph.subgraph(visited).copy()
+        sub = self.graph.subgraph(visited).copy()
+
+        # Strictly purge any edges not originating from allowed_set
+        if allowed_set is not None:
+            edges_to_remove = [
+                (u, v, k)
+                for u, v, k, d in sub.edges(data=True, keys=True)
+                if d.get("doc_id") not in allowed_set
+            ]
+            for u, v, k in edges_to_remove:
+                sub.remove_edge(u, v, key=k)
+
+            # Purge isolated nodes that have no remaining edges and do not belong to allowed_set
+            isolated = [
+                n for n in sub.nodes()
+                if sub.degree(n) == 0 and not set(sub.nodes[n].get("doc_ids", [])).intersection(allowed_set)
+            ]
+            for n in isolated:
+                sub.remove_node(n)
+
+        return sub
 
     def serialize_subgraph(self, subgraph: nx.MultiDiGraph) -> str:
         """Serialize subgraph to a text format suitable for LLM context.

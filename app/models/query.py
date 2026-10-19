@@ -12,6 +12,8 @@ class QueryRequest(BaseModel):
     model: str | None = None
     max_traversal_depth: int = Field(default=3, ge=1, le=10)
     include_graph_context: bool = False
+    conversation_id: str | None = None
+    doc_ids: list[str] | None = None
 
 
 class QueryMetadata(BaseModel):
@@ -51,6 +53,7 @@ class QueryResponse(BaseModel):
     """Final response returned to the user."""
 
     answer: str
+    conversation_id: str | None = None
     metadata: QueryMetadata = QueryMetadata()
     graph_context: str | None = None
     citations: list[Citation] = []

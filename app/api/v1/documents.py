@@ -164,11 +164,12 @@ async def _run_pipeline_worker(
     department: str | None,
     author: str | None,
     job_id: str,
+    conversation_id: str | None = None,
 ) -> None:
     """Background worker task wrapping document pipeline execution."""
     state = get_state()
     try:
-        await process_document_pipeline(
+        result = await process_document_pipeline(
             content=content,
             filename=filename,
             title=title,
@@ -177,6 +178,12 @@ async def _run_pipeline_worker(
             author=author,
             job_id=job_id,
         )
+        if conversation_id and result.get("doc_id"):
+            try:
+                from app.security.chat_store import chat_store
+                await chat_store.attach_document(conversation_id, result["doc_id"])
+            except Exception:
+                pass
     except Exception as exc:
         state.update_job(
             job_id,
@@ -195,6 +202,7 @@ async def ingest_document(
     classification: str | None = Form(None),
     department: str | None = Form(None),
     author: str | None = Form(None),
+    conversation_id: str | None = Form(None),
     background: bool = Form(False),
 ):
     """Ingest a Markdown, PDF, CSV, or XLSX document synchronously or asynchronously.
@@ -227,6 +235,7 @@ async def ingest_document(
     opt_class = classification if isinstance(classification, str) and classification.strip() else None
     opt_dept = department if isinstance(department, str) and department.strip() else None
     opt_author = author if isinstance(author, str) and author.strip() else None
+    opt_conv = conversation_id if isinstance(conversation_id, str) and conversation_id.strip() else None
 
     # Read uploaded file content immediately before request ends
     content = await file.read()
@@ -242,6 +251,7 @@ async def ingest_document(
             department=opt_dept,
             author=opt_author,
             job_id=job_id,
+            conversation_id=opt_conv,
         )
         return JSONResponse(
             status_code=202,
@@ -256,7 +266,7 @@ async def ingest_document(
         )
 
     try:
-        return await process_document_pipeline(
+        result = await process_document_pipeline(
             content=content,
             filename=filename,
             title=opt_title,
@@ -264,6 +274,13 @@ async def ingest_document(
             department=opt_dept,
             author=opt_author,
         )
+        if opt_conv and result.get("doc_id"):
+            try:
+                from app.security.chat_store import chat_store
+                await chat_store.attach_document(opt_conv, result["doc_id"])
+            except Exception:
+                pass
+        return result
     except UnicodeDecodeError as e:
         raise HTTPException(status_code=422, detail=f"Failed to decode text file: {e}")
     except ValueError as e:

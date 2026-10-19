@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { ChatProvider, useChat } from './context/ChatContext';
 import ProtectedRoute from './components/Auth/ProtectedRoute';
 import Sidebar from './components/Layout/Sidebar';
 import TopBar from './components/Layout/TopBar';
@@ -9,13 +10,24 @@ import AuditPage from './pages/AuditPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 
-function AuthenticatedLayout({ children }) {
+function AuthenticatedContent() {
+  const { isSidebarCollapsed } = useChat();
   return (
-    <div className="app-layout">
+    <div className={`app-layout ${isSidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
       <Sidebar />
       <TopBar />
-      <main className="app-main">{children}</main>
+      <main className="app-main">
+        <Outlet />
+      </main>
     </div>
+  );
+}
+
+function AuthenticatedLayout() {
+  return (
+    <ChatProvider>
+      <AuthenticatedContent />
+    </ChatProvider>
   );
 }
 
@@ -30,22 +42,19 @@ export default function App() {
 
           {/* Protected Application Routes */}
           <Route
-            path="/*"
             element={
               <ProtectedRoute>
-                <AuthenticatedLayout>
-                  <Routes>
-                    <Route path="/" element={<Navigate to="/query" replace />} />
-                    <Route path="/documents" element={<DocumentsPage />} />
-                    <Route path="/query" element={<QueryPage />} />
-                    <Route path="/graph" element={<Navigate to="/query" replace />} />
-                    <Route path="/audit" element={<AuditPage />} />
-                    <Route path="*" element={<Navigate to="/query" replace />} />
-                  </Routes>
-                </AuthenticatedLayout>
+                <AuthenticatedLayout />
               </ProtectedRoute>
             }
-          />
+          >
+            <Route path="/" element={<Navigate to="/query" replace />} />
+            <Route path="/query" element={<QueryPage />} />
+            <Route path="/documents" element={<DocumentsPage />} />
+            <Route path="/audit" element={<AuditPage />} />
+            <Route path="/graph" element={<Navigate to="/query" replace />} />
+            <Route path="*" element={<Navigate to="/query" replace />} />
+          </Route>
         </Routes>
       </AuthProvider>
     </BrowserRouter>

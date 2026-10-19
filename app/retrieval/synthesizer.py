@@ -51,6 +51,12 @@ class AnswerSynthesizer:
         Returns:
             A clean, synthesized response (never raw triple dumps, never empty string).
         """
+        if "No documents are attached to this chat session" in context_text:
+            return "No documents are attached to this chat session yet. Please attach or upload a document to ask questions about it."
+
+        if "No matching entities found in the attached documents" in context_text:
+            return "I could not find matching records in the documents attached to this chat session."
+
         rels = self.REL_PATTERN.findall(context_text)
         if not rels:
             return "I could not find matching records in the knowledge base for this query."

@@ -19,6 +19,7 @@ from app.models.query import (
 from app.security.audit_log import QUERY_SENT, QUERY_RECONSTRUCTED, INJECTION_BLOCKED
 from app.tokenization.token_codec import extract_tokens
 from app.retrieval.synthesizer import AnswerSynthesizer
+from app.security.chat_store import chat_store
 
 router = APIRouter(prefix="/query", tags=["query"])
 
@@ -33,6 +34,29 @@ async def submit_query(
     """Submit a natural language query through the privacy-preserving pipeline."""
     state = get_state()
     start_time = time.time()
+
+    # Manage conversation session & persist user message
+    conv_id = request.conversation_id
+    if not conv_id and user and user.user_id:
+        words = request.query.strip().split()
+        title = " ".join(words[:6])
+        if len(words) > 6:
+            title += "..."
+        try:
+            conv = await chat_store.create_conversation(user_id=user.user_id, title=title or "New Chat")
+            conv_id = conv.id
+        except Exception:
+            conv_id = None
+
+    if conv_id:
+        try:
+            await chat_store.add_message(
+                conversation_id=conv_id,
+                role="user",
+                content=request.query,
+            )
+        except Exception:
+            pass
 
     # Step 0: Tokenize PII in user query
     detector = state.get_detector()
@@ -49,10 +73,16 @@ async def submit_query(
             doc_id="query",
         )
 
+    # Resolve document scoping for this conversation
+    allowed_doc_ids = request.doc_ids
+    if allowed_doc_ids is None and conv_id:
+        allowed_doc_ids = await chat_store.get_conversation_documents(conv_id)
+
     # Step 1: Build context and retrieve citations from graph edges
     context, raw_citations = state.context_builder.build_context_with_citations(
         query=tokenized_query if query_entities else request.query,
         user=user,
+        allowed_doc_ids=allowed_doc_ids,
     )
 
     # Enrich citations with doc metadata and decrypt snippet preview locally
@@ -164,9 +194,30 @@ async def submit_query(
         egress_destination="Cloud LLM (Zero Plaintext PII)",
     )
 
-    # Step 5: Return answer with citations & Zero-PII verification proof
+    # Step 5: Persist assistant message
+    if conv_id:
+        try:
+            await chat_store.add_message(
+                conversation_id=conv_id,
+                role="assistant",
+                content=reconstructed_text,
+                citations=[c.model_dump() for c in citations],
+                zero_pii_proof=zero_pii_proof.model_dump() if zero_pii_proof else None,
+                metadata={
+                    "entities_reconstructed": entities_count,
+                    "subgraph_nodes": state.graph_builder.graph.number_of_nodes(),
+                    "subgraph_edges": state.graph_builder.graph.number_of_edges(),
+                    "model_used": llm_model,
+                    "latency_ms": elapsed_ms,
+                },
+            )
+        except Exception:
+            pass
+
+    # Step 6: Return answer with citations & Zero-PII verification proof
     return QueryResponse(
         answer=reconstructed_text,
+        conversation_id=conv_id,
         metadata=QueryMetadata(
             entities_reconstructed=entities_count,
             subgraph_nodes=state.graph_builder.graph.number_of_nodes(),

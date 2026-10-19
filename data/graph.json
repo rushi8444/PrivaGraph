@@ -2,6 +2,92 @@
   "directed": true,
   "multigraph": true,
   "graph": {},
-  "nodes": [],
-  "edges": []
+  "nodes": [
+    {
+      "namespace": "xlsx.multisheet_team",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "XLSX-MULTISHEET_TEAM-0BC21B"
+      ],
+      "id": "\u27e60A_PERSON_6A3BD8DF\u27e7"
+    },
+    {
+      "namespace": "xlsx.multisheet_team",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "XLSX-MULTISHEET_TEAM-0BC21B"
+      ],
+      "id": "DevOps Lead"
+    },
+    {
+      "namespace": "xlsx.multisheet_team",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "XLSX-MULTISHEET_TEAM-0BC21B"
+      ],
+      "id": "\u27e658_SALARY_03ABC66C\u27e7"
+    },
+    {
+      "namespace": "xlsx.multisheet_team",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "XLSX-MULTISHEET_TEAM-0BC21B"
+      ],
+      "id": "\u27e66A_PERSON_C31E2596\u27e7"
+    },
+    {
+      "namespace": "xlsx.multisheet_team",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "XLSX-MULTISHEET_TEAM-0BC21B"
+      ],
+      "id": "\u27e6BC_PERSON_71A247D7\u27e7"
+    },
+    {
+      "namespace": "xlsx.multisheet_team",
+      "classification": "INTERNAL",
+      "doc_ids": [
+        "XLSX-MULTISHEET_TEAM-0BC21B"
+      ],
+      "id": "\u27e633_SALARY_59CFECAA\u27e7"
+    }
+  ],
+  "edges": [
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e60A_PERSON_6A3BD8DF\u27e7 is a DevOps Lead.",
+      "doc_id": "XLSX-MULTISHEET_TEAM-0BC21B",
+      "namespace": "xlsx.multisheet_team",
+      "source": "\u27e60A_PERSON_6A3BD8DF\u27e7",
+      "target": "DevOps Lead",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e60A_PERSON_6A3BD8DF\u27e7 earns \u27e658_SALARY_03ABC66C\u27e7.",
+      "doc_id": "XLSX-MULTISHEET_TEAM-0BC21B",
+      "namespace": "xlsx.multisheet_team",
+      "source": "\u27e60A_PERSON_6A3BD8DF\u27e7",
+      "target": "\u27e658_SALARY_03ABC66C\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_ROLE",
+      "source_sentence": "\u27e66A_PERSON_C31E2596\u27e7 is a \u27e6BC_PERSON_71A247D7\u27e7.",
+      "doc_id": "XLSX-MULTISHEET_TEAM-0BC21B",
+      "namespace": "xlsx.multisheet_team",
+      "source": "\u27e66A_PERSON_C31E2596\u27e7",
+      "target": "\u27e6BC_PERSON_71A247D7\u27e7",
+      "key": 0
+    },
+    {
+      "predicate": "HAS_SALARY",
+      "source_sentence": "\u27e66A_PERSON_C31E2596\u27e7 earns \u27e633_SALARY_59CFECAA\u27e7.",
+      "doc_id": "XLSX-MULTISHEET_TEAM-0BC21B",
+      "namespace": "xlsx.multisheet_team",
+      "source": "\u27e66A_PERSON_C31E2596\u27e7",
+      "target": "\u27e633_SALARY_59CFECAA\u27e7",
+      "key": 0
+    }
+  ]
 }

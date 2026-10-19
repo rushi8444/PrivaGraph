@@ -6,12 +6,24 @@ import {
   UnlockIcon,
   EyeIcon,
   FileTextIcon,
+  CopyIcon,
+  CheckIcon,
 } from '../Common/Icons';
 import ZeroPIIModal from './ZeroPIIModal';
+import MarkdownContent from './MarkdownContent';
 
 export default function MessageBubble({ message }) {
   const isUser = message.role === 'user';
   const [showProofModal, setShowProofModal] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const messageText = message.content || message.text || '';
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(messageText);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   if (isUser) {
     return (
@@ -20,7 +32,9 @@ export default function MessageBubble({ message }) {
           <UserIcon size={13} />
           <span>Analyst Request</span>
         </div>
-        <div className="message-card">{message.text}</div>
+        <div className="message-card">
+          <MarkdownContent text={messageText} />
+        </div>
       </div>
     );
   }
@@ -30,7 +44,7 @@ export default function MessageBubble({ message }) {
   const decryptedCount = message.metadata?.entities_reconstructed ?? 0;
   const latencyMs = message.metadata?.latency_ms;
   const citations = message.citations || [];
-  const proof = message.zeroPiiProof;
+  const proof = message.zeroPiiProof || message.zero_pii_proof;
 
   // Deduplicate citations by doc_id or title
   const uniqueDocCitations = Array.from(
@@ -62,41 +76,68 @@ export default function MessageBubble({ message }) {
               )}
             </div>
 
-            {/* Zero-PII Egress Proof Button */}
-            {proof && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              {/* Copy Message Button */}
               <button
                 type="button"
-                onClick={() => setShowProofModal(true)}
+                onClick={handleCopy}
                 className="btn btn-sm btn-ghost"
                 style={{
                   fontSize: '0.72rem',
                   padding: '3px 8px',
                   borderRadius: '12px',
-                  background: 'rgba(16, 185, 129, 0.1)',
-                  color: '#10b981',
-                  border: '1px solid rgba(16, 185, 129, 0.25)',
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  color: copied ? '#10b981' : 'var(--text-muted)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '5px',
+                  gap: '4px',
                   cursor: 'pointer',
-                  fontWeight: 500,
                 }}
-                title="Inspect cryptographic proof that no PII left your local machine"
+                title="Copy entire response"
               >
-                <EyeIcon size={13} />
-                <span>Verify Zero-PII</span>
+                {copied ? <CheckIcon size={12} /> : <CopyIcon size={12} />}
+                <span>{copied ? 'Copied' : 'Copy'}</span>
               </button>
-            )}
+
+              {/* Zero-PII Egress Proof Button */}
+              {proof && (
+                <button
+                  type="button"
+                  onClick={() => setShowProofModal(true)}
+                  className="btn btn-sm btn-ghost"
+                  style={{
+                    fontSize: '0.72rem',
+                    padding: '3px 8px',
+                    borderRadius: '12px',
+                    background: 'rgba(16, 185, 129, 0.1)',
+                    color: '#10b981',
+                    border: '1px solid rgba(16, 185, 129, 0.25)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '5px',
+                    cursor: 'pointer',
+                    fontWeight: 500,
+                  }}
+                  title="Inspect cryptographic proof that no PII left your local machine"
+                >
+                  <EyeIcon size={13} />
+                  <span>Verify Zero-PII</span>
+                </button>
+              )}
+            </div>
           </div>
 
-          {/* Answer Content */}
-          <div className="message-assistant-body">{message.text}</div>
+          {/* Answer Content rendered with Markdown and Code highlighting */}
+          <div className="message-assistant-body" style={{ marginTop: '8px' }}>
+            <MarkdownContent text={messageText} />
+          </div>
 
-          {/* Minimalist Source Document Display */}
+          {/* Source Document Display */}
           {uniqueDocCitations.length > 0 && (
             <div
               style={{
-                marginTop: '10px',
+                marginTop: '12px',
                 paddingTop: '8px',
                 borderTop: '1px solid var(--border-color, rgba(255,255,255,0.06))',
                 display: 'flex',
@@ -106,7 +147,7 @@ export default function MessageBubble({ message }) {
               }}
             >
               <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)', fontWeight: 500 }}>
-                Source:
+                Sources:
               </span>
               {uniqueDocCitations.map((c, idx) => (
                 <span
@@ -124,7 +165,7 @@ export default function MessageBubble({ message }) {
                   }}
                 >
                   <FileTextIcon size={11} style={{ color: 'var(--brand-primary, #6366f1)' }} />
-                  <span style={{ fontWeight: 500 }}>{c.title}</span>
+                  <span style={{ fontWeight: 500 }}>{c.title || c.doc_id}</span>
                 </span>
               ))}
             </div>
@@ -136,7 +177,7 @@ export default function MessageBubble({ message }) {
       {showProofModal && proof && (
         <ZeroPIIModal
           proof={proof}
-          answer={message.text}
+          answer={messageText}
           onClose={() => setShowProofModal(false)}
         />
       )}

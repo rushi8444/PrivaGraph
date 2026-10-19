@@ -1,1 +1,12 @@
-{}
+{
+  "XLSX-MULTISHEET_TEAM-0BC21B": {
+    "id": "XLSX-MULTISHEET_TEAM-0BC21B",
+    "title": "Multisheet Team",
+    "classification": "INTERNAL",
+    "department": "General",
+    "author": "System Ingest",
+    "created": "2026-10-19",
+    "entity_count": 7,
+    "triple_count": 4
+  }
+}

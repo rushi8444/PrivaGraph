@@ -28,7 +28,11 @@ async function request(endpoint, options = {}) {
     }
     throw new Error(error.detail || `API Error: ${response.status}`);
   }
-  return response.json();
+  if (response.status === 204) {
+    return null;
+  }
+  const text = await response.text();
+  return text ? JSON.parse(text) : null;
 }
 
 export const api = {
@@ -84,11 +88,42 @@ export const api = {
   getDocument: (id) => request(`/documents/${id}`),
   deleteDocument: (id) => request(`/documents/${id}`, { method: 'DELETE' }),
 
+  // === Conversations & Chat History ===
+  listConversations: () => request('/conversations'),
+  createConversation: (title = 'New Chat') =>
+    request('/conversations', {
+      method: 'POST',
+      body: JSON.stringify({ title }),
+    }),
+  getConversation: (id) => request(`/conversations/${id}`),
+  renameConversation: (id, title) =>
+    request(`/conversations/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({ title }),
+    }),
+  deleteConversation: (id) => request(`/conversations/${id}`, { method: 'DELETE' }),
+  attachDocumentToConversation: (conversationId, docId) =>
+    request(`/conversations/${conversationId}/documents`, {
+      method: 'POST',
+      body: JSON.stringify({ doc_id: docId }),
+    }),
+  detachDocumentFromConversation: (conversationId, docId) =>
+    request(`/conversations/${conversationId}/documents/${docId}`, {
+      method: 'DELETE',
+    }),
+  getConversationDocuments: (conversationId) =>
+    request(`/conversations/${conversationId}/documents`),
+
   // === Query ===
-  submitQuery: (query, model) =>
+  submitQuery: (query, model, conversation_id = null) =>
     request('/query', {
       method: 'POST',
-      body: JSON.stringify({ query, model, include_graph_context: true }),
+      body: JSON.stringify({
+        query,
+        model,
+        conversation_id,
+        include_graph_context: true,
+      }),
     }),
 
   // === Graph & Audit ===
