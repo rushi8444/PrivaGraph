@@ -134,7 +134,7 @@ export function ChatProvider({ children }) {
       formData.append('file', file);
       formData.append('conversation_id', convId);
 
-      await api.uploadDocument(formData);
+      await api.ingestDocument(formData);
       const docs = await api.getConversationDocuments(convId);
       setAttachedDocuments(docs);
       await fetchConversations();

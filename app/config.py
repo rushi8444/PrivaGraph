@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+from typing import Literal
 from pydantic_settings import BaseSettings
 from pydantic import Field
 
@@ -49,6 +50,12 @@ class Settings(BaseSettings):
     # --- NER ---
     SPACY_MODEL: str = "en_core_web_sm"
     DEFAULT_MIN_CONFIDENCE: float = 0.85
+
+    # --- Graph Backend ---
+    GRAPH_BACKEND: Literal["file", "neo4j"] = "file"
+    NEO4J_URI: str = "bolt://localhost:7687"
+    NEO4J_USER: str = "neo4j"
+    NEO4J_PASSWORD: str = "password123"
 
     # --- Paths ---
     DATA_DIR: Path = Path("data")

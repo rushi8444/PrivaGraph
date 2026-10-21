@@ -287,6 +287,10 @@ export default function Sidebar() {
 
       {/* Navigation: Documents */}
       <nav className="sidebar-nav" style={{ flex: 'none' }}>
+        <NavLink to="/how-it-works" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
+          <span className="sidebar-link-icon"><ShieldIcon size={17} /></span>
+          <span>How it works</span>
+        </NavLink>
         <NavLink
           to="/documents"
           className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}

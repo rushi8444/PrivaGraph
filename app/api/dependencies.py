@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from app.graph.graph_builder import KnowledgeGraphBuilder
+from app.graph.graph_store import FileGraphStore, Neo4jGraphStore
 from app.tokenization.tokenizer import DeterministicTokenizer
 from app.tokenization.vault import EncryptedVault
 from app.detection.presidio_engine import PresidioDetectionEngine
@@ -43,7 +43,11 @@ class AppState:
 
         # Stage 3: Knowledge Graph
         self.triple_extractor = TripleExtractor()
-        self.graph_builder = KnowledgeGraphBuilder(persist_path=settings.DATA_DIR / "graph.json")
+        if settings.GRAPH_BACKEND == "neo4j":
+            self.graph_builder = Neo4jGraphStore(
+                settings.NEO4J_URI, settings.NEO4J_USER, settings.NEO4J_PASSWORD)
+        else:
+            self.graph_builder = FileGraphStore(settings.DATA_DIR / "graph.json")
 
         # Stage 4: Retrieval
         self.query_analyzer = QueryAnalyzer()

@@ -9,6 +9,7 @@ import QueryPage from './pages/QueryPage';
 import AuditPage from './pages/AuditPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import ProjectAnatomy from './pages/ProjectAnatomy';
 
 function AuthenticatedContent() {
   const { isSidebarCollapsed } = useChat();
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/query" element={<QueryPage />} />
             <Route path="/documents" element={<DocumentsPage />} />
             <Route path="/audit" element={<AuditPage />} />
+            <Route path="/how-it-works" element={<ProjectAnatomy />} />
             <Route path="/graph" element={<Navigate to="/query" replace />} />
             <Route path="*" element={<Navigate to="/query" replace />} />
           </Route>
