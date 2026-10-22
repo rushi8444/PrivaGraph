@@ -7,13 +7,14 @@ Supports OpenAI, Anthropic, and Google providers.
 from __future__ import annotations
 
 import httpx
+import itertools
 
 from app.config import settings
 from app.models.query import LLMRequest, LLMResponse
 
 
 SYSTEM_PROMPT = (
-    "You are a precise data answer synthesizer. Your job is to answer the user's query using ONLY the provided graph context.\n\n"
+    "You are a precise data answer synthesizer. Answer using only the provided retrieved evidence, including graph facts and document passages.\n\n"
     "CRITICAL CONSTRAINTS:\n"
     "1. STRICT FACT MATCHING: Answer ONLY what the user explicitly asks for.\n"
     "   - If the user asks for a Social Security Number, provide ONLY the Social Security Number.\n"
@@ -37,10 +38,12 @@ SYSTEM_PROMPT = (
 class LLMGateway:
     """Unified gateway to cloud LLM APIs."""
 
+    _gemini_key_rotation = itertools.count()
+
     def __init__(self, provider: str | None = None, api_key: str | None = None):
         self.provider = provider or settings.LLM_PROVIDER
         self.api_key = api_key or settings.LLM_API_KEY
-        self.client = httpx.AsyncClient(timeout=60.0)
+        self.client = httpx.AsyncClient(timeout=httpx.Timeout(15.0, connect=5.0))
 
     async def query(self, request: LLMRequest) -> LLMResponse:
         """Send anonymized context + query to cloud LLM.
@@ -73,7 +76,16 @@ class LLMGateway:
         """Query Google Gemini API."""
         # Normalize model name if user provided e.g. "gemini-2.5-flash" vs "models/gemini-2.5-flash"
         model_name = model if not model.startswith("models/") else model[len("models/"):]
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={self.api_key}"
+        configured_keys = [key.strip() for key in settings.GEMINI_API_KEYS.split(",") if key.strip()]
+        if not configured_keys and self.api_key:
+            configured_keys = [self.api_key]
+        if not configured_keys:
+            raise ValueError("No Gemini API key is configured. Set GEMINI_API_KEYS or LLM_API_KEY.")
+
+        # Rotate the starting key per request, then try the remaining keys on quota errors.
+        start = next(self._gemini_key_rotation) % len(configured_keys)
+        api_keys = configured_keys[start:] + configured_keys[:start]
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
 
         payload = {
             "system_instruction": {
@@ -90,16 +102,32 @@ class LLMGateway:
             },
         }
 
-        import asyncio
         import logging
+        import asyncio
         logger = logging.getLogger("uvicorn.error")
 
         data = {}
-        for attempt in range(3):
-            response = await self.client.post(url, json=payload)
-            if response.status_code == 429 and attempt < 2:
-                await asyncio.sleep(2.0 * (attempt + 1))
+        response = None
+        for key_index, api_key in enumerate(api_keys):
+            response = await self.client.post(
+                url,
+                json=payload,
+                headers={"x-goog-api-key": api_key},
+            )
+            if response.status_code in (401, 403, 429) and key_index < len(api_keys) - 1:
+                logger.warning(
+                    "Gemini rejected or quota-limited one configured key (HTTP %s); trying the next key.",
+                    response.status_code,
+                )
                 continue
+            if response.status_code in (500, 502, 503, 504):
+                # One short retry for transient provider pressure, then fail fast.
+                await asyncio.sleep(0.5)
+                response = await self.client.post(
+                    url,
+                    json=payload,
+                    headers={"x-goog-api-key": api_key},
+                )
             response.raise_for_status()
             data = response.json()
             break

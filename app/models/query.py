@@ -24,6 +24,7 @@ class QueryMetadata(BaseModel):
     subgraph_edges: int = 0
     model_used: str = ""
     latency_ms: int = 0
+    timings_ms: dict[str, int] = Field(default_factory=dict)
 
 
 class Citation(BaseModel):

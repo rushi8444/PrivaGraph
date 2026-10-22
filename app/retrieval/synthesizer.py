@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import re
 
+from app.tokenization.token_codec import TOKEN_PATTERN
+
 
 class AnswerSynthesizer:
     """Synthesizes query-aware natural answers from graph context."""
@@ -56,6 +58,14 @@ class AnswerSynthesizer:
 
         if "No matching entities found in the attached documents" in context_text:
             return "I could not find matching records in the documents attached to this chat session."
+
+        # The hybrid retriever adds source passages after the graph context. Prefer an
+        # extractive answer from those passages when the cloud model is unavailable.
+        passage_answer = self._synthesize_from_passages(
+            query, context_text, original_query or query
+        )
+        if passage_answer:
+            return passage_answer
 
         rels = self.REL_PATTERN.findall(context_text)
         if not rels:
@@ -276,12 +286,111 @@ class AnswerSynthesizer:
                 readable = self.PRED_READABLE.get(requested_pred, "record")
                 return f"No {readable} record was found for {target_subject} in the knowledge base."
 
-        # 2. General entity summary (not single property)
+        # Avoid emitting an entire entity profile when the requested property could
+        # not be identified. This keeps fallback responses scoped to the question.
         if target_subject:
-            return self._synthesize_entity_summary(target_subject, by_subject[target_subject])
+            return f"I could not find a specific requested fact for {target_subject}."
 
-        # 3. Fallback for multi-subject or un-scoped queries
-        return self._synthesize_general(by_subject)
+        return "I could not find a directly matching fact in the retrieved records."
+
+    @staticmethod
+    def _synthesize_from_passages(
+        query: str,
+        context_text: str,
+        original_query: str,
+    ) -> str | None:
+        """Return one or two relevant, privacy-filtered source sentences."""
+        marker = "# Matching Document Passages"
+        if marker not in context_text:
+            return None
+
+        passage_section = context_text.split(marker, 1)[1]
+        passages = re.findall(
+            r"\[\d+\] Source document:[^\n]*\n(.*?)(?=\n\n\[\d+\] Source document:|\Z)",
+            passage_section,
+            flags=re.DOTALL,
+        )
+        if not passages:
+            return None
+
+        stopwords = {
+            "the", "a", "an", "is", "are", "was", "were", "what", "who", "which",
+            "how", "where", "when", "do", "does", "did", "can", "could", "would",
+            "should", "will", "has", "have", "had", "this", "that", "these", "those",
+            "of", "in", "on", "at", "to", "for", "with", "by", "from", "and", "or",
+            "but", "not", "about", "me", "my", "tell", "show", "find", "get", "company",
+        }
+        query_terms = {
+            word.casefold()
+            for word in re.findall(r"[\w]+", f"{query} {original_query}", flags=re.UNICODE)
+            if len(word) > 2 and word.casefold() not in stopwords
+        }
+        if not query_terms:
+            return None
+
+        candidates: list[tuple[int, int, str]] = []
+        seen: set[str] = set()
+        order = 0
+        for passage in passages:
+            for sentence in re.split(r"(?<=[.!?])\s+", passage.strip()):
+                sentence = " ".join(sentence.split()).strip(" \t\r\n-|•")
+                if len(sentence) < 12:
+                    continue
+                normalized = sentence.casefold()
+                if normalized in seen:
+                    continue
+                seen.add(normalized)
+                sentence_terms = set(re.findall(r"[\w]+", normalized, flags=re.UNICODE))
+                score = sum(1 for term in query_terms if term in sentence_terms)
+                if score:
+                    candidates.append((score, order, sentence))
+                order += 1
+
+        if not candidates:
+            return None
+        candidates.sort(key=lambda item: (-item[0], item[1]))
+        minimum_score = 1 if len(query_terms) <= 3 else 2
+        selected = [item[2] for item in candidates if item[0] >= minimum_score]
+        if not selected:
+            return None
+
+        # Multi-part questions may need two separate sentences (e.g. performance
+        # result plus the manager's recommendation); single-fact questions get one.
+        asks_multiple = bool(re.search(r"\band\b|,", original_query, flags=re.IGNORECASE))
+        selected = selected[:2] if asks_multiple else selected[:1]
+
+        requested_types: set[str] = set()
+        query_lower = f"{query} {original_query}".casefold()
+        if re.search(r"\b(ssn|social security)\b", query_lower):
+            requested_types.update({"SSN", "US_SSN"})
+        if re.search(r"\b(salary|pay|compensation|wage|earnings)\b", query_lower):
+            requested_types.add("SALARY")
+        if re.search(r"\b(email)\b", query_lower):
+            requested_types.add("EMAIL_ADDRESS")
+        if re.search(r"\b(phone|telephone|contact number)\b", query_lower):
+            requested_types.add("PHONE_NUMBER")
+        if re.search(r"\b(home address|street address|address|residential|lives at)\b", query_lower):
+            requested_types.add("LOCATION")
+        if re.search(r"\b(headquarter|headquarters|headquartered|office location)\b", query_lower):
+            requested_types.add("LOCATION")
+        if re.search(r"\b(who|manager|reports to|recommend|recommended|leader)\b", query_lower):
+            requested_types.add("PERSON")
+
+        explicitly_queried_tokens = set(TOKEN_PATTERN.findall(query))
+
+        def redact_unrequested_tokens(text: str) -> str:
+            def replace(match: re.Match[str]) -> str:
+                token = match.group(0)
+                if token in explicitly_queried_tokens:
+                    return token
+                type_match = re.match(r"\u27e6XX_(.+)_[A-Z0-9]{3,16}\u27e7", token)
+                token_type = type_match.group(1) if type_match else ""
+                return token if token_type in requested_types else "[redacted]"
+
+            return TOKEN_PATTERN.sub(replace, text)
+
+        answer = " ".join(redact_unrequested_tokens(sentence) for sentence in selected)
+        return f"According to the retrieved document: {answer}"
 
     def _synthesize_list(
         self,
@@ -349,18 +458,8 @@ class AnswerSynthesizer:
                     readable = self.PRED_READABLE.get(requested_pred, requested_pred)
                     items.append(f"- **{subj}**: {readable.upper()} {', '.join(vals)}")
             else:
-                summary_parts = []
-                if "HAS_ROLE" in props:
-                    summary_parts.append(", ".join(props["HAS_ROLE"]))
-                if "IN_DEPARTMENT" in props:
-                    summary_parts.append(f"({', '.join(props['IN_DEPARTMENT'])})")
-                if "HAS_SALARY" in props:
-                    summary_parts.append(f"Salary: {', '.join(props['HAS_SALARY'])}")
-                if "HAS_SSN" in props:
-                    summary_parts.append(f"SSN: {', '.join(props['HAS_SSN'])}")
-
-                desc = " — ".join(p for p in summary_parts if p)
-                items.append(f"- **{subj}**" + (f": {desc}" if desc else ""))
+                # A request for a list without a named property gets names only.
+                items.append(f"- **{subj}**")
 
         if not items:
             return "No matching records found in the knowledge base."

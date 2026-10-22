@@ -1321,6 +1321,66 @@ body {
   line-height: 1.65;
 }
 
+.process-timing-panel {
+  margin: 0 16px 12px;
+  padding: 9px 11px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: rgba(12, 16, 13, 0.42);
+}
+
+.process-timing-panel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.72rem;
+  list-style-position: inside;
+}
+
+.process-timing-panel summary small {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.process-timing-panel summary strong {
+  color: var(--accent-sage-text);
+  font: 500 0.7rem var(--font-mono);
+}
+
+.process-timing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 18px;
+  margin: 9px 0 0 15px;
+}
+
+.process-timing-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.process-timing-row b {
+  color: var(--text-secondary);
+  font: 500 0.68rem var(--font-mono);
+  white-space: nowrap;
+}
+
+.process-timing-note {
+  margin: 8px 0 0 15px;
+  color: var(--text-dim);
+  font-size: 0.64rem;
+}
+
+@media (max-width: 600px) {
+  .process-timing-grid { grid-template-columns: 1fr; }
+}
+
 /* Context Inspector (Graph Provenance) */
 .context-inspector {
   border-top: 1px solid var(--border-subtle);

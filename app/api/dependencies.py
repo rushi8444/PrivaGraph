@@ -8,6 +8,7 @@ from app.tokenization.vault import EncryptedVault
 from app.detection.presidio_engine import PresidioDetectionEngine
 from app.retrieval.context_builder import ContextBuilder
 from app.retrieval.query_analyzer import QueryAnalyzer
+from app.retrieval.passage_store import PassageStore
 from app.proxy.llm_gateway import LLMGateway
 from app.proxy.reconstructor import TokenReconstructor
 from app.proxy.prompt_sanitizer import PromptSanitizer
@@ -51,9 +52,11 @@ class AppState:
 
         # Stage 4: Retrieval
         self.query_analyzer = QueryAnalyzer()
+        self.passage_store = PassageStore(settings.DATA_DIR / "passages.sqlite3")
         self.context_builder = ContextBuilder(
             graph_builder=self.graph_builder,
             query_analyzer=self.query_analyzer,
+            passage_store=self.passage_store,
         )
 
         # Stage 5: Proxy
@@ -139,6 +142,7 @@ class AppState:
     def reset_state(self) -> None:
         """Completely reset in-memory and persistent state for clean test runs."""
         self.graph_builder.clear()
+        self.passage_store.clear()
         self.vault.clear()
         self.documents.clear()
         self.jobs.clear()

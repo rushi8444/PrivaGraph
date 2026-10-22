@@ -33,9 +33,14 @@ async def submit_query(
 ):
     """Submit a natural language query through the privacy-preserving pipeline."""
     state = get_state()
-    start_time = time.time()
+    start_time = time.perf_counter()
+    timings_ms: dict[str, int] = {}
+
+    def elapsed_ms(since: float) -> int:
+        return max(0, round((time.perf_counter() - since) * 1000))
 
     # Manage conversation session & persist user message
+    phase_start = time.perf_counter()
     conv_id = request.conversation_id
     if not conv_id and user and user.user_id:
         words = request.query.strip().split()
@@ -57,8 +62,10 @@ async def submit_query(
             )
         except Exception:
             pass
+    timings_ms["session_setup_ms"] = elapsed_ms(phase_start)
 
     # Step 0: Tokenize PII in user query
+    phase_start = time.perf_counter()
     detector = state.get_detector()
     query_entities = detector.detect(request.query)
     tokenized_query, tok_entities = state.tokenizer.tokenize_text(
@@ -72,8 +79,10 @@ async def submit_query(
             hmac_digest=tok.hmac_digest,
             doc_id="query",
         )
+    timings_ms["question_protection_ms"] = elapsed_ms(phase_start)
 
     # Resolve document scoping for this conversation
+    phase_start = time.perf_counter()
     allowed_doc_ids = request.doc_ids
     if allowed_doc_ids is None and conv_id:
         allowed_doc_ids = await chat_store.get_conversation_documents(conv_id)
@@ -84,8 +93,10 @@ async def submit_query(
         user=user,
         allowed_doc_ids=allowed_doc_ids,
     )
+    timings_ms["graph_retrieval_ms"] = elapsed_ms(phase_start)
 
     # Enrich citations with doc metadata and decrypt snippet preview locally
+    phase_start = time.perf_counter()
     citations: list[Citation] = []
     for c in raw_citations:
         doc_id = c.get("doc_id", "")
@@ -105,9 +116,12 @@ async def submit_query(
                 predicate=c.get("predicate"),
             )
         )
+    timings_ms["citation_restore_ms"] = elapsed_ms(phase_start)
 
     # Step 2: Sanitize for prompt injection
+    phase_start = time.perf_counter()
     sanitization = state.sanitizer.sanitize(context)
+    timings_ms["safety_check_ms"] = elapsed_ms(phase_start)
     if not sanitization.is_safe:
         state.audit.log(
             INJECTION_BLOCKED,
@@ -136,6 +150,7 @@ async def submit_query(
 
     llm_response_text = ""
     llm_model = request.model or "offline-synthesizer"
+    phase_start = time.perf_counter()
 
     try:
         llm_response = await state.llm_gateway.query(llm_request)
@@ -145,38 +160,49 @@ async def submit_query(
         else:
             import logging
             logging.getLogger("uvicorn.error").warning(
-                "LLM returned empty response. Falling back to local graph answer synthesizer."
+                "LLM returned empty response. Falling back to local evidence synthesis."
             )
             llm_response_text = synthesizer.synthesize(
-                tokenized_query, context, original_query=request.query
+                tokenized_query, sanitization.sanitized_text, original_query=request.query
             )
             llm_model = "offline-synthesizer"
     except Exception as e:
         import logging
+        response = getattr(e, "response", None)
+        status_code = getattr(response, "status_code", None)
+        provider = getattr(state.llm_gateway, "provider", "unknown")
+        error_detail = f"status={status_code}" if status_code else f"type={type(e).__name__}"
         logging.getLogger("uvicorn.error").warning(
-            f"LLM call failed: {e}. Synthesizing answer directly from graph context."
+            "LLM call failed (provider=%s, %s); using local evidence fallback.",
+            provider,
+            error_detail,
         )
         llm_response_text = synthesizer.synthesize(
-            tokenized_query, context, original_query=request.query
+            tokenized_query, sanitization.sanitized_text, original_query=request.query
         )
         llm_model = "offline-synthesizer"
+    timings_ms["ai_and_fallback_ms"] = elapsed_ms(phase_start)
 
     # Step 4: Reconstruct tokens locally
+    phase_start = time.perf_counter()
     reconstructed_text, entities_count = await state.reconstructor.reconstruct(
         llm_response_text
     )
+    timings_ms["answer_restore_ms"] = elapsed_ms(phase_start)
 
     # Guarantee response is never empty string (prevents bare avatar glyph 🛡️)
     if not reconstructed_text or not reconstructed_text.strip():
         reconstructed_text = "I could not find matching records in the knowledge base for this query."
 
-    elapsed_ms = int((time.time() - start_time) * 1000)
+    total_elapsed_ms = elapsed_ms(start_time)
+    timings_ms["total_ms"] = total_elapsed_ms
 
     state.audit.log(
         QUERY_RECONSTRUCTED,
         {
             "entities_reconstructed": entities_count,
-            "latency_ms": elapsed_ms,
+            "latency_ms": total_elapsed_ms,
+            "timings_ms": timings_ms,
         },
     )
 
@@ -208,7 +234,8 @@ async def submit_query(
                     "subgraph_nodes": state.graph_builder.graph.number_of_nodes(),
                     "subgraph_edges": state.graph_builder.graph.number_of_edges(),
                     "model_used": llm_model,
-                    "latency_ms": elapsed_ms,
+                    "latency_ms": total_elapsed_ms,
+                    "timings_ms": timings_ms,
                 },
             )
         except Exception:
@@ -223,7 +250,8 @@ async def submit_query(
             subgraph_nodes=state.graph_builder.graph.number_of_nodes(),
             subgraph_edges=state.graph_builder.graph.number_of_edges(),
             model_used=llm_model,
-            latency_ms=elapsed_ms,
+            latency_ms=total_elapsed_ms,
+            timings_ms=timings_ms,
         ),
         graph_context=context if request.include_graph_context else None,
         citations=citations,

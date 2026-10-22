@@ -45,6 +45,8 @@ class Settings(BaseSettings):
     # --- LLM Provider ---
     LLM_PROVIDER: str = "openai"
     LLM_API_KEY: str = ""
+    # Comma-separated Gemini keys. Keys in the same Google project still share quota.
+    GEMINI_API_KEYS: str = ""
     DEFAULT_MODEL: str = "gpt-4o"
 
     # --- NER ---

@@ -118,6 +118,9 @@ async def process_document_pipeline(
 
     state.graph_builder.add_triples(all_triples, doc.header)
 
+    # Index only privacy-tokenized text so passage retrieval cannot bypass the vault.
+    indexed_passages = state.passage_store.index_document(doc_id, tokenized_sentences)
+
     # Store document metadata
     state.documents[doc_id] = {
         "id": doc_id,
@@ -128,6 +131,7 @@ async def process_document_pipeline(
         "created": str(doc.header.document.created),
         "entity_count": len(all_entities),
         "triple_count": len(all_triples),
+        "passage_count": indexed_passages,
     }
     state.save_documents()
 
@@ -147,6 +151,7 @@ async def process_document_pipeline(
         "doc_id": doc_id,
         "entities_detected": len(all_entities),
         "triples_extracted": len(all_triples),
+        "passages_indexed": indexed_passages,
         "tokens_stored": state.vault.count(),
     }
 
@@ -332,6 +337,7 @@ async def delete_document(doc_id: str):
     del state.documents[doc_id]
     state.save_documents()
     graph_stats = state.graph_builder.remove_document(doc_id)
+    passages_removed = state.passage_store.remove_document(doc_id)
     tokens_purged = state.vault.delete_by_doc_id(doc_id)
 
     state.audit.log(
@@ -351,5 +357,6 @@ async def delete_document(doc_id: str):
         "edges_removed": graph_stats.get("edges_removed", 0),
         "nodes_removed": graph_stats.get("nodes_removed", 0),
         "tokens_purged": tokens_purged,
+        "passages_removed": passages_removed,
     }
 

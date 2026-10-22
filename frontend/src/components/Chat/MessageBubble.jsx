@@ -12,6 +12,21 @@ import {
 import ZeroPIIModal from './ZeroPIIModal';
 import MarkdownContent from './MarkdownContent';
 
+const PROCESS_TIMINGS = [
+  ['session_setup_ms', 'Session setup'],
+  ['question_protection_ms', 'Protect the question'],
+  ['graph_retrieval_ms', 'Find relevant facts'],
+  ['citation_restore_ms', 'Restore source snippets'],
+  ['safety_check_ms', 'Safety check'],
+  ['ai_and_fallback_ms', 'AI response / local fallback'],
+  ['answer_restore_ms', 'Restore the answer'],
+];
+
+function formatDuration(milliseconds) {
+  const value = Number(milliseconds) || 0;
+  return value < 1000 ? `${value} ms` : `${(value / 1000).toFixed(value >= 10000 ? 1 : 2)} s`;
+}
+
 export default function MessageBubble({ message }) {
   const isUser = message.role === 'user';
   const [showProofModal, setShowProofModal] = useState(false);
@@ -43,6 +58,7 @@ export default function MessageBubble({ message }) {
   const isOffline = modelUsed === 'offline-synthesizer' || modelUsed === 'offline-graph';
   const decryptedCount = message.metadata?.entities_reconstructed ?? 0;
   const latencyMs = message.metadata?.latency_ms;
+  const timings = message.metadata?.timings_ms;
   const citations = message.citations || [];
   const proof = message.zeroPiiProof || message.zero_pii_proof;
 
@@ -60,7 +76,7 @@ export default function MessageBubble({ message }) {
             <div className="message-provenance">
               <span className="message-provenance-badge">
                 <ShieldIcon size={12} />
-                {isOffline ? 'Local Graph Synthesizer' : `Cloud: ${modelUsed}`}
+                {isOffline ? 'Local Evidence Fallback' : `Cloud: ${modelUsed}`}
               </span>
               {decryptedCount > 0 && (
                 <span className="message-meta-stat">
@@ -71,7 +87,7 @@ export default function MessageBubble({ message }) {
               {latencyMs != null && (
                 <span className="message-meta-stat">
                   <CpuIcon size={12} />
-                  {latencyMs}ms
+                  {formatDuration(latencyMs)}
                 </span>
               )}
             </div>
@@ -132,6 +148,23 @@ export default function MessageBubble({ message }) {
           <div className="message-assistant-body" style={{ marginTop: '8px' }}>
             <MarkdownContent text={messageText} />
           </div>
+
+          {timings && Object.keys(timings).length > 0 && (
+            <details className="process-timing-panel" open>
+              <summary>
+                <span>Process times <small>(approx.)</small></span>
+                <strong>Total {formatDuration(timings.total_ms ?? latencyMs)}</strong>
+              </summary>
+              <div className="process-timing-grid">
+                {PROCESS_TIMINGS.filter(([key]) => timings[key] != null).map(([key, label]) => (
+                  <div className="process-timing-row" key={key}>
+                    <span>{label}</span><b>{formatDuration(timings[key])}</b>
+                  </div>
+                ))}
+              </div>
+              <p className="process-timing-note">Server-side time for each step; browser and network overhead may add a little.</p>
+            </details>
+          )}
 
           {/* Source Document Display */}
           {uniqueDocCitations.length > 0 && (
